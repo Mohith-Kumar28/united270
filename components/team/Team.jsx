@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import TeamModal from "./TeamModal";
+import SlidingText from "../utils/SlidingText";
 
 const Team = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,15 @@ const Team = () => {
   ];
 
   return (
-    <div className="w-full h-screen overflow-hidden relative ">
+    <div className="w-full py-56 overflow-hidden relative ">
       <TeamModal user={selectedPerson} isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className="absolute top-1/2 -translate-y-[50%] left-0 w-full z-20 pl-28">
-        <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
+      <div className=" w-full z-0 ">
+        {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
           FROM THE UNIV
-        </p>
+        </p> */}
+        <SlidingText text={"FROM THE UNIV"} />
 
-        <div className="flex gap-20 mt-20 relative z-20 ">
+        <div className="flex gap-20 mt-20 relative z-20 justify-center">
           {team.map((member, idx) => (
             <div
               key={idx}

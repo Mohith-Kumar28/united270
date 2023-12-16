@@ -1,31 +1,36 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-// import CanvasAnimation from "../components/CanvasAnimation";
+import CanvasAnimation from "../components/CanvasAnimation";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import About from "@/components/about/About";
-import Brands from "@/components/Brands";
+import Brands from "@/components/brands/Brands";
 import Team from "@/components/team/Team";
+import HorizontalScroll from "@/components/brands/HorizontalScroll";
+import Layout from "@/components/layout/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div className="relative bg-pri-pink min-h-screen">
-      {/* <NavBar /> */}
-      {/* <CanvasAnimation /> */}
-      <div className=" w-full h-screen  z-10 fixed -bottom-0 left-0 overflow-hidden">
+      <Layout>
+        {/* <NavBar /> */}
+        <CanvasAnimation />
+        {/* <div className=" w-full h-screen  z-10 fixed -bottom-0 left-0 overflow-hidden">
         <Image
           width={1000}
           height={1000}
           className="w-full"
           src={"/3dPerson/cam.0000.png"}
         />
-      </div>
-      <Hero />
-      <About />
-      <Brands />
-      <Team />
+      </div> */}
+        <Hero />
+        <About />
+        <Brands />
+        <HorizontalScroll />
+        <Team />
+      </Layout>
     </div>
   );
 }

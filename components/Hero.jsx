@@ -1,15 +1,18 @@
 import Image from "next/image";
 import React from "react";
+import { motion, useAnimate } from "framer-motion";
+import SlidingText from "./utils/SlidingText";
 
 const Hero = () => {
   return (
     <div className="w-full h-screen overflow-hidden relative">
-      <div className="absolute top-1/2 -translate-y-[50%] left-0 w-full z-0 pl-44">
-        <p className="text-pri-green text-9xl font-extrabold   ">
+      <div className="absolute top-1/2 -translate-y-[50%] left-0 w-full z-0 ">
+        {/* <p className="text-pri-green text-9xl font-extrabold   ">
           Text to test here
-        </p>
+        </p> */}
 
-        <p className="text-gray-600 w-36 p-3 mt-8 text-left bg-[#fbcbcc] text-xl font-medium  ">
+        <SlidingText text={"this is just a text to "} />
+        <p className="text-gray-600 w-36 p-3 mt-8 text-left bg-[#fbcbcc] text-xl font-medium ml-44 ">
           Text to test here
         </p>
       </div>
