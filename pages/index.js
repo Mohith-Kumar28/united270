@@ -8,6 +8,10 @@ import Brands from "@/components/brands/Brands";
 import Team from "@/components/team/Team";
 import HorizontalScroll from "@/components/brands/HorizontalScroll";
 import Layout from "@/components/layout/Layout";
+import WearableAccordion from "@/components/wearables/WearableAccordion";
+import ModelsHero from "@/components/models/ModelsHero";
+import WearableHorizontalScroll from "@/components/wearables/WearableHorizontalScroll";
+import HyperRealisticHero from "@/components/hyperRealistic/HyperRealisticHero";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +34,9 @@ export default function Home() {
         <Brands />
         <HorizontalScroll />
         <Team />
+        <WearableHorizontalScroll />
+        <HyperRealisticHero />
+        <ModelsHero />
       </Layout>
     </div>
   );

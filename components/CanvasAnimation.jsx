@@ -135,7 +135,7 @@ const CanvasAnimation = () => {
         <Image
           src={`/3dPerson/cam.${String(currentFrame + 1).padStart(4, "0")}.png`}
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
           alt="3D Person"
         />
       </div>

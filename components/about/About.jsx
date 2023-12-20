@@ -71,25 +71,89 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import SlidingText from "../utils/SlidingText";
 import Image from "next/image";
+import { galaktisRegular, stretchPro } from "@/styles/fonts";
 
 const content = [
-  { title: "title1", features: ["feature 1", "feature 2", "feature 3"] },
-  { title: "title1", features: ["feature 1", "feature 2", "feature 3"] },
-  { title: "title2", features: ["feature 1", "feature 2", "feature 3"] },
-  { title: "title3", features: ["feature 1", "feature 2", "feature 3"] },
-  { title: "title4", features: ["feature 1", "feature 2", "feature 3"] },
+  {
+    title: "title1",
+    features: [
+      "feature 1",
+      "feature 2",
+      "feature 3",
+      "feature 4",
+      "feature 5",
+      ,
+      "feature 6",
+    ],
+  },
+  {
+    title: "title1",
+    features: [
+      "feature 1",
+      "feature 2",
+      "feature 3",
+      "feature 4",
+      "feature 5",
+      ,
+      "feature 6",
+    ],
+  },
+  {
+    title: "title2",
+    features: [
+      "feature 1",
+      "feature 2",
+      "feature 3",
+      "feature 4",
+      "feature 5",
+      ,
+      "feature 6",
+    ],
+  },
+  {
+    title: "title3",
+    features: [
+      "feature 1",
+      "feature 2",
+      "feature 3",
+      "feature 4",
+      "feature 5",
+      ,
+      "feature 6",
+    ],
+  },
+  {
+    title: "title4",
+    features: [
+      "feature 1",
+      "feature 2",
+      "feature 3",
+      "feature 4",
+      "feature 5",
+      ,
+      "feature 6",
+    ],
+  },
 ];
 const slider = [{}, {}, {}, {}, {}];
 
 const About = () => {
   return (
     <div className=" py-56">
-      <div className="flex gap-12 justify-center">
+      <div className="flex gap-8 justify-center">
         {content.map((item, idx) => (
           <div className="flex flex-col">
-            <p className="text-pri-green text-2xl font-bold  ">{item.title}</p>
+            <p
+              className={`text-pri-green text-4xl font-bold   ${stretchPro.className}`}
+            >
+              {item.title}
+            </p>
             {item.features.map((feature) => (
-              <span className="text-gray-200 text-lg">{feature}</span>
+              <span
+                className={`text-gray-200 text-lg  ${galaktisRegular.className}`}
+              >
+                {feature}
+              </span>
             ))}
           </div>
         ))}
@@ -131,8 +195,8 @@ const HorizontalScrollCarousel = () => {
               key={idx}
               className="flex flex-col justify-end relative  cursor-pointer"
             >
-              <button className="bg-pri-green w-52  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
-                See Works
+              <button className="bg-light-orange w-52  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
+                {/* See Works */}
               </button>
               <Image
                 width={200}

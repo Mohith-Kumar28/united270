@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { motion, useAnimate } from "framer-motion";
 import SlidingText from "./utils/SlidingText";
+import { galaktisRegular } from "@/styles/fonts";
 
 const Hero = () => {
   return (
@@ -12,7 +13,12 @@ const Hero = () => {
         </p> */}
 
         <SlidingText text={"this is just a text to "} />
-        <p className="text-gray-600 w-36 p-3 mt-8 text-left bg-[#fbcbcc] text-xl font-medium ml-44 ">
+        <p
+          className={
+            `text-gray-600 w-36 p-3 mt-8 text-left bg-[#fbcbcc] text-xl font-medium ml-44` +
+            ` ${galaktisRegular.className}`
+          }
+        >
           Text to test here
         </p>
       </div>

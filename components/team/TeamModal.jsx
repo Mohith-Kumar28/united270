@@ -2,6 +2,31 @@ import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { Fragment, useState } from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
+import {
+  SiNike,
+  Si3M,
+  SiAbstract,
+  SiAdobe,
+  SiAirtable,
+  SiAmazon,
+  SiBox,
+  SiBytedance,
+  SiChase,
+  SiCloudbees,
+  SiBurton,
+  SiBmw,
+  SiHeroku,
+  SiBuildkite,
+  SiCouchbase,
+  SiDailymotion,
+  SiDeliveroo,
+  SiEpicgames,
+  SiGenius,
+  SiGodaddy,
+  SiLinkedin,
+} from "react-icons/si";
+import { galaktisRegular, sourceSansVariableItalic } from "@/styles/fonts";
 
 export default function TeamModal({ isOpen, setIsOpen, user }) {
   function closeModal() {
@@ -35,7 +60,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black/25" />
+            <div className="fixed inset-0 bg-black/25 backdrop-blur-lg  " />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -49,19 +74,53 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all relative h-[70vh] flex flex-col justify-center">
+                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[70vh] flex flex-col justify-center">
+                  <div className="flex  overflow-hidden">
+                    <TranslateWrapper>
+                      <LogoItemsTop />
+                    </TranslateWrapper>
+                    <TranslateWrapper>
+                      <LogoItemsTop />
+                    </TranslateWrapper>
+                    <TranslateWrapper>
+                      <LogoItemsTop />
+                    </TranslateWrapper>
+                  </div>
+                  <div className="flex overflow-hidden mt-4">
+                    <TranslateWrapper reverse>
+                      <LogoItemsBottom />
+                    </TranslateWrapper>
+                    <TranslateWrapper reverse>
+                      <LogoItemsBottom />
+                    </TranslateWrapper>
+                    <TranslateWrapper reverse>
+                      <LogoItemsBottom />
+                    </TranslateWrapper>
+                  </div>
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
+                    className="mt-4 text-lg font-medium leading-6 text-gray-900"
                   >
-                    <p className="text-pri-green bg-light-orange text-9xl font-semibold relative   w-full ">
+                    <p
+                      className={`text-pri-green  text-8xl font-semibold relative   w-full px-5  ${galaktisRegular.className}`}
+                    >
                       ~ {user?.name}
                     </p>
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500 w-1/2">
+                  <div className="mt-2 p-4 justify-between flex">
+                    <p
+                      className={`text-lg font-medium text-gray-100 w-2/3  ${sourceSansVariableItalic.className}`}
+                    >
                       {user?.description}
                     </p>
+                    <a
+                      href="#"
+                      rel="nofollow"
+                      target="_blank"
+                      className="cursor-pointer w-16 md:w-24 h-16 md:h-24 flex justify-center items-center  hover:bg-slate-200 text-pri-green transition-colors"
+                    >
+                      <SiLinkedin className="text-4xl md:text-5xl" />
+                    </a>
                   </div>
 
                   <div className="mt-4">
@@ -88,3 +147,59 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
     </>
   );
 }
+
+const TranslateWrapper = ({ children, reverse }) => {
+  return (
+    <motion.div
+      initial={{ translateX: reverse ? "-100%" : "0%" }}
+      animate={{ translateX: reverse ? "0%" : "-100%" }}
+      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      className="flex gap-4 px-2"
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const LogoItem = ({ Icon }) => {
+  return (
+    <a
+      href="/"
+      rel="nofollow"
+      target="_blank"
+      className="w-16 md:w-24 h-16 md:h-24 flex justify-center items-center  hover:bg-slate-200 text-pri-green transition-colors"
+    >
+      <Icon className="text-4xl md:text-5xl" />
+    </a>
+  );
+};
+
+const LogoItemsTop = () => (
+  <>
+    <LogoItem Icon={SiNike} />
+    <LogoItem Icon={Si3M} />
+    <LogoItem Icon={SiAbstract} />
+    <LogoItem Icon={SiAdobe} />
+    <LogoItem Icon={SiAirtable} />
+    <LogoItem Icon={SiAmazon} />
+    <LogoItem Icon={SiBox} />
+    <LogoItem Icon={SiBytedance} />
+    <LogoItem Icon={SiChase} />
+    <LogoItem Icon={SiCloudbees} />
+  </>
+);
+
+const LogoItemsBottom = () => (
+  <>
+    <LogoItem Icon={SiBmw} />
+    <LogoItem Icon={SiBurton} />
+    <LogoItem Icon={SiBuildkite} />
+    <LogoItem Icon={SiCouchbase} />
+    <LogoItem Icon={SiDailymotion} />
+    <LogoItem Icon={SiDeliveroo} />
+    <LogoItem Icon={SiEpicgames} />
+    <LogoItem Icon={SiGenius} />
+    <LogoItem Icon={SiGodaddy} />
+    <LogoItem Icon={SiHeroku} />
+  </>
+);

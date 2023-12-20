@@ -1,14 +1,19 @@
+import { cafeDeParis, galaktisRegular } from "@/styles/fonts";
 import { motion, useAnimate } from "framer-motion";
 
 const SlidingText = ({ reverse, text }) => (
   <div className="flex  select-none overflow-hidden ">
     <TranslateWrapper reverse={reverse}>
-      <span className="w-fit whitespace-nowrap text-[20vmax] font-extrabold uppercase leading-[0.75] text-pri-green">
+      <span
+        className={`w-fit whitespace-nowrap text-[20vmax] font-extrabold uppercase leading-[0.75] text-pri-green  ${cafeDeParis.className}`}
+      >
         {text}
       </span>
     </TranslateWrapper>
     <TranslateWrapper reverse={reverse}>
-      <span className="ml-48 w-fit whitespace-nowrap text-[20vmax] uppercase leading-[0.75] text-pri-green text-9xl font-extrabold  ">
+      <span
+        className={`ml-48 w-fit whitespace-nowrap text-[20vmax] uppercase leading-[0.75] text-pri-green text-9xl font-extrabold   ${cafeDeParis.className}`}
+      >
         {text}
       </span>
     </TranslateWrapper>

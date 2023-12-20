@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cafeDeParis: "var(--font-cafeDeParis)",
+        galaktis: "var(--font-galaktisRegular)",
+      },
       colors: {
         "pri-pink": "#bb88ed",
         "pri-green": "#12ed34",

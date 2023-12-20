@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import TeamModal from "./TeamModal";
 import SlidingText from "../utils/SlidingText";
+import { galaktisRegular } from "@/styles/fonts";
 
 const Team = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,7 @@ const Team = () => {
                 onClick={() => {
                   setSelectedPerson(member), setIsOpen(true);
                 }}
-                className="bg-white w-36  h-36 relative rounded-full text-xl font-semibold"
+                className="bg-light-orange w-36  h-36 relative rounded-full text-xl font-semibold"
               >
                 <Image
                   width={600}
@@ -57,7 +58,9 @@ const Team = () => {
                   src={"/3dPerson/cam.0000.png"}
                 />
               </div>
-              <span className="text-center mt-2 font-bold text-lg text-gray-200">
+              <span
+                className={`text-center mt-2 font-bold text-lg text-gray-200 ${galaktisRegular.className}`}
+              >
                 {member.name}
               </span>
             </div>
