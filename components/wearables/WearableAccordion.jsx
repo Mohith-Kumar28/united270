@@ -41,26 +41,26 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) => {
   return (
     <>
       <button
-        className="bg-white hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group text-pri-pink"
+        className="bg-light-orange hover:bg-slate-50 transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse lg:flex-col justify-end items-center gap-4 relative group text-pri-pink "
         onClick={() => setOpen(id)}
       >
         <span
           style={{
             writingMode: "vertical-lr",
           }}
-          className={`hidden lg:block text-xl font-light rotate-180 ${galaktisRegular.className}`}
+          className={`hidden lg:block text-xl font-bold rotate-180 ${galaktisRegular.className}`}
         >
           {title}
         </span>
         <span
-          className={`block lg:hidden text-xl font-light ${galaktisRegular.className}`}
+          className={`block lg:hidden text-xl font-bold ${galaktisRegular.className}`}
         >
           {title}
         </span>
         <div className="w-6 lg:w-full aspect-square bg-pri-pink text-white grid place-items-center">
           <Icon />
         </div>
-        <span className="w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />
+        <span className="w-4 h-4 bg-pri-green group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] lg:border-b-0 lg:border-t-[1px] border-slate-200 rotate-45 absolute bottom-0 lg:bottom-[50%] right-[50%] lg:right-0 translate-y-[50%] translate-x-[50%] z-20" />
       </button>
 
       <AnimatePresence>

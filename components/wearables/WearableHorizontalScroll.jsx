@@ -45,6 +45,12 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
         <motion.div style={{ x }} className="flex gap-52 ">
           <div className="flex w-[100vw] relative">
+            <Image
+              width={80}
+              height={80}
+              className="absolute top-44 left-8 z-10"
+              src={"/images/logos/Asset_1.png"}
+            />
             <div className="absolute z-0  top-1/2 -translate-y-1/2 left-0">
               <SlidingText
                 text={
@@ -52,12 +58,14 @@ const HorizontalScrollCarousel = () => {
                 }
               />
             </div>
-            <Image
-              width={600}
-              height={600}
-              className="w-full relative z-10"
-              src={"/images/wearables/hero.png"}
-            />
+            <div className="w-full flex items-center">
+              <Image
+                width={600}
+                height={600}
+                className="w-full relative z-10 m-20"
+                src={"/images/wearables/hero.png"}
+              />
+            </div>
           </div>
           <div className="flex w-[100vw] h-screen ">
             <WearableAccordion />

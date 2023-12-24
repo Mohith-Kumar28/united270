@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         "pri-pink": "#bb88ed",
         "pri-green": "#12ed34",
-        "light-orange": "#fbcbcc",
+        "light-orange": "#eae1cc",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

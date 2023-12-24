@@ -75,63 +75,60 @@ import { galaktisRegular, stretchPro } from "@/styles/fonts";
 
 const content = [
   {
-    title: "title1",
+    title: "BRANDING +CONTENT",
     features: [
-      "feature 1",
-      "feature 2",
-      "feature 3",
-      "feature 4",
-      "feature 5",
-      ,
-      "feature 6",
+      "Brand Launch",
+      "Design & Identity",
+      "Brand Strategy",
+      "Brand Films & AVs",
+      "Logo Design & Packaging",
+      "Brand Communication",
+      "OOH & Events",
+      "Production + Shoots",
+      "Website Building",
     ],
   },
   {
-    title: "title1",
+    title: "STORY TELLING +COHORTS",
     features: [
-      "feature 1",
-      "feature 2",
-      "feature 3",
-      "feature 4",
-      "feature 5",
-      ,
-      "feature 6",
+      " Film Scripting",
+      "Digital Film Making",
+      "Interactive Content",
+      "Content Videos",
+      "Social Media Films",
+      "Print Media-From Concept",
+      "to Creation with In-house",
+      "Production Network",
     ],
   },
   {
-    title: "title2",
+    title: "DIGITAL MARKETING +AI",
     features: [
-      "feature 1",
-      "feature 2",
-      "feature 3",
-      "feature 4",
-      "feature 5",
-      ,
-      "feature 6",
+      "Market Research",
+      "Social Media Marketing",
+      "Content Strategy",
+      "Media Planning",
+      "Campaign Development",
+      "Marketing Automation",
+      "Performance Marketing",
+      "AI Film Making",
+      "AI-Gen Lookbooks",
     ],
   },
   {
-    title: "title3",
+    title: "DESIGN +TECH",
     features: [
-      "feature 1",
-      "feature 2",
-      "feature 3",
-      "feature 4",
-      "feature 5",
-      ,
-      "feature 6",
-    ],
-  },
-  {
-    title: "title4",
-    features: [
-      "feature 1",
-      "feature 2",
-      "feature 3",
-      "feature 4",
-      "feature 5",
-      ,
-      "feature 6",
+      "Design Research",
+      "Motion Design",
+      "VFx",
+      "AR/VR",
+      "3D design & Films",
+      "Experience Design",
+      "Art Direction",
+      "Tech-Integrated Billboards",
+      "Holobox Advertising",
+      "Web Innovation",
+      "Gamification",
     ],
   },
 ];
@@ -140,19 +137,22 @@ const slider = [{}, {}, {}, {}, {}];
 const About = () => {
   return (
     <div className=" py-56">
-      <div className="flex gap-8 justify-center">
+      <div className="flex gap-3 justify-center px-20 relative z-30">
         {content.map((item, idx) => (
           <div className="flex flex-col">
             <p
-              className={`text-pri-green text-4xl font-bold   ${stretchPro.className}`}
+              className={`text-pri-green text-3xl font-bold   ${stretchPro.className}`}
             >
               {item.title}
             </p>
             {item.features.map((feature) => (
               <span
-                className={`text-gray-200 text-lg  ${galaktisRegular.className}`}
+                className={`text-gray-100  text-xl  ${galaktisRegular.className}`}
               >
-                {feature}
+                <span className="bg-black/5 px-3 backdrop-blur-3xl inline-block">
+                  {" "}
+                  {feature}
+                </span>
               </span>
             ))}
           </div>
@@ -179,33 +179,33 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["100%", "-100%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] z-30">
-      <div className="sticky top-1/3 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20 ">
-          <SlidingText text={"from the univ"} />
-          {/* {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })} */}
+    <section ref={targetRef} className=" h-[300vh] ">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex flex-col gap-36 ">
+          <img
+            className="h-[14vmax] object-cover overflow-visible relative z-10 "
+            src={"/images/texts/Asset_3.png"}
+          />
 
-          {slider.map((slide, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col justify-end relative  cursor-pointer"
-            >
-              <button className="bg-light-orange w-52  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
-                {/* See Works */}
-              </button>
-              <Image
-                width={200}
-                height={200}
-                className="  absolute -left-24 -bottom-10"
-                src={"/3dPerson/cam.0000.png"}
-              />
-            </div>
-          ))}
+          <div className="flex gap-20  relative z-30">
+            {slider.map((slide, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col justify-end relative  cursor-pointer"
+              >
+                <button className="bg-light-orange w-52  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold"></button>
+                <Image
+                  width={200}
+                  height={200}
+                  className="  absolute -left-24 -bottom-10"
+                  src={"/3dPerson/cam.0000.png"}
+                />
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
@@ -240,7 +240,7 @@ export default About;
 const cards = [
   {
     url: "/images/Asset1.png",
-    title: "Title 1",
+    title: "HT Interiors",
     id: 1,
   },
   {

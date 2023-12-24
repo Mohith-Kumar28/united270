@@ -17,7 +17,7 @@ const About = () => {
     <div className=" py-56">
       <div className="flex gap-12 justify-center">
         {content.map((item, idx) => (
-          <div className="flex flex-col">
+          <div className="flex flex-col" key={idx}>
             <p className="text-pri-green text-2xl font-bold  ">{item.title}</p>
             {item.features.map((feature) => (
               <span className="text-gray-200 text-lg">{feature}</span>

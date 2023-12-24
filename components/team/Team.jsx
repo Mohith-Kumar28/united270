@@ -3,30 +3,61 @@ import React, { useState } from "react";
 import TeamModal from "./TeamModal";
 import SlidingText from "../utils/SlidingText";
 import { galaktisRegular } from "@/styles/fonts";
+import { motion } from "framer-motion";
 
 const Team = () => {
   let [isOpen, setIsOpen] = useState(false);
   let [selectedPerson, setSelectedPerson] = useState();
   const team = [
     {
-      name: "user 1",
+      name: "~JEFF EMMANUEL",
+      role: "Chief Creative Officer & Co- Founder",
+      photo: "/images/team/person1.png",
+      photoSmall: "",
+      brands: "/images/team/person1Brands.png",
+      linkedinUrl: "",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "With over 18 years of experience in advertising and brand-building, Jeff has been the man behind many iconic campaigns. He has worked on numerous brands like Simon Carter, Puma, Mumbai Indians, Allen Solly, Mia by Tanishq, Louis Phillipe and headed various creative teams both in India and the Middle East. During his stint he has been recognised multiple times by both national and international forums like the Cannes Lions and been featured in the top creatives lists by various agencies.",
     },
     {
-      name: "user 2",
+      name: "~MANISH CHAWALA",
+      role: "Chief Creative Officer & Co- Founder",
+      photo: "/images/team/person2.png",
+      photoSmall: "",
+      brands: "/images/team/person2Brands.png",
+      linkedinUrl: "",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "With a keen interest and experience in business and entrepreneurship, he has recently diversified himself with the advertising industry. In the past 5 years he has managed and built various accounts across diverse industries. A full-time hustler, Manish is an organised visionary who is passionate about building businesses into brands. His key skills include Account Management, Media Buying and Strategy, and Tech and Media Innovations.",
     },
     {
-      name: "user 3",
+      name: "~SASHADSOZA",
+      role: "Chief Creative Officer & Co- Founder",
+      photo: "/images/team/person3.png",
+      photoSmall: "/images/team/person3Small.png",
+      brands: "/images/team/person3Brands.png",
+      linkedinUrl: "",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "With over 5 years of experience in the advertising industry, Sasha has worked on some key accounts in a short span. She spearheaded her career by writing for Hindustan Unilever - one of Indias largest and most trusted FMCG brands. She led the communications for their CSR initiatives on Twitter and executive leadership profiles. She later moved on to other noteworthy brands across segments like Automobile, fashion, finance, real estate among many others.",
     },
     {
-      name: "user 4",
+      name: "~ANTARA SRIVATSA",
+      role: "Chief Creative Officer & Co- Founder",
+      photo: "/images/team/person4.png",
+      photoSmall: "/images/team/person4Small.png",
+      brands: "/images/team/person4Brands.png",
+      linkedinUrl: "",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "With over 8 years of experience in retail and visual merchandising across various marketsin the country, Antara has elevated multiple brands like Tommy Hilfiger, ALDO, Lifestyle. Apart from these she has a keen interest in styling and marketing and has associated with brands like Collective, Louis Phillipe, Mia, Lifestyle and TFM Modelling agency for the same.",
+    },
+    {
+      name: "~SENAPATHI KESAVA",
+      role: "Chief Creative Officer & Co- Founder",
+      photo: "/images/team/person5.png",
+      photoSmall: "",
+      brands: "",
+      linkedinUrl: "",
+      description:
+        "With over 22 years of expertise in the IT domain across diverse business verticals, Senapathi is our experienced advisor and mentor. His multi-faceted expertise lies in areas like IT Strategy & Planning, Enterprise Solution Design, and Business Transformation - including Digital Transformation ranging from Big data and Robotics to Apps and Al.",
     },
   ];
 
@@ -37,9 +68,17 @@ const Team = () => {
         {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
           FROM THE UNIV
         </p> */}
-        <SlidingText text={"FROM THE UNIV"} />
-
-        <div className="flex gap-20 mt-20 relative z-20 justify-center">
+        <TranslateWrapper>
+          <img
+            className=" h-[14vmax] object-cover overflow-visible"
+            src={"/images/texts/Asset_5.png"}
+          />{" "}
+          {/* <img
+            className=" h-[14vmax] object-cover overflow-visible"
+            src={"/images/texts/Asset_5.png"}
+          /> */}
+        </TranslateWrapper>{" "}
+        <div className="flex flex-wrap gap-16 mt-20 relative z-20 justify-center">
           {team.map((member, idx) => (
             <div
               key={idx}
@@ -49,17 +88,17 @@ const Team = () => {
                 onClick={() => {
                   setSelectedPerson(member), setIsOpen(true);
                 }}
-                className="bg-light-orange w-36  h-36 relative rounded-full text-xl font-semibold"
+                className="bg-gray-200 w-36  h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end"
               >
                 <Image
                   width={600}
                   height={600}
-                  className="  absolute -left-1 -bottom-7 "
-                  src={"/3dPerson/cam.0000.png"}
+                  className="  absolute bottom0 "
+                  src={member.photoSmall}
                 />
               </div>
               <span
-                className={`text-center mt-2 font-bold text-lg text-gray-200 ${galaktisRegular.className}`}
+                className={`text-center mt-2 w-44 font-bold text-lg text-gray-200 ${galaktisRegular.className}`}
               >
                 {member.name}
               </span>
@@ -85,3 +124,16 @@ const Team = () => {
 };
 
 export default Team;
+
+const TranslateWrapper = ({ children, reverse }) => {
+  return (
+    <motion.div
+      initial={{ translateX: reverse ? "-100%" : "50%" }}
+      animate={{ translateX: reverse ? "0%" : "-100%" }}
+      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      className="flex gap-4 px-2"
+    >
+      {children}
+    </motion.div>
+  );
+};

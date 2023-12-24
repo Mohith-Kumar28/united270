@@ -12,7 +12,7 @@ const SlidingText = ({ reverse, text }) => (
     </TranslateWrapper>
     <TranslateWrapper reverse={reverse}>
       <span
-        className={`ml-48 w-fit whitespace-nowrap text-[20vmax] uppercase leading-[0.75] text-pri-green text-9xl font-extrabold   ${cafeDeParis.className}`}
+        className={` w-fit whitespace-nowrap text-[20vmax] uppercase leading-[0.75] text-pri-green text-9xl font-extrabold   ${cafeDeParis.className}`}
       >
         {text}
       </span>

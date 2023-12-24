@@ -27,6 +27,8 @@ import {
   SiLinkedin,
 } from "react-icons/si";
 import { galaktisRegular, sourceSansVariableItalic } from "@/styles/fonts";
+import SlidingText from "../utils/SlidingText";
+import Link from "next/link";
 
 export default function TeamModal({ isOpen, setIsOpen, user }) {
   function closeModal() {
@@ -74,9 +76,9 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[70vh] flex flex-col justify-center">
+                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[80vh] flex flex-col justify-center">
                   <div className="flex  overflow-hidden">
-                    <TranslateWrapper>
+                    {/* <TranslateWrapper>
                       <LogoItemsTop />
                     </TranslateWrapper>
                     <TranslateWrapper>
@@ -95,6 +97,16 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     </TranslateWrapper>
                     <TranslateWrapper reverse>
                       <LogoItemsBottom />
+                    </TranslateWrapper> */}
+                    <TranslateWrapper>
+                      <img
+                        className=" h-[14vmax] object-cover overflow-visible"
+                        src={user?.brands}
+                      />{" "}
+                      <img
+                        className="translate-x-[25%] h-[14vmax] object-cover overflow-visible"
+                        src={user?.brands}
+                      />
                     </TranslateWrapper>
                   </div>
                   <Dialog.Title
@@ -102,9 +114,9 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     className="mt-4 text-lg font-medium leading-6 text-gray-900"
                   >
                     <p
-                      className={`text-pri-green  text-8xl font-semibold relative   w-full px-5  ${galaktisRegular.className}`}
+                      className={`text-pri-green  text-8xl font-semibold relative z-10 bg-white/5 backdrop-blur-lg w-full px-5  ${galaktisRegular.className}`}
                     >
-                      ~ {user?.name}
+                      {user?.name}
                     </p>
                   </Dialog.Title>
                   <div className="mt-2 p-4 justify-between flex">
@@ -113,14 +125,13 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     >
                       {user?.description}
                     </p>
-                    <a
-                      href="#"
-                      rel="nofollow"
-                      target="_blank"
-                      className="cursor-pointer w-16 md:w-24 h-16 md:h-24 flex justify-center items-center  hover:bg-slate-200 text-pri-green transition-colors"
+                    <Link
+                      href={user?.linkedinUrl}
+                      // target="_blank"
+                      className="cursor-pointer z-10 w-16 md:w-24 h-16 md:h-24 flex justify-center items-center rounded-lg  hover:bg-black/10 text-pri-green transition-colors outline-none"
                     >
                       <SiLinkedin className="text-4xl md:text-5xl" />
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="mt-4">
@@ -135,7 +146,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                       width={600}
                       height={600}
                       className="object-contain h-full py-20  absolute -right-10 -bottom-3 "
-                      src={"/images/team/jeff.png"}
+                      src={user?.photo}
                     />
                   </div>
                 </Dialog.Panel>
@@ -151,7 +162,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateX: reverse ? "-100%" : "0%" }}
+      initial={{ translateX: reverse ? "-100%" : "50%" }}
       animate={{ translateX: reverse ? "0%" : "-100%" }}
       transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
       className="flex gap-4 px-2"

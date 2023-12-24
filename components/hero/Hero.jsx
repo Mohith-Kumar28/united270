@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion, useAnimate } from "framer-motion";
-import SlidingText from "./utils/SlidingText";
+import SlidingText from "../utils/SlidingText";
 import { galaktisRegular } from "@/styles/fonts";
 
 const Hero = () => {
@@ -11,15 +11,26 @@ const Hero = () => {
         {/* <p className="text-pri-green text-9xl font-extrabold   ">
           Text to test here
         </p> */}
-
-        <SlidingText text={"this is just a text to "} />
+        <div className="flex overflow-hidden mt-4">
+          <TranslateWrapper>
+            <img
+              className=" h-[14vmax] object-cover overflow-visible"
+              src={"/images/texts/Asset_1.png"}
+            />{" "}
+            <img
+              className=" h-[14vmax] object-cover overflow-visible"
+              src={"/images/texts/Asset_1.png"}
+            />
+          </TranslateWrapper>{" "}
+        </div>
         <p
           className={
-            `text-gray-600 w-36 p-3 mt-8 text-left bg-[#fbcbcc] text-xl font-medium ml-44` +
+            `text-gray-100  w-80 p-3 mt-2 text-left  text-xl font-medium ml-24` +
             ` ${galaktisRegular.className}`
           }
         >
-          Text to test here
+          Cyberfiction aims to be a decentralized community that can create new
+          values and profits through play in the virtual world.
         </p>
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
@@ -40,3 +51,16 @@ const Hero = () => {
 };
 
 export default Hero;
+
+const TranslateWrapper = ({ children, reverse }) => {
+  return (
+    <motion.div
+      initial={{ translateX: reverse ? "-100%" : "0%" }}
+      animate={{ translateX: reverse ? "0%" : "-100%" }}
+      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      className="flex gap-4 px-2"
+    >
+      {children}
+    </motion.div>
+  );
+};
