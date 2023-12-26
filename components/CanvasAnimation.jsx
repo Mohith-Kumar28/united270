@@ -123,7 +123,7 @@ const CanvasAnimation = () => {
             "0"
           )}.png`}
           alt="3D Person"
-          className="object-cover max-w-[100vw] ov fixed w-full h-screen z-20 -bottom-44 md:bottom-0 left-0"
+          className="object-cover max-w-[100vw] ov fixed w-full h-screen z-20 -bottom-44 md:-bottom-10 left-0"
         />
       </div>
     </div>
