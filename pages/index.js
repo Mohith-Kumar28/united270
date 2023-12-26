@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import CanvasAnimation from "../components/CanvasAnimation";
-import NavBar from "@/components/NavBar";
+
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Brands from "@/components/brands/Brands";
 import Team from "@/components/team/Team";
 import HorizontalScroll from "@/components/brands/HorizontalScroll";
 import Layout from "@/components/layout/Layout";
-import WearableAccordion from "@/components/wearables/WearableAccordion";
+
 import ModelsHero from "@/components/models/ModelsHero";
 import WearableHorizontalScroll from "@/components/wearables/WearableHorizontalScroll";
 import HyperRealisticHero from "@/components/hyperRealistic/HyperRealisticHero";
