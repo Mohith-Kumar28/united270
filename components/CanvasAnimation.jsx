@@ -9,20 +9,19 @@ const CanvasAnimation = () => {
   const frameCount = 359; // Adjust this according to your image count
 
   useEffect(() => {
-    const preloadedImages = [];
-
     const loadImages = async () => {
       try {
+        const imagePromises = [];
         for (let i = 1; i <= frameCount; i++) {
           const img = new Image();
           img.src = `/3dPerson/cam.${String(i).padStart(4, "0")}.png`;
-          await new Promise((resolve, reject) => {
+          const promise = new Promise((resolve, reject) => {
             img.onload = resolve;
             img.onerror = reject;
           });
-          preloadedImages.push(img);
+          imagePromises.push(promise);
         }
-
+        await Promise.all(imagePromises);
         setImagesLoaded(true);
       } catch (error) {
         console.error("Error loading images:", error);
