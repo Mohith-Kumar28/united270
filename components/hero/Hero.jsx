@@ -17,10 +17,10 @@ const Hero = () => {
               className=" h-[14vmax] object-cover overflow-visible"
               src={"/images/texts/Asset_1.png"}
             />{" "}
-            {/* <img
-              className="  h-[14vmax] object-contain overflow-visible"
+            <img
+              className="  h-[14vmax] object-cover overflow-visible hidden md:block"
               src={"/images/texts/Asset_1.png"}
-            /> */}
+            />
           </TranslateWrapper>
         </div>
         <p
