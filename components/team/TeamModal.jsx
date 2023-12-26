@@ -114,7 +114,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     className="mt-4 text-lg font-medium leading-6 text-gray-900"
                   >
                     <p
-                      className={`text-pri-green  text-8xl font-semibold relative z-10 bg-white/5 backdrop-blur-lg w-full px-5  ${galaktisRegular.className}`}
+                      className={`text-pri-green  text-8xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
                     >
                       {user?.name}
                     </p>

@@ -58,7 +58,7 @@ const Card = ({ card }) => {
       className="group relative h-screen flex flex-col justify-between py-10  w-[80vw] overflow-hidden "
     >
       <div className="flex justify-between md:flex-row flex-col gap-20   w-full">
-        <div className="flex gap-4 md:gap-10 md:pl-20 pt-16">
+        <div className="flex gap-4 md:gap-10 md:pl-20 pt-24">
           <div>
             <Image
               width={50}
