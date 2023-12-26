@@ -78,7 +78,7 @@ const Team = () => {
             src={"/images/texts/Asset_5.png"}
           /> */}
         </TranslateWrapper>{" "}
-        <div className="flex flex-wrap gap-16 mt-20 relative z-20 justify-center">
+        <div className="flex flex-wrap gap-16 mt-20 relative z-20 justify-center ">
           {team.map((member, idx) => (
             <div
               key={idx}
@@ -98,9 +98,9 @@ const Team = () => {
                 />
               </div>
               <span
-                className={`text-center mt-2 w-44 font-bold text-lg text-gray-200 ${galaktisRegular.className}`}
+                className={`text-center mt-2 w-44 font-bold text-lg text-gray-200 rounded-lg bg-white/5 backdrop-blur-lg  ${galaktisRegular.className}`}
               >
-                {member.name}
+                {member.role}
               </span>
             </div>
           ))}

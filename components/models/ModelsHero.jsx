@@ -94,7 +94,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <section ref={targetRef} className=" h-[200vh] relative z-30">
+    <section ref={targetRef} className=" h-[400vh] relative z-30">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-light-orange ">
         <motion.div style={{ x }} className="flex  justify-between ">
           <div className="flex w-[100vw] overflow-hidden h-screen relative gap-10 p-20">
@@ -106,32 +106,37 @@ const HorizontalScrollCarousel = () => {
                 />
               </TranslateWrapper>
             </div>
-            <div className="flex absolute  bottom-0  cursor-pointer">
-              <Image
-                width={600}
-                height={600}
-                src={"/images/models/model1.png"}
-              />
-              <Image
-                width={600}
-                height={600}
-                src={"/images/models/model2.png"}
-              />
-              <Image
-                width={600}
-                height={600}
-                src={"/images/models/model3.png"}
-              />
-              <Image
-                width={600}
-                height={600}
-                src={"/images/models/model4.png"}
-              />
-              <Image
-                width={600}
-                height={600}
-                src={"/images/models/model5.png"}
-              />
+
+            <div className="absolute bottom-0  ">
+              <TranslateWrapper reverse>
+                <div className="flex ">
+                  <Image
+                    width={600}
+                    height={600}
+                    src={"/images/models/model1.png"}
+                  />
+                  <Image
+                    width={600}
+                    height={600}
+                    src={"/images/models/model2.png"}
+                  />
+                  <Image
+                    width={600}
+                    height={600}
+                    src={"/images/models/model3.png"}
+                  />
+                  <Image
+                    width={600}
+                    height={600}
+                    src={"/images/models/model4.png"}
+                  />
+                  <Image
+                    width={600}
+                    height={600}
+                    src={"/images/models/model5.png"}
+                  />
+                </div>
+              </TranslateWrapper>
             </div>
           </div>
           {models.map((model) => (
@@ -149,7 +154,7 @@ export default ModelsHero;
 
 const ModelCard = ({ model }) => {
   return (
-    <div className="flex flex-col justify-center  w-[100vw] h-screen relative p-10 overflow-hidden">
+    <div className="flex flex-col justify-center  w-[100vw] h-screen relative px-10 pb-28 md:pb-auto overflow-hidden">
       <TranslateWrapper>
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900">
           <p
@@ -159,7 +164,7 @@ const ModelCard = ({ model }) => {
           </p>
         </h3>
         <img
-          className=" w-[20vw] object-cover overflow-visible"
+          className=" md:w-[20vw] object-cover overflow-visible"
           src={model.instaImg}
         />
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900">
@@ -172,7 +177,7 @@ const ModelCard = ({ model }) => {
       </TranslateWrapper>
       <div className="mt-2 p-4 justify-between flex">
         <p
-          className={`text-lg font-bold text-pri-pink w-2/3  ${sourceSansVariableItalic.className}`}
+          className={`text-base md:text-lg rounded-lg font-bold p-4 bg-light-orange/80 backdrop-blur-md text-pri-pink w-2/3 relative z-30 ${sourceSansVariableItalic.className}`}
         >
           {model.description}
         </p>
@@ -188,19 +193,19 @@ const ModelCard = ({ model }) => {
         <Image
           width={600}
           height={600}
-          className="object-contain h-full py-20  absolute -right-10 -bottom-3 "
+          className="object-contain   w-1/2 md:h-full py-20  absolute right-10 md:-right-10 -bottom-3 "
           src={model.photo}
         />
       </div>
       <div className="flex absolute z-20 bottom-10 right-20 cursor-pointer">
         <div className="flex flex-col justify-end relative">
-          <button className="bg-pri-pink  pl-16 pr-5 py-3 rounded-xl text-xl font-semibold">
+          <button className="bg-pri-pink  pl-16 pr-5 py-2 rounded-xl text-md md:text-xl font-semibold">
             Meet {model.name}
           </button>
           <Image
-            width={150}
-            height={150}
-            className="  absolute -left-28 bottom-0"
+            width={100}
+            height={100}
+            className="  absolute -left-12 bottom-0"
             src={"/images/models/model1.png"}
           />
         </div>

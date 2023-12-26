@@ -23,14 +23,7 @@ export default function Home() {
       <Layout>
         {/* <NavBar /> */}
         <CanvasAnimation />
-        {/* <div className=" w-full h-screen  z-10 fixed -bottom-0 left-0 overflow-hidden">
-        <Image
-          width={1000}
-          height={1000}
-          className="w-full"
-          src={"/3dPerson/cam.0000.png"}
-        />
-      </div> */}
+
         <Hero />
         <AfterHero />
         <About />

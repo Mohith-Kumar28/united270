@@ -47,24 +47,24 @@ const HyperRealisticHero = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] z-30 bg-pri-pink">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
+      <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
         <motion.div style={{ x }} className="flex gap-52 ">
-          <div className="flex w-[100vw] relative gap-10 p-20">
+          <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 p-20">
             <Image
               width={80}
               height={80}
               className="absolute top-44 -left-5 z-10"
               src={"/images/logos/Asset_2.png"}
             />
-            <div className="w-1/3 bg-black"></div>
+            <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div>
             <div className="w-2/3">
               <h2
-                className={`text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
+                className={`text-5xl md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
               >
                 CREATING HYPER-REALISTIC 3D FASHION BESPOKE CREATIONS ~
               </h2>
               <h3
-                className={`text-7xl text-gray-600 mt-3 ${cafeDeParis.className}`}
+                className={`text-3xl md:text-7xl text-gray-600 mt-3 ${cafeDeParis.className}`}
               >
                 BRANDS
                 <br />
@@ -85,14 +85,14 @@ const HyperRealisticHero = () => {
                   return (
                     <div className="w-[80vw] flex flex-col justify-center relative">
                       <h2
-                        className={` text-pri-green mb-2 mr-6  text-4xl text-right  ${galaktisRegular.className}`}
+                        className={` text-pri-green mb-2 md:mr-6  text-4xl text-right  ${galaktisRegular.className}`}
                       >
                         {item.title}
                       </h2>
                       <Image
-                        width={80}
-                        height={80}
-                        className="absolute -right-20 top-16 z-10"
+                        width={60}
+                        height={60}
+                        className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:-right-16 md:top-20 z-10"
                         src={"/images/logos/Asset_2.png"}
                       />
                       <div className="relative h-[60vh]">

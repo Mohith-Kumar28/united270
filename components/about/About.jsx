@@ -137,11 +137,11 @@ const slider = [{}, {}, {}, {}, {}];
 const About = () => {
   return (
     <div className=" py-56">
-      <div className="flex gap-3 justify-center px-20 relative z-30">
+      <div className="flex flex-wrap gap-x-3 gap-y-16 justify-center px-20 relative z-30">
         {content.map((item, idx) => (
           <div className="flex flex-col">
             <p
-              className={`text-pri-green text-3xl font-bold   ${stretchPro.className}`}
+              className={`text-pri-green text-3xl w-72 font-bold   ${stretchPro.className}`}
             >
               {item.title}
             </p>

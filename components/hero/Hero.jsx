@@ -6,26 +6,26 @@ import { galaktisRegular } from "@/styles/fonts";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen overflow-hidden relative">
-      <div className="absolute top-1/2 -translate-y-[50%] left-0 w-full z-0 ">
+    <div className="w-full h-screen flex flex-col justify-center overflow-hidden relative">
+      <div className=" ">
         {/* <p className="text-pri-green text-9xl font-extrabold   ">
           Text to test here
         </p> */}
-        <div className="flex overflow-hidden mt-4">
+        <div className="flex overflow-hidden mt-4 relative z-0">
           <TranslateWrapper>
             <img
-              className=" h-[14vmax] object-cover overflow-visible"
+              className=" h-[14vmax] object-contain overflow-visible"
               src={"/images/texts/Asset_1.png"}
             />{" "}
             <img
-              className=" h-[14vmax] object-cover overflow-visible"
+              className="  h-[14vmax] object-contain overflow-visible"
               src={"/images/texts/Asset_1.png"}
             />
-          </TranslateWrapper>{" "}
+          </TranslateWrapper>
         </div>
         <p
           className={
-            `text-gray-100  w-80 p-3 mt-2 text-left  text-xl font-medium ml-24` +
+            `text-gray-100  w-80 p-3 mt-2 text-left  text-xl font-medium ml-24 z-30 relative rounded-lg bg-white/5 backdrop-blur-lg` +
             ` ${galaktisRegular.className}`
           }
         >

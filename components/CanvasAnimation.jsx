@@ -129,17 +129,25 @@ const CanvasAnimation = () => {
   }, [currentFrame]);
 
   return (
-    <div className="fixed w-full h-screen z-20 bottom-0 left-0">
-      <canvas ref={canvasRef} className="w-full h-full" />
-      <div className="w-full h-screen">
-        <Image
-          src={`/3dPerson/cam.${String(currentFrame + 1).padStart(4, "0")}.png`}
-          layout="fill"
-          objectFit="cover"
-          alt="3D Person"
-        />
+    <>
+      <div className="fixed w-full h-screen z-20 bottom-0 left-0 ">
+        <canvas ref={canvasRef} className="w-full h-full" />
+        <div className="w-full  h-screen ">
+          <Image
+            src={`/3dPerson/cam.${String(currentFrame + 1).padStart(
+              4,
+              "0"
+            )}.png`}
+            // layout="fill"
+            // objectFit="cover"
+            width={1000}
+            height={1000}
+            alt="3D Person"
+            className="  object-cover max-w-[100vw] ov fixed w-full h-screen z-20 -bottom-44 md:bottom-0 left-0"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

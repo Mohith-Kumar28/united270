@@ -10,8 +10,15 @@ import {
 
 const Navbar = () => {
   return (
-    <div className=" fixed top-0 left-0 flex justify-between  w-full px-10 py-2 z-40 ">
-      <Image width={100} height={100} src={"/images/logos/united270logo.png"} />
+    <div className=" fixed top-0 left-0 flex justify-between  w-full px-10  z-40 ">
+      <div className="bg-white/10 backdrop-blur-xl p-4">
+        <Image
+          className=""
+          width={90}
+          height={90}
+          src={"/images/logos/united270logo.png"}
+        />
+      </div>
       <div>
         <div className="inline-flex gap-6  bg-white/10 backdrop-blur-xl rounded-md p-3">
           <LogoItem Icon={SiDiscord} />

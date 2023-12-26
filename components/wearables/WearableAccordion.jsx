@@ -83,7 +83,7 @@ const Panel = ({ open, setOpen, id, Icon, title, imgSrc, description }) => {
               initial="closed"
               animate="open"
               exit="closed"
-              className={`px-4 py-2 bg-black/40 backdrop-blur-sm text-white ${galaktisRegular.className}`}
+              className={`px-4 py-2 hidden md:block bg-white/5 backdrop-blur-lg text-white ${galaktisRegular.className}`}
             >
               <p>{description}</p>
             </motion.div>
