@@ -14,13 +14,13 @@ const Hero = () => {
         <div className="flex overflow-hidden mt-4 relative z-0">
           <TranslateWrapper>
             <img
-              className=" h-[14vmax] object-contain overflow-visible"
+              className=" h-[14vmax] object-cover overflow-visible"
               src={"/images/texts/Asset_1.png"}
             />{" "}
-            <img
+            {/* <img
               className="  h-[14vmax] object-contain overflow-visible"
               src={"/images/texts/Asset_1.png"}
-            />
+            /> */}
           </TranslateWrapper>
         </div>
         <p

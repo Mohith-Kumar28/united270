@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { galaktisRegular } from "@/styles/fonts";
 
 const CanvasAnimation = () => {
   const [currentFrame, setCurrentFrame] = useState(0);
@@ -88,14 +89,16 @@ const CanvasAnimation = () => {
 
   if (!imagesLoaded) {
     return (
-      <div className="fixed flex justify-center align-middle z-50 w-full h-screen bg-black">
+      <div className="fixed flex justify-center align-middle z-50 w-full h-screen bg-pri-green">
         <div className="flex flex-col justify-center">
-          <div className="flex  justify-center gap-3">
+          <div
+            className={`flex text-4xl font-bold justify-center gap-3 ${galaktisRegular.className}`}
+          >
             <svg
               className="mx-auto bg-white animate-spin h-5 w-5 mr-3 ..."
               viewBox="0 0 24 24"
             ></svg>
-            Loading...
+            LOADING...
           </div>
         </div>
       </div>
