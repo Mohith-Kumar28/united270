@@ -8,7 +8,7 @@ import {
   SiYoutube,
 } from "react-icons/si";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div className=" fixed top-0 left-0 flex justify-between  w-full px-10  z-40 ">
       <div className="bg-white/10 backdrop-blur-xl p-4">
@@ -33,7 +33,7 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
 
 const LogoItem = ({ Icon }) => {
   return (
