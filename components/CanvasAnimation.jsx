@@ -8,7 +8,7 @@ const CanvasAnimation = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const canvasRef = useRef(null);
   const frameCount = 358; // Total image count
-  const initialLoadCount = 20; // Initial loaded count
+  const initialLoadCount = 50; // Initial loaded count
 
   useEffect(() => {
     const loadImages = async () => {
