@@ -8,7 +8,7 @@ const CanvasAnimation = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const canvasRef = useRef(null);
   const frameCount = 358; // Total image count
-  const initialLoadCount = 50; // Initial loaded count
+  const initialLoadCount = 200; // Initial loaded count
 
   useEffect(() => {
     const loadImages = async () => {
@@ -87,7 +87,9 @@ const CanvasAnimation = () => {
   }, [imagesLoaded, frameCount]);
 
   if (!imagesLoaded) {
-    return <div>Loading...</div>; // Placeholder until all images are loaded
+    return (
+      <div className="fixed z-50 w-full h-screen bg-black">Loading...</div>
+    ); // Placeholder until all images are loaded
   }
 
   return (
