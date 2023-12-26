@@ -88,7 +88,17 @@ const CanvasAnimation = () => {
 
   if (!imagesLoaded) {
     return (
-      <div className="fixed z-50 w-full h-screen bg-black">Loading...</div>
+      <div className="fixed flex justify-center align-middle z-50 w-full h-screen bg-black">
+        <div className="flex flex-col justify-center">
+          <div className="flex  justify-center gap-3">
+            <svg
+              className="mx-auto bg-white animate-spin h-5 w-5 mr-3 ..."
+              viewBox="0 0 24 24"
+            ></svg>
+            Loading...
+          </div>
+        </div>
+      </div>
     ); // Placeholder until all images are loaded
   }
 
