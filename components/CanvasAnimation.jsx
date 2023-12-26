@@ -14,9 +14,19 @@ const CanvasAnimation = () => {
     const loadImages = async () => {
       try {
         const images = [];
+        const imagePromises = [];
         for (let i = 1; i <= initialLoadCount; i++) {
-          images.push(`/3dPerson/cam.${String(i).padStart(4, "0")}.png`);
+          const imgSrc = `/3dPerson/cam.${String(i).padStart(4, "0")}.png`;
+          images.push(imgSrc);
+          const promise = new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = imgSrc;
+          });
+          imagePromises.push(promise);
         }
+        await Promise.all(imagePromises);
         setLoadedImages(images);
         setImagesLoaded(true);
       } catch (error) {
