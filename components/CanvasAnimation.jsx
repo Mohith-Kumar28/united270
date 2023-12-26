@@ -16,7 +16,10 @@ const CanvasAnimation = () => {
         const images = [];
         const imagePromises = [];
         for (let i = 1; i <= initialLoadCount; i++) {
-          const imgSrc = `/3dPerson/cam.${String(i).padStart(4, "0")}.png`;
+          const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
+            3,
+            "0"
+          )}.png`;
           images.push(imgSrc);
           const promise = new Promise((resolve, reject) => {
             const img = new Image();
@@ -47,7 +50,9 @@ const CanvasAnimation = () => {
         try {
           const images = [...loadedImages];
           for (let i = loadedImages.length + 1; i <= frameCount; i++) {
-            images.push(`/3dPerson/cam.${String(i).padStart(4, "0")}.png`);
+            images.push(
+              `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
+            );
           }
           setLoadedImages(images);
         } catch (error) {
@@ -98,7 +103,10 @@ const CanvasAnimation = () => {
           />
         ))}
         <img
-          src={`/3dPerson/cam.${String(currentFrame + 1).padStart(4, "0")}.png`}
+          src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
+            3,
+            "0"
+          )}.png`}
           alt="3D Person"
           className="object-cover max-w-[100vw] ov fixed w-full h-screen z-20 -bottom-44 md:bottom-0 left-0"
         />
