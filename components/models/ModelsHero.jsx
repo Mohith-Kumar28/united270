@@ -218,7 +218,7 @@ const ModelCard = ({ model }) => {
         <Image
           width={600}
           height={600}
-          className="object-contain  w-2/3 md:w-1/2 md:h-full py-20  absolute right-10 md:-right-10 -bottom-3 "
+          className="object-contain  w-[60%] md:w-1/2 md:h-full py-20  absolute right-2 md:-right-10 -bottom-3 "
           src={model.photo}
         />
       </div>
