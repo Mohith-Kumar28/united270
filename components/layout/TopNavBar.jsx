@@ -21,11 +21,20 @@ const TopNavBar = () => {
       </div>
       <div>
         <div className="w-full flex flex-wrap gap-4 md:gap-6  bg-white/10 backdrop-blur-xl rounded-md p-3">
-          <LogoItem Icon={SiDiscord} />
-          <LogoItem Icon={SiX} />
-          <LogoItem Icon={SiInstagram} />
-          <LogoItem Icon={SiLinkedin} />
-          <LogoItem Icon={SiYoutube} />
+          <LogoItem href="" Icon={SiDiscord} />
+          <LogoItem href="https://twitter.com/united270?lang=en" Icon={SiX} />
+          <LogoItem
+            href="https://www.instagram.com/united_270/"
+            Icon={SiInstagram}
+          />
+          <LogoItem
+            href="https://www.linkedin.com/company/united270/mycompany/"
+            Icon={SiLinkedin}
+          />
+          <LogoItem
+            href="https://www.youtube.com/@United270AdLabs"
+            Icon={SiYoutube}
+          />
           {/* <LogoItem Icon={SiYoutube} /> */}
         </div>
       </div>
@@ -35,10 +44,10 @@ const TopNavBar = () => {
 
 export default TopNavBar;
 
-const LogoItem = ({ Icon }) => {
+const LogoItem = ({ Icon, href }) => {
   return (
     <a
-      href="/"
+      href={href}
       rel="nofollow"
       target="_blank"
       className=" flex justify-center items-center   text-pri-green transition-colors"
