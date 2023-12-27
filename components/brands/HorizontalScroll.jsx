@@ -80,7 +80,7 @@ const Card = ({ card }) => {
           {/* <card.icon className="w-28 h-28 text-pri-green" /> */}
         </div>
         <div
-          className={`flex md:flex-row flex-col font-bold mt-10 ${sourceSansVariableItalic.className}`}
+          className={`text-gray-200 flex md:flex-row flex-col font-bold mt-10 ${sourceSansVariableItalic.className}`}
         >
           <div className="border-2 rounded-lg p-4 md:w-[50%]">
             What they wrote:

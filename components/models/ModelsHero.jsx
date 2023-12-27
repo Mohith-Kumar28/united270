@@ -224,7 +224,7 @@ const ModelCard = ({ model }) => {
       </div>
       <div className="flex absolute  bottom-10 right-20 cursor-pointer z-30">
         <div className="flex flex-col justify-end relative">
-          <button className="bg-pri-pink  pl-16 pr-5 py-2 rounded-xl text-md md:text-xl font-semibold">
+          <button className="bg-pri-pink text-white  pl-16 pr-5 py-2 rounded-xl text-md md:text-xl font-semibold">
             Meet {model.name}
           </button>
           <Image

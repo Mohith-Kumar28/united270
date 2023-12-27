@@ -92,7 +92,7 @@ const CanvasAnimation = () => {
       <div className="fixed flex justify-center align-middle z-50 w-full h-screen bg-pri-green">
         <div className="flex flex-col justify-center">
           <div
-            className={`flex text-4xl font-bold justify-center gap-3 ${galaktisRegular.className}`}
+            className={`flex text-white text-4xl font-bold justify-center gap-3 ${galaktisRegular.className}`}
           >
             <svg
               className="mx-auto bg-white animate-spin h-5 w-5 mr-3 ..."

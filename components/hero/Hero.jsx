@@ -35,7 +35,7 @@ const Hero = () => {
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">
-          <button className="bg-pri-green  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
+          <button className="bg-pri-green text-white  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
             See Works
           </button>
           <Image

@@ -15,7 +15,7 @@ const LastSection = () => {
         </h2>
         <div>
           <div
-            className={`text-3xl  font-regular md:w-1/2 ${galaktisRegular.className}`}
+            className={`text-3xl text-gray-200 font-regular md:w-1/2 ${galaktisRegular.className}`}
           >
             Shortlisted
             <div className="flex gap-10 mt-4">
