@@ -88,7 +88,7 @@ const Team = () => {
                 onClick={() => {
                   setSelectedPerson(member), setIsOpen(true);
                 }}
-                className="bg-gray-200 w-36  h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end"
+                className="bg-gray-200 w-20 h-20 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end"
               >
                 <Image
                   width={600}
@@ -98,7 +98,7 @@ const Team = () => {
                 />
               </div>
               <span
-                className={`text-center mt-2 w-44 font-bold text-lg text-gray-200 rounded-lg bg-white/5 backdrop-blur-lg  ${galaktisRegular.className}`}
+                className={`text-center mt-2 w-28 md:w-44 font-bold text-lg text-gray-200 rounded-lg bg-white/5 backdrop-blur-lg  ${galaktisRegular.className}`}
               >
                 {member.role}
               </span>
@@ -128,9 +128,9 @@ export default Team;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateX: reverse ? "-100%" : "50%" }}
+      initial={{ translateX: reverse ? "-100%" : "150%" }}
       animate={{ translateX: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       className="flex gap-4 px-2"
     >
       {children}

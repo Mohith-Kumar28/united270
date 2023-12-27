@@ -11,7 +11,7 @@ import {
 const TopNavBar = () => {
   return (
     <div className=" fixed top-0 left-0 flex justify-between  w-full px-10  z-40 ">
-      <div className="bg-white/10 backdrop-blur-xl p-4">
+      <div className="bg-white/10 backdrop-blur-xl p-2 md:p-4">
         <Image
           className=""
           width={90}
@@ -20,7 +20,7 @@ const TopNavBar = () => {
         />
       </div>
       <div>
-        <div className="inline-flex gap-6  bg-white/10 backdrop-blur-xl rounded-md p-3">
+        <div className="w-full flex flex-wrap gap-4 md:gap-6  bg-white/10 backdrop-blur-xl rounded-md p-3">
           <LogoItem Icon={SiDiscord} />
           <LogoItem Icon={SiX} />
           <LogoItem Icon={SiInstagram} />
@@ -43,7 +43,7 @@ const LogoItem = ({ Icon }) => {
       target="_blank"
       className=" flex justify-center items-center   text-pri-green transition-colors"
     >
-      <Icon className="text-3xl" />
+      <Icon className="text-xl md:text-3xl" />
     </a>
   );
 };

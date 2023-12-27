@@ -183,7 +183,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className=" h-[300vh] ">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-0 flex h-screen md:items-center py-20 overflow-hidden">
         <motion.div style={{ x }} className="flex flex-col gap-36 ">
           <img
             className="h-[14vmax] object-cover overflow-visible relative z-10 "

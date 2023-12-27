@@ -6,20 +6,20 @@ import { motion, useAnimate } from "framer-motion";
 
 const LastSection = () => {
   return (
-    <div className=" h-screen relative flex flex-col gap-6 overflow-hidden">
-      <div className="flex justify-center  gap-44 pl-44">
+    <div className=" md:h-screen relative flex flex-col gap-6 overflow-hidden">
+      <div className="flex md:flex-row flex-col justify-center  px-16 gap-16 md:gap-44 md:pl-44">
         <h2
-          className={`text-6xl font-bold text-light-orange w-1/2  ${cafeDeParis.className}`}
+          className={`text-5xl md:text-6xl font-bold text-light-orange md:w-1/2  ${cafeDeParis.className}`}
         >
           “to have a great idea, have a lot of them.”
         </h2>
         <div>
           <div
-            className={`text-3xl  font-regular w-1/2 ${galaktisRegular.className}`}
+            className={`text-3xl  font-regular md:w-1/2 ${galaktisRegular.className}`}
           >
             Shortlisted
             <div className="flex gap-10 mt-4">
-              <div className="h-32">
+              <div className="h-32 w-32">
                 <Image
                   width={400}
                   height={400}
@@ -85,10 +85,10 @@ const LastSection = () => {
             className=" h-[14vmax] object-cover overflow-visible"
             src="/images/texts/Asset_6.png"
           />{" "}
-          <img
+          {/* <img
             className=" h-[14vmax] object-cover overflow-visible"
             src={"/images/texts/Asset_6.png"}
-          />
+          /> */}
         </TranslateWrapper>
         {/* <div className="w-[700px]">
                 <Image
@@ -102,7 +102,7 @@ const LastSection = () => {
           }
         /> */}
       </div>
-      <div className="flex justify-between px-28 relative z-30 ">
+      <div className="flex  md:flex-row flex-col gap-20 justify-between px-10 md:px-28 relative z-30 ">
         <div>
           <Image
             width={300}
@@ -131,7 +131,7 @@ const LastSection = () => {
             </div>
           </div>
           <p
-            className={`text-gray-200 w-80 bg-white/10 backdrop-blur-3xl text-lg mt-4 ${galaktisRegular.className}`}
+            className={`text-gray-200 w-80 bg-white/10 backdrop-blur-3xl p-3 rounded-lg text-lg mt-4 ${galaktisRegular.className}`}
           >
             Studio Space & Locations Curated Talents Model Agencies Meta
             Creative Partner Motion Capture Studio Green Screen Studio + VFX
@@ -151,7 +151,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "50%" }}
       animate={{ translateX: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       className="flex gap-4 px-2"
     >
       {children}

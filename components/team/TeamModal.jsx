@@ -76,7 +76,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[80vh] flex flex-col justify-center">
+                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[90vh] md:h-[80vh] flex flex-col justify-center">
                   <div className="flex  overflow-hidden">
                     {/* <TranslateWrapper>
                       <LogoItemsTop />
@@ -114,14 +114,14 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     className="mt-4 text-lg font-medium leading-6 text-gray-900"
                   >
                     <p
-                      className={`text-pri-green  text-8xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
+                      className={`text-pri-green text-4xl md:text-8xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
                     >
                       {user?.name}
                     </p>
                   </Dialog.Title>
-                  <div className="mt-2 p-4 justify-between flex">
+                  <div className="mt-2 p-4 justify-between flex flex-col md:flex-row">
                     <p
-                      className={`text-lg font-medium text-gray-100 w-2/3  ${sourceSansVariableItalic.className}`}
+                      className={`text-base md:text-lg font-medium text-gray-100 bg-white/5 backdrop-blur-lg relative z-10 md:w-2/3  ${sourceSansVariableItalic.className}`}
                     >
                       {user?.description}
                     </p>
