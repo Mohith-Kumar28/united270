@@ -42,7 +42,7 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[300vh] bg-pri-pink">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-32">
-          {cards.map((card) => {
+          {BrandsData.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
         </motion.div>
@@ -117,7 +117,20 @@ const Card = ({ card }) => {
 
 export default HorizontalScroll;
 
-const cards = [
+const TranslateWrapper = ({ children, reverse }) => {
+  return (
+    <motion.div
+      initial={{ translateY: reverse ? "-100%" : "0%" }}
+      animate={{ translateY: reverse ? "0%" : "-100%" }}
+      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      className="flex flex-col gap-20 px-2"
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const BrandsData = [
   {
     url: "/images/brands/Asset1.png",
     title: "HT Interiors",

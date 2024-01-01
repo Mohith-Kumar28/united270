@@ -11,7 +11,7 @@ import {
 const TopNavBar = () => {
   return (
     <div className=" fixed top-0 left-0 flex justify-between  w-full px-10  z-40 ">
-      <div className="bg-white/10 backdrop-blur-xl p-2 md:p-4">
+      <div className=" p-2 md:p-4">
         <Image
           className=""
           width={90}
@@ -20,7 +20,7 @@ const TopNavBar = () => {
         />
       </div>
       <div>
-        <div className="w-full flex flex-wrap gap-4 md:gap-6  bg-white/10 backdrop-blur-xl rounded-md p-3">
+        <div className="w-full flex flex-wrap gap-4 md:gap-6   rounded-md p-3">
           <LogoItem href="" Icon={SiDiscord} />
           <LogoItem href="https://twitter.com/united270?lang=en" Icon={SiX} />
           <LogoItem
@@ -35,7 +35,6 @@ const TopNavBar = () => {
             href="https://www.youtube.com/@United270AdLabs"
             Icon={SiYoutube}
           />
-          {/* <LogoItem Icon={SiYoutube} /> */}
         </div>
       </div>
     </div>

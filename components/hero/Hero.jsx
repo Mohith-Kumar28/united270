@@ -3,10 +3,11 @@ import React from "react";
 import { motion, useAnimate } from "framer-motion";
 import SlidingText from "../utils/SlidingText";
 import { galaktisRegular } from "@/styles/fonts";
+import { fadeIn, staggerContainer } from "@/utils/motion";
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen flex flex-col md:justify-center py-20 overflow-hidden relative">
+    <motion.div className="w-full h-screen flex flex-col md:justify-center py-20 overflow-hidden relative">
       <div className=" ">
         {/* <p className="text-pri-green text-9xl font-extrabold   ">
           Text to test here
@@ -25,7 +26,7 @@ const Hero = () => {
         </div>
         <p
           className={
-            `text-gray-100  w-80 p-5 mt-2 text-left  text-xl font-medium md:ml-24 z-30 relative rounded-lg bg-white/5 backdrop-blur-lg` +
+            `text-gray-100  w-80 p-5 mt-2 text-left  text-xl font-medium md:ml-52 z-30 relative rounded-lg ` +
             ` ${galaktisRegular.className}`
           }
         >
@@ -46,7 +47,7 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

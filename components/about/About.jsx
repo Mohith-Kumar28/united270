@@ -137,11 +137,11 @@ const slider = [{}, {}, {}, {}, {}];
 const About = () => {
   return (
     <div className=" py-56">
-      <div className="flex flex-wrap gap-x-3 gap-y-16 justify-center px-20 relative z-30">
+      <div className="flex flex-wrap gap-x-3 gap-y-16 justify-center px-32 relative z-30">
         {content.map((item, idx) => (
           <div className="flex flex-col">
             <p
-              className={`text-pri-green text-3xl w-72 font-bold   ${stretchPro.className}`}
+              className={`text-pri-green text-2xl w-60 font-bold   ${stretchPro.className}`}
             >
               {item.title}
             </p>
@@ -149,10 +149,7 @@ const About = () => {
               <span
                 className={`text-gray-100  text-xl  ${galaktisRegular.className}`}
               >
-                <span className="bg-black/5 px-3 backdrop-blur-3xl inline-block">
-                  {" "}
-                  {feature}
-                </span>
+                <span className=" px-3  inline-block"> {feature}</span>
               </span>
             ))}
           </div>
@@ -179,7 +176,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["100%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["150%", "-150%"]);
 
   return (
     <section ref={targetRef} className=" h-[300vh] ">

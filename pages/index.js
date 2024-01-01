@@ -19,20 +19,21 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="relative bg-pri-pink min-h-screen">
+    <div className="relative bg-pri-pink min-h-screen ">
       <Layout>
         <CanvasAnimation />
-
         <Hero />
         <AfterHero />
         <About />
         <Brands />
         <HorizontalScroll />
+        <ModelsHero />
+
         <Team />
+
         <WearableHorizontalScroll />
         <HyperRealisticHero />
         <LastSection />
-        <ModelsHero />
       </Layout>
     </div>
   );

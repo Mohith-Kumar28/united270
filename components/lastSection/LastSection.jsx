@@ -3,10 +3,17 @@ import Image from "next/image";
 import React from "react";
 import SlidingText from "../utils/SlidingText";
 import { motion, useAnimate } from "framer-motion";
+import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
 
 const LastSection = () => {
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 50, delay: 0 });
   return (
-    <div className=" md:h-screen relative flex flex-col gap-6 overflow-hidden">
+    <div
+      className=" md:h-screen relative flex flex-col gap-6 overflow-hidden py-16"
+      ref={scrollRef}
+    >
       <div className="flex md:flex-row flex-col justify-center  px-16 gap-16 md:gap-44 md:pl-44">
         <h2
           className={`text-5xl md:text-6xl font-bold text-light-orange md:w-1/2  ${cafeDeParis.className}`}

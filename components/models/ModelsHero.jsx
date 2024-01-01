@@ -79,7 +79,7 @@ import { galaktisRegular, sourceSansVariableItalic } from "@/styles/fonts";
 
 const ModelsHero = () => {
   return (
-    <div className=" pt-56">
+    <div className=" ">
       <HorizontalScrollCarousel />
     </div>
   );
@@ -110,56 +110,51 @@ const HorizontalScrollCarousel = () => {
             <div className="absolute flex bottom-0  ">
               <TranslateWrapper reverse>
                 <div className="flex ">
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model1.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model2.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model3.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model4.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model5.png"}
-                  />{" "}
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model1.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model2.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model3.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model4.png"}
-                  />
-                  <Image
-                    width={600}
-                    height={600}
-                    src={"/images/models/model5.png"}
-                  />
+                  <div className="h-72 flex items-end w-60  relative z-40">
+                    <Image
+                      // width={600}
+                      // height={600}
+                      fill={true}
+                      className="object-cover overflow-visible"
+                      src={"/images/models/model1.png"}
+                    />
+                  </div>
+                  <div className="h-72 flex items-end w-60 relative z-40">
+                    <Image
+                      // width={600}
+                      // height={600}
+                      fill={true}
+                      className="object-cover overflow-visible"
+                      src={"/images/models/model2.png"}
+                    />
+                  </div>{" "}
+                  <div className="h-72 flex items-end w-60 relative z-40">
+                    <Image
+                      // width={600}
+                      // height={600}
+                      fill={true}
+                      className="object-cover overflow-visible"
+                      src={"/images/models/model3.png"}
+                    />
+                  </div>{" "}
+                  <div className="h-72 flex items-end w-60 relative z-40">
+                    <Image
+                      // width={600}
+                      // height={600}
+                      fill={true}
+                      className="object-cover overflow-visible"
+                      src={"/images/models/model4.png"}
+                    />
+                  </div>{" "}
+                  <div className="h-72 flex items-end w-60 relative z-40">
+                    <Image
+                      // width={600}
+                      // height={600}
+                      fill={true}
+                      className="object-cover overflow-visible"
+                      src={"/images/models/model5.png"}
+                    />
+                  </div>
                 </div>
               </TranslateWrapper>
             </div>

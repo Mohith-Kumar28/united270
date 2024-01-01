@@ -4,10 +4,15 @@ import TeamModal from "./TeamModal";
 import SlidingText from "../utils/SlidingText";
 import { galaktisRegular } from "@/styles/fonts";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
 
 const Team = () => {
   let [isOpen, setIsOpen] = useState(false);
   let [selectedPerson, setSelectedPerson] = useState();
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+
   const team = [
     {
       name: "~JEFF EMMANUEL",
@@ -62,51 +67,56 @@ const Team = () => {
   ];
 
   return (
-    <div className="w-full py-56 overflow-hidden relative ">
-      <TeamModal user={selectedPerson} isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className=" w-full z-0 ">
-        {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
+    <div ref={scrollRef}>
+      <div className="w-full py-56 overflow-hidden relative ">
+        <TeamModal
+          user={selectedPerson}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
+        <div className=" w-full z-0 ">
+          {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
           FROM THE UNIV
         </p> */}
-        <TranslateWrapper>
-          <img
-            className=" h-[14vmax] object-cover overflow-visible"
-            src={"/images/texts/Asset_5.png"}
-          />{" "}
-          {/* <img
+          <TranslateWrapper>
+            <img
+              className=" h-[14vmax] object-cover overflow-visible"
+              src={"/images/texts/Asset_5.png"}
+            />{" "}
+            {/* <img
             className=" h-[14vmax] object-cover overflow-visible"
             src={"/images/texts/Asset_5.png"}
           /> */}
-        </TranslateWrapper>{" "}
-        <div className="flex flex-wrap gap-16 mt-20 relative z-20 justify-center ">
-          {team.map((member, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col justify-end   cursor-pointer"
-            >
+          </TranslateWrapper>{" "}
+          <div className="flex flex-wrap gap-16 mt-20 relative z-20 justify-center ">
+            {team.map((member, idx) => (
               <div
-                onClick={() => {
-                  setSelectedPerson(member), setIsOpen(true);
-                }}
-                className="bg-gray-200 w-20 h-20 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end"
+                key={idx}
+                className="flex flex-col justify-end   cursor-pointer"
               >
-                <Image
-                  width={600}
-                  height={600}
-                  className="  absolute bottom0 "
-                  src={member.photoSmall}
-                />
+                <div
+                  onClick={() => {
+                    setSelectedPerson(member), setIsOpen(true);
+                  }}
+                  className="bg-gray-200 w-20 h-20 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end"
+                >
+                  <Image
+                    width={600}
+                    height={600}
+                    className="  absolute bottom0 "
+                    src={member.photoSmall}
+                  />
+                </div>
+                <span
+                  className={`text-center mt-2 w-28 md:w-44 font-bold text-lg text-gray-200 rounded-lg   ${galaktisRegular.className}`}
+                >
+                  {member.role}
+                </span>
               </div>
-              <span
-                className={`text-center mt-2 w-28 md:w-44 font-bold text-lg text-gray-200 rounded-lg bg-white/5 backdrop-blur-lg  ${galaktisRegular.className}`}
-              >
-                {member.role}
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-      {/* <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
+        {/* <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">
           <button className="bg-pri-green  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
             See Works
@@ -119,6 +129,7 @@ const Team = () => {
           />
         </div>
       </div> */}
+      </div>
     </div>
   );
 };
