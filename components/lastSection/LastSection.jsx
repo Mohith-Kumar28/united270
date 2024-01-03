@@ -11,7 +11,7 @@ const LastSection = () => {
   useScrollSnap({ ref: scrollRef, duration: 50, delay: 0 });
   return (
     <div
-      className=" md:h-screen relative flex flex-col gap-6 overflow-hidden py-16"
+      className=" md:h-screen relative flex flex-col gap-28 overflow-hidden py-16"
       ref={scrollRef}
     >
       <div className="flex md:flex-row flex-col justify-center  px-16 gap-16 md:gap-44 md:pl-44">
@@ -169,7 +169,7 @@ const LastSection = () => {
           }
         /> */}
       </div>
-      <div className="flex  md:flex-row flex-col gap-20 justify-between px-10 md:px-28 relative z-30 ">
+      <div className="flex  md:flex-row flex-col gap-20 justify-center px-10 md:px-28 relative z-30 ">
         {/* <div>
           <Image
             width={300}
@@ -178,7 +178,7 @@ const LastSection = () => {
             src={"/images/lastSection/Asset_7.png"}
           />
         </div> */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 justify-center">
           <div className="flex flex-col justify-center gap-4">
             <div className="h-20 w-20">
               <Image

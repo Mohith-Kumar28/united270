@@ -13,6 +13,7 @@ import {
 } from "react-icons/si";
 import WearableAccordion from "./WearableAccordion";
 import SlidingText from "../utils/SlidingText";
+import Link from "next/link";
 
 const WearableHorizontalScroll = () => {
   return (
@@ -45,12 +46,17 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
         <motion.div style={{ x }} className="flex gap-52 ">
           <div className="flex w-[100vw] relative">
-            <Image
-              width={80}
-              height={80}
-              className="absolute top-44 left-8 z-10"
-              src={"/images/logos/Asset_1.png"}
-            />
+            <Link
+              href={"https://www.instagram.com/united_270/"}
+              target="_blank"
+            >
+              <Image
+                width={80}
+                height={80}
+                className="absolute top-44 left-8 z-10"
+                src={"/images/logos/Asset_1.png"}
+              />
+            </Link>
             <div className="absolute z-0  top-1/2 -translate-y-1/2 left-0">
               <SlidingText
                 text={
