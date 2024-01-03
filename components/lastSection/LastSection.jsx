@@ -21,7 +21,7 @@ const LastSection = () => {
           “to have a great idea, have a lot of them.”
         </h2>
         <div>
-          <div
+          {/* <div
             className={`text-3xl text-gray-200 font-regular md:w-1/2 ${galaktisRegular.className}`}
           >
             Shortlisted
@@ -41,7 +41,7 @@ const LastSection = () => {
                   className=""
                   src={"/images/lastSection/Asset_3.png"}
                 />
-                {/* BANGALORE */}
+                BANGALORE
               </div>{" "}
               <div className="w-28 h-28 flex flex-col justify-start">
                 <Image
@@ -50,14 +50,14 @@ const LastSection = () => {
                   className=""
                   src={"/images/lastSection/Asset_2.png"}
                 />
-                {/* JEDDAH */}
+                JEDDAH
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="">
-        <div className="flex justify-end gap-3">
+        {/* <div className="flex justify-end gap-3">
           <div className="h-20 w-20">
             <Image
               width={400}
@@ -73,7 +73,7 @@ const LastSection = () => {
               3d Studio partner
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* <SlidingText text={"Meet Us Here "} /> */}
         {/* <SlidingText
@@ -92,6 +92,66 @@ const LastSection = () => {
             className=" h-[14vmax] object-cover overflow-visible"
             src="/images/texts/Asset_6.png"
           />{" "}
+          <Image
+            width={400}
+            height={200}
+            className=" h-[10vmax] object-cover overflow-visible"
+            src={"/images/lastSection/Asset_7.png"}
+          />
+          <div className="flex bg-light-orange rounded-xl gap-10 p-4">
+            <div
+              className={`text-3xl h-[10vmax] text-gray-800 font-regular md:w-1/2 ${galaktisRegular.className}`}
+            >
+              Shortlisted
+              <div className="flex gap-10 mt-4">
+                {/* <div className="h-28 w-28">
+                <Image
+                  width={200}
+                  height={200}
+                  className="rounded-full overflow-hidden"
+                  src={"/images/lastSection/Asset_1.png"}
+                />
+              </div>{" "} */}
+                <div className="w-24 h-24 flex flex-col justify-start">
+                  <Image
+                    width={200}
+                    height={200}
+                    className=""
+                    src={"/images/lastSection/Asset_3.png"}
+                  />
+                  {/* BANGALORE */}
+                </div>{" "}
+                <div className="w-24 h-24 flex flex-col justify-start">
+                  <Image
+                    width={200}
+                    height={200}
+                    className=""
+                    src={"/images/lastSection/Asset_2.png"}
+                  />
+                  {/* JEDDAH */}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex  justify-end gap-3">
+              <div className=" flex flex-col justify-center">
+                <p
+                  className={`text-gray-800   text-xl  ${galaktisRegular.className}`}
+                >
+                  3d Studio partner
+                </p>
+              </div>
+              <div className="h-44 w-44">
+                <Image
+                  width={400}
+                  height={400}
+                  alt=""
+                  className="rounded-full overflow-hidden"
+                  src={"/images/lastSection/Asset_4.png"}
+                />
+              </div>
+            </div>
+          </div>
           {/* <img
             className=" h-[14vmax] object-cover overflow-visible"
             src={"/images/texts/Asset_6.png"}
@@ -110,16 +170,16 @@ const LastSection = () => {
         /> */}
       </div>
       <div className="flex  md:flex-row flex-col gap-20 justify-between px-10 md:px-28 relative z-30 ">
-        <div>
+        {/* <div>
           <Image
             width={300}
             height={200}
             className=""
             src={"/images/lastSection/Asset_7.png"}
           />
-        </div>
-        <div>
-          <div className="flex gap-4">
+        </div> */}
+        <div className="flex gap-4">
+          <div className="flex flex-col justify-center gap-4">
             <div className="h-20 w-20">
               <Image
                 width={400}
@@ -138,7 +198,7 @@ const LastSection = () => {
             </div>
           </div>
           <p
-            className={`text-gray-200 w-80 bg-white/10 backdrop-blur-3xl p-3 rounded-lg text-lg mt-4 ${galaktisRegular.className}`}
+            className={`text-gray-200 w-1/2 bg-white/10 backdrop-blur-3xl p-3 rounded-lg text-lg mt-4 ${galaktisRegular.className}`}
           >
             Studio Space & Locations Curated Talents Model Agencies Meta
             Creative Partner Motion Capture Studio Green Screen Studio + VFX
@@ -159,7 +219,7 @@ const TranslateWrapper = ({ children, reverse }) => {
       initial={{ translateX: reverse ? "-100%" : "50%" }}
       animate={{ translateX: reverse ? "0%" : "-100%" }}
       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      className="flex gap-4 px-2"
+      className="flex gap-10 px-2"
     >
       {children}
     </motion.div>

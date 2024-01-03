@@ -7,14 +7,24 @@ const BrandCard = ({ card }) => {
   return (
     <div
       key={card?.id}
-      className="group relative h-screen flex flex-col justify-between py-10  w-[80vw] overflow-hidden "
+      className="group relative h-screen flex flex-col justify-center gap-28 py-10  w-full overflow-hidden "
     >
       <div className="flex justify-between md:flex-row flex-col gap-20   w-full">
-        <div className="flex gap-4 md:gap-10 md:pl-20">
+        <div className="flex gap-4 md:gap-3 ">
+          <div className="flex flex-col mt-3 ">
+            <Image
+              width={100}
+              height={100}
+              alt=""
+              src={"/images/logos/united270logo.png"}
+              className="object-contain h-20"
+            />
+          </div>
           <div>
             <Image
               width={50}
               height={50}
+              alt=""
               src={"/images/brands/xImg.png"}
               className="object-contain h-20 w-28"
             />
@@ -24,6 +34,7 @@ const BrandCard = ({ card }) => {
             <Image
               width={200}
               height={200}
+              alt=""
               src={card?.icon}
               className="object-contain h-20"
             />
@@ -32,7 +43,7 @@ const BrandCard = ({ card }) => {
           {/* <card?.icon className="w-28 h-28 text-pri-green" /> */}
         </div>
         <div
-          className={`text-gray-200 flex md:flex-row flex-col font-bold mt-10 ${sourceSansVariableItalic.className}`}
+          className={`text-gray-200 flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
         >
           <div className="border-2 rounded-lg p-4 md:w-[50%]">
             What they wrote:
@@ -53,8 +64,9 @@ const BrandCard = ({ card }) => {
       <Image
         width={700}
         height={700}
+        alt=""
         style={{ objectFit: "contain" }}
-        className="w-full "
+        className="w-full rounded-xl"
         src={card?.url}
       />
 

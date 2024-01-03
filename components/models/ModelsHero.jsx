@@ -72,10 +72,11 @@
 // };
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import SlidingText from "../utils/SlidingText";
 import Image from "next/image";
 import { galaktisRegular, sourceSansVariableItalic } from "@/styles/fonts";
+import ModelsModal from "./ModelsModal";
 
 const ModelsHero = () => {
   return (
@@ -90,16 +91,19 @@ const HorizontalScrollCarousel = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
+  const [isOpen, setIsOpen] = useState(false);
+  let [selectedModel, setSelectedModel] = useState();
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <section ref={targetRef} className=" h-[400vh] relative z-30">
+    <section ref={targetRef} className=" h-[200vh] relative z-30">
+      <ModelsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedModel} />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-light-orange ">
         <motion.div style={{ x }} className="flex  justify-between ">
-          <div className="flex w-[100vw] overflow-hidden h-screen relative gap-10 p-20">
+          <div className="flex w-[100vw] overflow-visible h-screen relative gap-10 p-20">
             <div className="absolute top-1/2 -translate-y-1/2 ">
-              <TranslateWrapper>
+              <TranslateWrapper reverse>
                 <img
                   className="h-[14vmax]  object-cover overflow-visible  z-10 "
                   src={"/images/texts/Asset_7.png"}
@@ -108,18 +112,27 @@ const HorizontalScrollCarousel = () => {
             </div>
 
             <div className="absolute flex bottom-0  ">
-              <TranslateWrapper reverse>
+              <TranslateWrapper>
                 <div className="flex ">
-                  <div className="h-72 flex items-end w-60  relative z-40">
-                    <Image
-                      // width={600}
-                      // height={600}
-                      fill={true}
-                      className="object-cover overflow-visible"
-                      src={"/images/models/model1.png"}
-                    />
-                  </div>
-                  <div className="h-72 flex items-end w-60 relative z-40">
+                  {models.map((model) => (
+                    <div
+                      key={model.id}
+                      onClick={() => {
+                        setSelectedModel(model);
+                        setIsOpen(true);
+                      }}
+                      className="h-72 cursor-pointer flex items-end w-60  relative z-40"
+                    >
+                      <Image
+                        // width={600}
+                        // height={600}
+                        fill={true}
+                        className="object-cover overflow-visible"
+                        src={model.photoSmall}
+                      />
+                    </div>
+                  ))}
+                  {/* <div className="h-72 flex items-end w-60 relative z-40">
                     <Image
                       // width={600}
                       // height={600}
@@ -154,16 +167,16 @@ const HorizontalScrollCarousel = () => {
                       className="object-cover overflow-visible"
                       src={"/images/models/model5.png"}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </TranslateWrapper>
             </div>
           </div>
-          {models.map((model) => (
+          {/* {models.map((model) => (
             <>
               <ModelCard key={model.name} model={model} />
             </>
-          ))}
+          ))} */}
         </motion.div>
       </div>
     </section>
@@ -174,7 +187,7 @@ export default ModelsHero;
 
 const ModelCard = ({ model }) => {
   return (
-    <div className="flex flex-col justify-between md:justify-center  w-[100vw] h-screen relative px-10 py-28 overflow-hidden">
+    <div className="flex flex-col justify-between md:justify-center  w-[100vw] h-screen relative px-10 py-28 overflow-hidden ">
       <TranslateWrapper>
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900 ">
           <p
@@ -213,7 +226,7 @@ const ModelCard = ({ model }) => {
         <Image
           width={600}
           height={600}
-          className="object-contain  w-[60%] md:w-1/2 md:h-full py-20  absolute right-2 md:-right-10 -bottom-3 "
+          className="object-contain  w-[60%] md:w-1/2 md:h-[90vh] py-20  absolute right-2 md:-right-10 bottom-16 "
           src={model.photo}
         />
       </div>
@@ -251,8 +264,8 @@ const models = [
   {
     name: "~JORDADAM",
     photo: "/images/models/model1Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model1.png",
+    id: 0,
     instaImg: "/images/models/model1Insta.png",
     description:
       "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
@@ -260,8 +273,8 @@ const models = [
   {
     name: "~ANNEVE",
     photo: "/images/models/model2Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model2.png",
+    id: 1,
     instaImg: "/images/models/model2Insta.png",
     description:
       "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
@@ -269,8 +282,8 @@ const models = [
   {
     name: "~KUMAR ADAM",
     photo: "/images/models/model3Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model3.png",
+    id: 2,
     instaImg: "/images/models/model3Insta.png",
     description:
       "Hailing from Kumari Kandam, Kumar Adam is an artist of varying mediums.He is a poet, sculptor, martial artist and archer too.",
@@ -278,8 +291,8 @@ const models = [
   {
     name: "~RARO EVE",
     photo: "/images/models/model4Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model4.png",
+    id: 3,
     instaImg: "/images/models/model4Insta.png",
     description:
       "Raro is from the exotic lost island Nararo. She is an underwater photographer by profession and shell collector by passion. She loves to run, play beach volleyball and reads the weather effortlessly. ",
@@ -287,8 +300,8 @@ const models = [
   {
     name: "~MU EVE",
     photo: "/images/models/model5Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model5.png",
+    id: 4,
     instaImg: "",
     description:
       "This French teacher loves sugar cane and hails from the lost island of Mauritia and is passionate about building boats. During his free time he loves to sing and dance.",
@@ -296,8 +309,8 @@ const models = [
   {
     name: "~WICH EVE",
     photo: "/images/models/model6Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model6.png",
+    id: 5,
     instaImg: "",
     description:
       "Originally from Bermeja island, Wich Eve loves spicy food and tequila. She loves wearing colourful clothes and reading history books in her free time.",
@@ -305,8 +318,8 @@ const models = [
   {
     name: "~NAH ADAM",
     photo: "/images/models/model7Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model7.png",
+    id: 6,
     instaImg: "",
     description:
       "Nah Adam is from the lost island of Nahlapenlohd. He loves to climb trees in his free time and enjoys skiing too.",
@@ -314,8 +327,8 @@ const models = [
   {
     name: "~TAMBU ADAM",
     photo: "/images/models/model8Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model8.png",
+    id: 7,
     instaImg: "",
     description:
       "Tambu adam is a deep sea diver from the lost island of Nuatambu. When he is not swimming with the fishes he is playing his panpipe and volunteering for the climate change cause.",
@@ -323,8 +336,8 @@ const models = [
   {
     name: "~MU EVE",
     photo: "/images/models/model9Big.png",
-    photoSmall: "",
-
+    photoSmall: "/images/models/model9.png",
+    id: 8,
     instaImg: "",
     description:
       "Mu eve is from the Japanese Mu island. She loves to sing, fish and is passionate about efforts against climate change.",

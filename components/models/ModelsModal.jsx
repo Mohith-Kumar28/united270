@@ -1,12 +1,12 @@
 import { Dialog, Transition } from "@headlessui/react";
 
 import { Fragment, useState } from "react";
-import HorizontalScroll from "./HorizontalScroll";
-import BrandCard from "./BrandCard";
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import BrandsCardCarousel from "./BrandsCardCarousel";
 
-export default function BrandsModal({ isOpen, setIsOpen, card }) {
+import { XMarkIcon } from "@heroicons/react/24/solid";
+
+import ModelsCardCarousel from "./ModelsCardCarousel";
+
+export default function ModelsModal({ isOpen, setIsOpen, card }) {
   function closeModal() {
     setIsOpen(false);
   }
@@ -52,11 +52,11 @@ export default function BrandsModal({ isOpen, setIsOpen, card }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className=" w-[100vw] transform overflow-hidden  bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-screen flex flex-col justify-center">
+                <Dialog.Panel className=" w-[100vw] transform overflow-hidden  bg-light-orange p-6 text-left align-middle shadow-xl transition-all relative h-screen flex flex-col justify-center">
                   {/* <BrandCard card={card} /> */}
-                  <BrandsCardCarousel card={card} />
+                  <ModelsCardCarousel card={card} />
                   <div
-                    className=" z-50 bg-light-orange p-3 rounded-full text-gray-600 absolute bottom-4 left-4 cursor-pointer"
+                    className=" z-50 bg-pri-pink p-3 rounded-full text-white absolute bottom-4 left-4 cursor-pointer"
                     onClick={closeModal}
                   >
                     <XMarkIcon className="w-8" />{" "}

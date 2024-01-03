@@ -9,13 +9,13 @@ const Brands = () => {
   const [isOpen, setIsOpen] = useState(false);
   let [selectedBrand, setSelectedBrand] = useState();
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 10, delay: 1 });
+  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 1 });
   return (
     <motion.div
       ref={scrollRef}
       className="px-10  flex justify-end h-screen overflow-hidden relative z-30"
     >
-      {/* <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} /> */}
+      <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
       {/* <Image
         width={200}
         height={200}
@@ -66,7 +66,7 @@ const BrandsData = [
     whatTheyWrote: "Launch the new home furniture collection",
     whatWeRead: "Inspire India to make space for HomeTown in their homes",
     icon: "/images/logos/htInteriors.png",
-    id: 1,
+    id: 0,
   },
   {
     url: "/images/brands/Asset2.png",
@@ -74,7 +74,7 @@ const BrandsData = [
     whatTheyWrote: "Launch their run collection",
     whatWeRead: "Give Nike a run its money",
     icon: "/images/logos/cultSport.png",
-    id: 2,
+    id: 1,
   },
   {
     url: "/images/brands/Asset3.png",
@@ -83,7 +83,7 @@ const BrandsData = [
     whatWeRead:
       "Create a campaign that makes Simon Carter impossible to forget",
     icon: "/images/logos/simonCarter.png",
-    id: 3,
+    id: 2,
   },
   {
     url: "/images/brands/Asset4.png",
@@ -91,7 +91,7 @@ const BrandsData = [
     whatTheyWrote: "Reposition the boutique brand into a mass brand",
     whatWeRead: "Make Chumbak a household favourite",
     icon: "/images/logos/Chumbak.png",
-    id: 4,
+    id: 3,
   },
   {
     url: "/images/brands/Asset5.png",
@@ -99,7 +99,7 @@ const BrandsData = [
     whatTheyWrote: "Launch the first-ever casual collection",
     whatWeRead: "Show that Vanhuesen means business even when its casual ",
     icon: "/images/logos/vanHeusen.png",
-    id: 5,
+    id: 4,
   },
   {
     url: "/images/brands/Asset6.png",
@@ -109,7 +109,7 @@ const BrandsData = [
     whatWeRead:
       "Position John Jacobs as the best thing your eyes will see, or wear.",
     icon: "/images/logos/johnJacobs.png",
-    id: 6,
+    id: 5,
   },
   {
     url: "/images/brands/Asset7.png",
@@ -118,7 +118,7 @@ const BrandsData = [
     whatWeRead:
       "Create an iconic campaign that leverages the iconic school’s reputation to establish it as a safe haven for all creative people",
     icon: "/images/logos/whistlingWoods.png",
-    id: 7,
+    id: 6,
   },
   {
     url: "/images/brands/Asset8.png",
@@ -126,7 +126,7 @@ const BrandsData = [
     whatTheyWrote: "Launch the official Bangalore Football Club Jersey",
     whatWeRead: "Get our cricket-obsessed country to love football the same",
     icon: "/images/logos/puma.png",
-    id: 8,
+    id: 7,
   },
   {
     url: "/images/brands/Asset9.png",
@@ -134,7 +134,7 @@ const BrandsData = [
     whatTheyWrote: "lTalk about KONEs modernisation efforts",
     whatWeRead: "Make KONE a household favourite",
     icon: "/images/logos/kone.png",
-    id: 9,
+    id: 8,
   },
   {
     url: "/images/brands/Asset10.png",
@@ -144,6 +144,6 @@ const BrandsData = [
     whatWeRead:
       "Shoot a memorable film that celebrates the youth and their quirks",
     icon: "/images/logos/virgio.png",
-    id: 10,
+    id: 9,
   },
 ];

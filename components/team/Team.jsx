@@ -11,7 +11,7 @@ const Team = () => {
   let [isOpen, setIsOpen] = useState(false);
   let [selectedPerson, setSelectedPerson] = useState();
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
 
   const team = [
     {
@@ -68,7 +68,7 @@ const Team = () => {
 
   return (
     <div ref={scrollRef}>
-      <div className="w-full py-56 overflow-hidden relative ">
+      <div className="w-full py-56 overflow-hidden relative">
         <TeamModal
           user={selectedPerson}
           isOpen={isOpen}

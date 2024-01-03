@@ -26,7 +26,7 @@ export default function Home() {
         <AfterHero />
         <About />
         <Brands />
-        <HorizontalScroll />
+        {/* <HorizontalScroll /> */}
         <ModelsHero />
 
         <Team />

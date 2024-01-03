@@ -41,13 +41,13 @@ const WearableHorizontalScroll = () => {
 
 const HyperRealisticHero = () => {
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
 
   return (
     <div ref={scrollRef}>
@@ -85,29 +85,29 @@ const HyperRealisticHero = () => {
             </div>
             <div className=" ">
               <section className="  px-32 flex flex-col justify-center relative z-30">
-                <div className="relative h-screen flex gap-36 justify-between py-10    overflow-hidden ">
+                <div className="relative h-screen flex gap-36 justify-between py-5   ">
                   {cards.map((item) => {
                     return (
                       <div className="w-[80vw] flex flex-col justify-center relative">
                         <h2
-                          className={` text-pri-green mb-2 md:mr-6  text-4xl text-right  ${galaktisRegular.className}`}
+                          className={` text-pri-green mb-2 md:mr-16  text-4xl text-right  ${galaktisRegular.className}`}
                         >
                           {item.title}
                         </h2>
                         <Image
                           width={60}
                           height={60}
-                          className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:-right-16 md:top-20 z-10"
+                          className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:-right-16 md:top-28 z-10"
                           src={"/images/logos/Asset_2.png"}
                         />
-                        <div className="relative h-[60vh]">
+                        <div className="flex justify-end  relative h-[60vh]">
                           <Image
-                            // width={700}
-                            // height={700}
+                            width={900}
+                            height={700}
                             // style={{ objectFit: "cover" }}
-                            fill={true}
-                            objectFit="cover"
-                            className=" "
+
+                            // objectFit="contain"
+                            className="object-contain "
                             src={item.url}
                           />
                         </div>
