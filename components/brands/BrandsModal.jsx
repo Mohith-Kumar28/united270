@@ -52,7 +52,7 @@ export default function BrandsModal({ isOpen, setIsOpen, card }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className=" w-[100vw] transform overflow-hidden  bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-screen flex flex-col justify-center">
+                <Dialog.Panel className=" w-[100vw] transform overflow-hidden  bg-pri-pink  text-left align-middle shadow-xl transition-all relative h-screen flex flex-col justify-center">
                   {/* <BrandCard card={card} /> */}
                   <BrandsCardCarousel card={card} />
                   <div

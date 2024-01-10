@@ -100,11 +100,11 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     </TranslateWrapper> */}
                     <TranslateWrapper>
                       <img
-                        className=" h-[14vmax] object-cover overflow-visible"
+                        className=" h-[18vmax] object-cover overflow-visible"
                         src={user?.brands}
                       />{" "}
                       <img
-                        className="translate-x-[25%] h-[14vmax] object-cover overflow-visible"
+                        className="translate-x-[25%] h-[18vmax] object-cover overflow-visible"
                         src={user?.brands}
                       />
                     </TranslateWrapper>

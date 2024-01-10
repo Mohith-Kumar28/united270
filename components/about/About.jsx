@@ -131,29 +131,52 @@ const content = [
       "Gamification",
     ],
   },
+  {
+    title: "WEB3 + PHYGITAL",
+    features: [
+      "Metaworld",
+      "Virtual Characters",
+      "Digital Brand Ambassadors ",
+      "Digital Clothing",
+      "3D Fashion Runway",
+      "Virtual Collection Launch ",
+      "Filters",
+      "Product NFTs",
+      ,
+      "Virtual Campaign Production",
+    ],
+  },
 ];
 const slider = [{}, {}, {}, {}, {}];
 
 const About = () => {
   return (
     <div className=" py-56">
-      <div className="flex flex-wrap gap-x-3 gap-y-16 justify-center px-32 relative z-30">
+      <div className="flex flex-wrap gap-x-3 gap-y-16 justify-center  relative z-30">
         {content.map((item, idx) => (
           <div className="flex flex-col">
             <p
-              className={`text-pri-green text-2xl w-60 font-bold   ${stretchPro.className}`}
+              className={`text-pri-green text-xl w-52 font-bold   ${stretchPro.className}`}
             >
               {item.title}
             </p>
             {item.features.map((feature) => (
               <span
-                className={`text-gray-100  text-xl  ${galaktisRegular.className}`}
+                className={`text-gray-100  text-lg  ${galaktisRegular.className}`}
               >
-                <span className=" px-3  inline-block"> {feature}</span>
+                <span className="  inline-block"> {feature}</span>
               </span>
             ))}
           </div>
         ))}
+      </div>
+      <div className="flex overflow-hidden  relative z-0 ">
+        <TranslateWrapper>
+          <img
+            className="h-[18vmax] object-cover overflow-visible   "
+            src={"/images/texts/Asset_3.png"}
+          />
+        </TranslateWrapper>
       </div>
       {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
         FROM THE UNIV
@@ -180,12 +203,12 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className=" h-[300vh] ">
-      <div className="sticky top-0 flex h-screen md:items-center py-20 overflow-hidden">
+      <div className="sticky top-0 flex h-screen md:items-end  py-44 overflow-hidden z-30">
         <motion.div style={{ x }} className="flex flex-col gap-36 ">
-          <img
-            className="h-[14vmax] object-cover overflow-visible relative z-10 "
+          {/* <img
+            className="h-[18vmax] object-cover overflow-visible relative z-10 "
             src={"/images/texts/Asset_3.png"}
-          />
+          /> */}
 
           <div className="flex gap-20  relative z-30">
             {slider.map((slide, idx) => (
@@ -271,3 +294,16 @@ const cards = [
     id: 7,
   },
 ];
+
+const TranslateWrapper = ({ children, reverse }) => {
+  return (
+    <motion.div
+      initial={{ translateX: reverse ? "-100%" : "200%" }}
+      animate={{ translateX: reverse ? "0%" : "-100%" }}
+      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      className="flex gap-4 px-2"
+    >
+      {children}
+    </motion.div>
+  );
+};

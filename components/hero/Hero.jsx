@@ -12,19 +12,19 @@ const Hero = () => {
         {/* <p className="text-pri-green text-9xl font-extrabold   ">
           Text to test here
         </p> */}
-        <div className="flex overflow-hidden mt-4 relative z-0">
+        <div className="flex overflow-hidden  relative z-0 -mt-36">
           <TranslateWrapper>
             <img
-              className=" h-[14vmax] object-cover overflow-visible"
+              className=" h-[18vmax] object-cover overflow-visible"
               src={"/images/texts/Asset_1.png"}
             />{" "}
-            <img
-              className="  h-[14vmax] object-cover overflow-visible hidden md:block"
+            {/* <img
+              className="  h-[18vmax] object-cover overflow-visible hidden md:block"
               src={"/images/texts/Asset_1.png"}
-            />
+            /> */}
           </TranslateWrapper>
         </div>
-        <p
+        {/* <p
           className={
             `text-gray-100  w-80 p-5 mt-2 text-left  text-xl font-medium md:ml-52 z-30 relative rounded-lg ` +
             ` ${galaktisRegular.className}`
@@ -32,7 +32,7 @@ const Hero = () => {
         >
           Cyberfiction aims to be a decentralized community that can create new
           values and profits through play in the virtual world.
-        </p>
+        </p> */}
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">

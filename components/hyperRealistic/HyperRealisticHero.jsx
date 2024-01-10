@@ -20,6 +20,7 @@ import SlidingText from "../utils/SlidingText";
 import WearableAccordion from "../wearables/WearableAccordion";
 
 import useScrollSnap from "react-use-scroll-snap";
+import Link from "next/link";
 
 const WearableHorizontalScroll = () => {
   return (
@@ -54,53 +55,64 @@ const HyperRealisticHero = () => {
       <section ref={targetRef} className="relative h-[300vh] z-30 bg-pri-pink">
         <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
           <motion.div style={{ x }} className="flex gap-52 ">
-            <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 p-20">
+            <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 pl-32 py-16 pr-28">
               <Image
-                width={80}
-                height={80}
-                className="absolute top-44 -left-5 z-10"
+                width={90}
+                height={90}
+                className="absolute top-44 -left-6 z-10"
                 src={"/images/logos/Asset_2.png"}
               />
               <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div>
               <div className="w-2/3">
                 <h2
-                  className={`text-5xl md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
+                  className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >
-                  CREATING HYPER-REALISTIC 3D FASHION BESPOKE CREATIONS ~
+                  CREATING
+                  <br /> HYPER-REALISTIC
+                  <br /> 3D FASHION
+                  <br /> BESPOKE
+                  <br /> CREATIONS ~
                 </h2>
-                <h3
-                  className={`text-3xl md:text-7xl text-gray-600 mt-3 ${cafeDeParis.className}`}
+                <div
+                  className={`text-3xl flex flex-col  md:text-6xl text-gray-600 mt-3 ${cafeDeParis.className}`}
                 >
-                  BRANDS
-                  <br />
-                  DESIGNERS
-                  <br />
-                  ORG
-                  <br />
-                  GAMING
-                  <br />
-                  METAVERSE
-                </h3>
+                  <h3 className={``}>BRANDS</h3>
+                  <h3 className={``}>DESIGNERS</h3>
+                  <h3 className={``}>ORG</h3>
+                  <h3 className={``}>GAMING</h3>
+                  <h3 className={``}>METAVERSE</h3>
+                </div>
               </div>
             </div>
             <div className=" ">
-              <section className="  px-32 flex flex-col justify-center relative z-30">
+              <section className="  px-32 flex flex-col justify-center mt-10 relative z-30">
                 <div className="relative h-screen flex gap-36 justify-between py-5   ">
                   {cards.map((item) => {
                     return (
                       <div className="w-[80vw] flex flex-col justify-center relative">
                         <h2
-                          className={` text-pri-green mb-2 md:mr-16  text-4xl text-right  ${galaktisRegular.className}`}
+                          className={`relative text-pri-green mb-2 md:mr-8  text-4xl text-right  ${galaktisRegular.className}`}
                         >
                           {item.title}
+                          <Link
+                            href={"https://www.instagram.com/united_270/"}
+                            target="_blank"
+                          >
+                            <Image
+                              width={80}
+                              height={80}
+                              className="absolute -top-10 -right-24 z-10"
+                              src={"/images/logos/Asset_2.png"}
+                            />
+                          </Link>
                         </h2>
-                        <Image
+                        {/* <Image
                           width={60}
                           height={60}
                           className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:-right-16 md:top-28 z-10"
                           src={"/images/logos/Asset_2.png"}
-                        />
-                        <div className="flex justify-end  relative h-[60vh]">
+                        /> */}
+                        <div className="flex justify-end  relative h-[70vh]">
                           <Image
                             width={900}
                             height={700}
@@ -134,7 +146,7 @@ const cards = [
     id: 1,
   },
   {
-    url: "",
+    url: "/images/hyperRealistic/Asset_1.png",
     title: "ARCHITECTURAL  WALKTHROUGH",
 
     id: 2,

@@ -18,18 +18,18 @@ export default function BrandsCardCarousel({ card }) {
   }, [card]);
 
   return (
-    <div className="h-full w-[80vw] mx-auto relative ">
+    <div className="h-full w-[100vw]  mx-auto relative ">
       <button
         onClick={() => {
           setPrevIdx(idx);
           setIdx((pv) => pv - 1);
         }}
-        className="bg-black/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 -left-16 rounded-full top-1/2 "
+        className="bg-white/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 left-16 rounded-full top-1/2 "
       >
         <FiChevronLeft className="text-3xl" />
       </button>
 
-      <div className="absolute inset-0 z-[5] backdrop-blur-xl">
+      <div className="absolute  inset-0 z-[5] backdrop-blur-xl">
         <AnimatePresence initial={false} custom={trend}>
           {/* <motion.img
             variants={imgVariants}
@@ -51,7 +51,7 @@ export default function BrandsCardCarousel({ card }) {
           setPrevIdx(idx);
           setIdx((pv) => pv + 1);
         }}
-        className="bg-black/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 -right-16  rounded-full top-1/2"
+        className="bg-white/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 right-16  rounded-full top-1/2"
       >
         <FiChevronRight className="text-3xl" />
       </button>

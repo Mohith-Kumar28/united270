@@ -38,6 +38,38 @@ const Brands = () => {
               src={brand.icon}
             />
           </>
+        ))}{" "}
+        {BrandsData.map((brand) => (
+          <>
+            <Image
+              onClick={() => {
+                setSelectedBrand(brand);
+                setIsOpen(true);
+              }}
+              key={brand.id}
+              width={400}
+              height={400}
+              alt="brand logo"
+              className="cursor-pointer w-36"
+              src={brand.icon}
+            />
+          </>
+        ))}{" "}
+        {BrandsData.map((brand) => (
+          <>
+            <Image
+              onClick={() => {
+                setSelectedBrand(brand);
+                setIsOpen(true);
+              }}
+              key={brand.id}
+              width={400}
+              height={400}
+              alt="brand logo"
+              className="cursor-pointer w-36"
+              src={brand.icon}
+            />
+          </>
         ))}
       </TranslateWrapper>
     </motion.div>

@@ -97,15 +97,15 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <section ref={targetRef} className=" h-[200vh] relative z-30">
+    <section ref={targetRef} className=" h-[400vh] relative z-30">
       <ModelsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedModel} />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-light-orange ">
         <motion.div style={{ x }} className="flex  justify-between ">
-          <div className="flex w-[100vw] overflow-visible h-screen relative gap-10 p-20">
-            <div className="absolute top-1/2 -translate-y-1/2 ">
+          <div className="flex w-[100vw] overflow-hidden h-screen relative gap-10 p-20">
+            <div className="absolute top-1/2 -translate-y-1/2 -mt-28">
               <TranslateWrapper reverse>
                 <img
-                  className="h-[14vmax]  object-cover overflow-visible  z-10 "
+                  className="h-[18vmax]  object-cover overflow-visible  z-10 "
                   src={"/images/texts/Asset_7.png"}
                 />
               </TranslateWrapper>
@@ -121,7 +121,7 @@ const HorizontalScrollCarousel = () => {
                         setSelectedModel(model);
                         setIsOpen(true);
                       }}
-                      className="h-72 cursor-pointer flex items-end w-60  relative z-40"
+                      className="h-[40vh] cursor-pointer flex items-end w-60  relative z-40"
                     >
                       <Image
                         // width={600}
@@ -172,11 +172,11 @@ const HorizontalScrollCarousel = () => {
               </TranslateWrapper>
             </div>
           </div>
-          {/* {models.map((model) => (
+          {models.map((model) => (
             <>
               <ModelCard key={model.name} model={model} />
             </>
-          ))} */}
+          ))}
         </motion.div>
       </div>
     </section>
@@ -187,11 +187,11 @@ export default ModelsHero;
 
 const ModelCard = ({ model }) => {
   return (
-    <div className="flex flex-col justify-between md:justify-center  w-[100vw] h-screen relative px-10 py-28 overflow-hidden ">
+    <div className="flex flex-col justify-between md:justify-center  w-[125vw] h-screen relative px-[30vw] py-28 overflow-hidden ">
       <TranslateWrapper>
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900 ">
           <p
-            className={`text-pri-green  text-6xl   md:text-8xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
+            className={`text-pri-green  text-6xl   md:text-9xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
           >
             {model.name}
           </p>
@@ -202,13 +202,22 @@ const ModelCard = ({ model }) => {
         />
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900">
           <p
-            className={`text-pri-green text-6xl   md:text-8xl font-semibold relative z-10   w-full px-5  ${galaktisRegular.className}`}
+            className={`text-pri-green text-6xl   md:text-9xl font-semibold relative z-10   w-full px-5  ${galaktisRegular.className}`}
           >
             {model.name}
           </p>
         </h3>
       </TranslateWrapper>
-      <div className="mt-2 p-4 justify-between flex">
+      <div className="mt-4">
+        <Image
+          width={600}
+          height={600}
+          className="object-contain  w-[60%] md:w-1/2 md:h-[120vh] py-20  absolute left-24  -bottom-28 "
+          src={model.photo}
+        />
+      </div>
+
+      <div className="mt-2 p-4 justify-end flex">
         <p
           className={`text-base md:text-lg rounded-lg font-bold p-4 bg-light-orange/80 backdrop-blur-md text-pri-pink md:w-2/3 relative z-30 ${sourceSansVariableItalic.className}`}
         >
@@ -222,17 +231,10 @@ const ModelCard = ({ model }) => {
         <SiLinkedin className="text-4xl md:text-5xl" />
       </Link> */}
       </div>
-      <div className="mt-4">
-        <Image
-          width={600}
-          height={600}
-          className="object-contain  w-[60%] md:w-1/2 md:h-[90vh] py-20  absolute right-2 md:-right-10 bottom-16 "
-          src={model.photo}
-        />
-      </div>
+
       <div className="flex absolute  bottom-10 right-20 cursor-pointer z-30">
         <div className="flex flex-col justify-end relative">
-          <button className="bg-pri-pink text-white  pl-16 pr-5 py-2 rounded-xl text-md md:text-xl font-semibold">
+          <button className="bg-pri-pink text-white  pl-16 pr-6 py-3 rounded-full text-md md:text-xl font-semibold">
             Meet {model.name}
           </button>
           <Image

@@ -16,7 +16,7 @@ const LastSection = () => {
     >
       <div className="flex md:flex-row flex-col justify-center  px-16 gap-16 md:gap-44 md:pl-44">
         <h2
-          className={`text-5xl md:text-6xl font-bold text-light-orange md:w-1/2  ${cafeDeParis.className}`}
+          className={`text-5xl md:text-7xl font-bold text-light-orange md:w-2/3  ${cafeDeParis.className}`}
         >
           “to have a great idea, have a lot of them.”
         </h2>
@@ -89,22 +89,23 @@ const LastSection = () => {
               </div>{" "} */}
         <TranslateWrapper>
           <img
-            className=" h-[14vmax] object-cover overflow-visible"
+            className=" h-[18vmax] object-cover overflow-visible"
             src="/images/texts/Asset_6.png"
           />{" "}
           <Image
             width={400}
             height={200}
-            className=" h-[10vmax] object-cover overflow-visible"
+            className=" h-[10vmax] object-cover overflow-visible mt-10 mx-10"
             src={"/images/lastSection/Asset_7.png"}
           />
-          <div className="flex bg-light-orange rounded-xl gap-10 p-4">
-            <div
-              className={`text-3xl h-[10vmax] text-gray-800 font-regular md:w-1/2 ${galaktisRegular.className}`}
-            >
-              Shortlisted
-              <div className="flex gap-10 mt-4">
-                {/* <div className="h-28 w-28">
+          <div className="flex  flex-col justify-center rounded-xl">
+            <div className="flex  rounded-xl gap-10 p-4">
+              <div
+                className={`text-3xl h-[10vmax] text-gray-800 font-regular md:w-1/2 ${galaktisRegular.className}`}
+              >
+                Shortlisted
+                <div className="flex gap-10 mt-4">
+                  {/* <div className="h-28 w-28">
                 <Image
                   width={200}
                   height={200}
@@ -112,34 +113,35 @@ const LastSection = () => {
                   src={"/images/lastSection/Asset_1.png"}
                 />
               </div>{" "} */}
-                <div className="w-24 h-24 flex flex-col justify-start">
-                  <Image
-                    width={200}
-                    height={200}
-                    className=""
-                    src={"/images/lastSection/Asset_3.png"}
-                  />
-                  {/* BANGALORE */}
-                </div>{" "}
-                <div className="w-24 h-24 flex flex-col justify-start">
-                  <Image
-                    width={200}
-                    height={200}
-                    className=""
-                    src={"/images/lastSection/Asset_2.png"}
-                  />
-                  {/* JEDDAH */}
+                  <div className="w-24 h-24 flex flex-col justify-start">
+                    <Image
+                      width={200}
+                      height={200}
+                      className=""
+                      src={"/images/lastSection/Asset_3.png"}
+                    />
+                    {/* BANGALORE */}
+                  </div>{" "}
+                  <div className="w-24 h-24 flex flex-col justify-start">
+                    <Image
+                      width={200}
+                      height={200}
+                      className=""
+                      src={"/images/lastSection/Asset_2.png"}
+                    />
+                    {/* JEDDAH */}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="flex  justify-end gap-3">
-              <div className=" flex flex-col justify-center">
-                <p
-                  className={`text-gray-800   text-xl  ${galaktisRegular.className}`}
-                >
-                  3d Studio partner
-                </p>
+              <div className="flex  justify-end gap-3">
+                <div className=" flex flex-col justify-center">
+                  <p
+                    className={`text-gray-800   text-xl  ${galaktisRegular.className}`}
+                  >
+                    3d Studio partner
+                  </p>
+                </div>
               </div>
               <div className="h-44 w-44">
                 <Image
@@ -153,7 +155,7 @@ const LastSection = () => {
             </div>
           </div>
           {/* <img
-            className=" h-[14vmax] object-cover overflow-visible"
+            className=" h-[18vmax] object-cover overflow-visible"
             src={"/images/texts/Asset_6.png"}
           /> */}
         </TranslateWrapper>
@@ -169,7 +171,7 @@ const LastSection = () => {
           }
         /> */}
       </div>
-      <div className="flex  md:flex-row flex-col gap-20 justify-center px-10 md:px-28 relative z-30 ">
+      <div className="flex  md:flex-row flex-col gap-20 justify-center -mt-10 px-10 md:px-28 relative z-30 ">
         {/* <div>
           <Image
             width={300}

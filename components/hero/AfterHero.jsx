@@ -12,12 +12,12 @@
 //           <TranslateWrapper>
 //             <div>
 //               <img
-//                 className=" h-[14vmax] object-contain "
+//                 className=" h-[18vmax] object-contain "
 //                 src={"/images/texts/Asset_2.png"}
 //               />
 //             </div>
 //             <img
-//               className=" h-[14vmax] object-contain "
+//               className=" h-[18vmax] object-contain "
 //               src={"/images/texts/Asset_2.png"}
 //             />
 //           </TranslateWrapper>{" "}
@@ -68,10 +68,10 @@ const HorizontalScrollCarousel = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh] z-0">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-20 ">
+        <motion.div style={{ x }} className="flex gap-20 -mt-36 ">
           {/* <SlidingText text={"from the univ"} /> */}
           <img
-            className=" h-[14vmax] object-cover overflow-visible "
+            className=" h-[18vmax] object-cover overflow-visible "
             src={"/images/texts/Asset_2.png"}
           />
         </motion.div>

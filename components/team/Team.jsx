@@ -80,11 +80,11 @@ const Team = () => {
         </p> */}
           <TranslateWrapper>
             <img
-              className=" h-[14vmax] object-cover overflow-visible"
+              className=" h-[18vmax] object-cover overflow-visible"
               src={"/images/texts/Asset_5.png"}
             />{" "}
             {/* <img
-            className=" h-[14vmax] object-cover overflow-visible"
+            className=" h-[18vmax] object-cover overflow-visible"
             src={"/images/texts/Asset_5.png"}
           /> */}
           </TranslateWrapper>{" "}
