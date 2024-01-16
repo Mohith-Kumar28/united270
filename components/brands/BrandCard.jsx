@@ -30,7 +30,7 @@ const BrandCard = ({ card }) => {
             />
           </div>
 
-          <div className="flex flex-col mt-3 ">
+          <div className="flex flex-col  ">
             <Image
               width={200}
               height={200}
@@ -43,7 +43,7 @@ const BrandCard = ({ card }) => {
           {/* <card?.icon className="w-28 h-28 text-pri-green" /> */}
         </div>
         <div
-          className={`text-gray-200 w-[50vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
+          className={`text-gray-200 w-[60vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
         >
           <div className="border rounded-full p-8 md:w-[50%]">
             <span className="font-bold"> What they wrote:</span>
