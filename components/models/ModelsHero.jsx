@@ -219,7 +219,7 @@ const ModelCard = ({ model }) => {
 
       <div className="mt-2 p-4 justify-end flex">
         <p
-          className={`text-base md:text-lg rounded-lg font-bold p-4 bg-light-orange/80 backdrop-blur-md text-pri-pink md:w-2/3 relative z-30 ${sourceSansVariableItalic.className}`}
+          className={`text-base md:text-lg rounded-lg font-bold  pl-32 bg-light-orange/80 backdrop-blur-md text-pri-pink md:w-4/5 relative z-30 ${sourceSansVariableItalic.className}`}
         >
           {model.description}
         </p>
@@ -232,7 +232,7 @@ const ModelCard = ({ model }) => {
       </Link> */}
       </div>
 
-      <div className="flex absolute  bottom-10 right-20 cursor-pointer z-30">
+      <div className="flex absolute  bottom-10 right-60 cursor-pointer z-30">
         <div className="flex flex-col justify-end relative">
           <button className="bg-pri-pink text-white  pl-16 pr-6 py-3 rounded-full text-md md:text-xl font-semibold">
             Meet {model.name}
