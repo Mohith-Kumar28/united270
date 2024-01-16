@@ -10,7 +10,7 @@ const BrandCard = ({ card }) => {
       className="group absolute    h-screen flex flex-col justify-start gap-28 py-6 px-4  w-full overflow-hidden "
     >
       <div className="flex  md:flex-row flex-col gap-20   w-full">
-        <div className="flex gap-4 md:gap-3 ">
+        <div className="flex gap-2 md:gap-1 ">
           <div className="flex flex-col  ">
             <Image
               width={90}
@@ -26,7 +26,7 @@ const BrandCard = ({ card }) => {
               height={90}
               alt=""
               src={"/images/brands/xImg.png"}
-              className="object-contain h-20 w-28"
+              className="object-contain h-24 w-28"
             />
           </div>
 

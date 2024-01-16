@@ -31,10 +31,10 @@ const Brands = () => {
                 setIsOpen(true);
               }}
               key={brand.id}
-              width={400}
-              height={400}
+              width={250}
+              height={250}
               alt="brand logo"
-              className="cursor-pointer w-36"
+              className="cursor-pointer w-28"
               src={brand.icon}
             />
           </>
@@ -47,10 +47,10 @@ const Brands = () => {
                 setIsOpen(true);
               }}
               key={brand.id}
-              width={400}
-              height={400}
+              width={250}
+              height={250}
               alt="brand logo"
-              className="cursor-pointer w-36"
+              className="cursor-pointer w-28"
               src={brand.icon}
             />
           </>
@@ -63,10 +63,10 @@ const Brands = () => {
                 setIsOpen(true);
               }}
               key={brand.id}
-              width={400}
-              height={400}
+              width={250}
+              height={250}
               alt="brand logo"
-              className="cursor-pointer w-36"
+              className="cursor-pointer w-28"
               src={brand.icon}
             />
           </>
