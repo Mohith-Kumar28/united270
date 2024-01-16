@@ -22,8 +22,8 @@ const BrandCard = ({ card }) => {
           </div>
           <div>
             <Image
-              width={50}
-              height={50}
+              width={90}
+              height={90}
               alt=""
               src={"/images/brands/xImg.png"}
               className="object-contain h-20 w-28"
@@ -36,7 +36,7 @@ const BrandCard = ({ card }) => {
               height={200}
               alt=""
               src={card?.icon}
-              className="object-contain h-20"
+              className="object-contain h-20 -ml-5"
             />
           </div>
 
