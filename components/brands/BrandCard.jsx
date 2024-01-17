@@ -26,7 +26,7 @@ const BrandCard = ({ card }) => {
               height={90}
               alt=""
               src={"/images/brands/xImg.png"}
-              className="object-contain h-24 w-28"
+              className="object-contain h-24 w-28 -mt-3"
             />
           </div>
 
