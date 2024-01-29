@@ -43,14 +43,14 @@ const BrandCard = ({ card }) => {
           {/* <card?.icon className="w-28 h-28 text-pri-green" /> */}
         </div>
         <div
-          className={`text-gray-200 w-[60vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
+          className={`text-light-orange w-[60vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
         >
-          <div className="border rounded-full p-8 md:w-[50%]">
+          <div className="border leading-5 rounded-full p-8 md:w-[50%]">
             <span className="font-bold"> What they wrote:</span>
             <br />
             {card?.whatTheyWrote}
           </div>
-          <div className="border rounded-full p-8 md:w-[50%]">
+          <div className="border leading-5 rounded-full p-8 md:w-[50%]">
             <span className="font-bold"> What we read:</span>
             <br />
             {card?.whatWeRead}

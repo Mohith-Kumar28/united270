@@ -80,14 +80,14 @@ const Card = ({ card }) => {
           {/* <card.icon className="w-28 h-28 text-pri-green" /> */}
         </div>
         <div
-          className={`text-gray-200 flex md:flex-row flex-col font-bold mt-10 ${sourceSansVariableItalic.className}`}
+          className={`text-light-orange leading-5  flex md:flex-row flex-col font-bold  mt-10 ${sourceSansVariableItalic.className}`}
         >
-          <div className="border-2 rounded-lg p-4 md:w-[50%]">
+          <p className="border-2 leading-5 border-light-orange rounded-lg p-4 pr-8 md:w-[50%]">
             What they wrote:
             <br />
             {card.whatTheyWrote}
-          </div>
-          <div className="border-2 rounded-lg p-4 md:w-[50%]">
+          </p>
+          <div className="border-2 leading-5 border-light-orange rounded-lg p-4 pr-8 md:w-[50%]">
             What we read:
             <br />
             {card.whatWeRead}

@@ -12,8 +12,9 @@ module.exports = {
         galaktis: "var(--font-galaktisRegular)",
       },
       colors: {
-        "pri-pink": "#bb88ed",
-        "pri-green": "#12ed34",
+        "pri-pink": "#b38de7",
+        // "pri-pink": "#bb88ed",
+        "pri-green": "#6fe956",
         "light-orange": "#eae1cc",
       },
       backgroundImage: {

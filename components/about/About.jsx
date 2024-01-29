@@ -68,10 +68,12 @@
 // export default About;
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import SlidingText from "../utils/SlidingText";
 import Image from "next/image";
 import { galaktisRegular, stretchPro } from "@/styles/fonts";
+import ScrollSnap from "scroll-snap";
+import useScrollSnap from "react-use-scroll-snap";
 
 const content = [
   {
@@ -151,33 +153,37 @@ const slider = [{}, {}, {}, {}, {}];
 
 const About = () => {
   return (
-    <div className=" py-56">
-      <div className="flex flex-wrap gap-x-3 gap-y-16 justify-center  relative z-30">
-        {content.map((item, idx) => (
-          <div className="flex flex-col">
-            <p
-              className={`text-pri-green text-xl w-52 font-bold   ${stretchPro.className}`}
-            >
-              {item.title}
-            </p>
-            {item.features.map((feature) => (
-              <span
-                className={`text-gray-100  text-lg  ${galaktisRegular.className}`}
+    <div className=" py-56 ">
+      <div className="pb-72">
+        {" "}
+        <div className="flex flex-wrap gap-x-3  gap-y-16 justify-center  relative z-30">
+          {content.map((item, idx) => (
+            <div className="flex flex-col leading-5">
+              <p
+                className={`text-pri-green text-xl w-52 mb-4 leading-5 font-bold   ${stretchPro.className}`}
               >
-                <span className="  inline-block"> {feature}</span>
-              </span>
-            ))}
-          </div>
-        ))}
+                {item.title}
+              </p>
+              {item.features.map((feature) => (
+                <span
+                  className={`text-light-orange flex mt-3  text-lg  ${galaktisRegular.className}`}
+                >
+                  <span className="   -mt-[23px]"> {feature}</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="flex overflow-hidden  relative z-0 ">
+          <TranslateWrapper>
+            <img
+              className="h-[18vmax] object-cover overflow-visible   "
+              src={"/images/texts/Asset_3.png"}
+            />
+          </TranslateWrapper>
+        </div>
       </div>
-      <div className="flex overflow-hidden  relative z-0 ">
-        <TranslateWrapper>
-          <img
-            className="h-[18vmax] object-cover overflow-visible   "
-            src={"/images/texts/Asset_3.png"}
-          />
-        </TranslateWrapper>
-      </div>
+
       {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
         FROM THE UNIV
       </p> */}
@@ -199,10 +205,19 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["150%", "-150%"]);
+  useScrollSnap({ ref: targetRef, duration: 1, delay: 0 });
+
+  // useEffect(() => {
+  //   const element = targetRef.current;
+  //   const snapElement = new ScrollSnap(element, {
+  //     snapDestinationY: "90%",
+  //   });
+  // }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-150%"]);
 
   return (
-    <section ref={targetRef} className=" h-[300vh] ">
+    <section ref={targetRef} className=" h-[200vh] ">
       <div className="sticky top-0 flex h-screen md:items-end  py-44 overflow-hidden z-30">
         <motion.div style={{ x }} className="flex flex-col gap-36 ">
           {/* <img
@@ -300,7 +315,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "200%" }}
       animate={{ translateX: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
       className="flex gap-4 px-2"
     >
       {children}

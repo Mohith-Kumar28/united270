@@ -66,7 +66,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["150%", "-150%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] z-0">
+    <section ref={targetRef} className="relative h-[180vh] z-0">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-20 -mt-36 ">
           {/* <SlidingText text={"from the univ"} /> */}
