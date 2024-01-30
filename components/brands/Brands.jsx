@@ -16,39 +16,31 @@ const Brands = () => {
       className="px-10  flex justify-end h-screen overflow-hidden relative z-30"
     >
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
-      <Image
-        width={100}
-        height={400}
-        className="  absolute right-20 bottom-5 h-screen w-auto"
-        src={"/images/brands.png"}
-      />
-
-      <div className="  absolute right-24 top-0 flex flex-col  justify-between h-screen">
-        {BrandsData.map((brand) => (
-          <>
-            {/* <Image
-              onClick={() => {
-                setSelectedBrand(brand);
-                setIsOpen(true);
-              }}
-              key={brand.id}
-              width={250}
-              height={250}
-              alt="brand logo"
-              className="cursor-pointer w-28 h-14 bg-black"
-              src={brand.icon}
-            /> */}
-            <div
-              onClick={() => {
-                setSelectedBrand(brand);
-                setIsOpen(true);
-              }}
-              key={brand.id}
-              className="cursor-pointer w-32 h-20 hover:bg-black/5"
-            ></div>
-          </>
-        ))}
-      </div>
+      <TranslateWrapper reverse>
+        <div className="relative    mr-10">
+          <div className="h-screen">
+            <Image
+              width={100}
+              height={400}
+              className="  absolute right-0 -bottom-3 -z-10 h-screen w-72 "
+              src={"/images/brands.png"}
+            />
+          </div>{" "}
+          {BrandsData.map((brand) => (
+            <>
+              <div
+                onClick={() => {
+                  setSelectedBrand(brand);
+                  setIsOpen(true);
+                }}
+                key={brand.id}
+                className="cursor-pointer w-40 h-20  "
+              ></div>
+            </>
+          ))}
+        </div>
+      </TranslateWrapper>
+      {/* </div> */}
 
       {/* <TranslateWrapper reverse>
         {BrandsData.map((brand) => (
@@ -109,7 +101,7 @@ export default Brands;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateY: reverse ? "-100%" : "0%" }}
+      initial={{ translateY: reverse ? "-200%" : "0%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
       transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       className="flex flex-col gap-20 px-2"
