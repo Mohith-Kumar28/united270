@@ -101,13 +101,46 @@ const HorizontalScrollCarousel = () => {
       <ModelsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedModel} />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-light-orange ">
         <motion.div style={{ x }} className="flex  justify-between ">
-          <div className="flex w-[100vw] overflow-hidden h-screen relative gap-10 p-20">
-            <div className="absolute top-1/2 -translate-y-1/2 -mt-28">
-              <TranslateWrapper reverse>
+          <div className="flex w-[100vw]  overflow-hidden h-screen relative gap-10 p-20">
+            <div className="absolute top-0 right-0 h-full w-32 z-10 bg-gradient-to-l from-light-orange"></div>
+            <div className="absolute top-1/2 -translate-y-1/4 -mt-28">
+              <TranslateWrapper>
                 <img
                   className="h-[18vmax]  object-cover overflow-visible  z-10 "
                   src={"/images/texts/Asset_7.png"}
                 />
+              </TranslateWrapper>
+              <div className="flex justify-center">
+                <Image
+                  width={250}
+                  height={250}
+                  className=""
+                  src={"/images/models/logos/AdamEveLogo.svg"}
+                />
+              </div>
+            </div>
+
+            <div className="absolute flex top-0  ">
+              <TranslateWrapper reverse>
+                <div className="flex ">
+                  {brandLogos.map((brand, idx) => (
+                    <div
+                      key={idx}
+                      // onClick={() => {
+                      //   setSelectedModel(model);
+                      //   setIsOpen(true);
+                      // }}
+                      className="h-[25vh] cursor-pointer flex items-end w-60  relative z-40"
+                    >
+                      <Image
+                        width={200}
+                        height={200}
+                        className="object-cover "
+                        src={brand.logo}
+                      />
+                    </div>
+                  ))}
+                </div>
               </TranslateWrapper>
             </div>
 
@@ -121,7 +154,7 @@ const HorizontalScrollCarousel = () => {
                         setSelectedModel(model);
                         setIsOpen(true);
                       }}
-                      className="h-[40vh] cursor-pointer flex items-end w-60  relative z-40"
+                      className="h-[25vh] cursor-pointer flex items-end w-60  relative z-40"
                     >
                       <Image
                         // width={600}
@@ -132,42 +165,6 @@ const HorizontalScrollCarousel = () => {
                       />
                     </div>
                   ))}
-                  {/* <div className="h-72 flex items-end w-60 relative z-40">
-                    <Image
-                      // width={600}
-                      // height={600}
-                      fill={true}
-                      className="object-cover overflow-visible"
-                      src={"/images/models/model2.png"}
-                    />
-                  </div>{" "}
-                  <div className="h-72 flex items-end w-60 relative z-40">
-                    <Image
-                      // width={600}
-                      // height={600}
-                      fill={true}
-                      className="object-cover overflow-visible"
-                      src={"/images/models/model3.png"}
-                    />
-                  </div>{" "}
-                  <div className="h-72 flex items-end w-60 relative z-40">
-                    <Image
-                      // width={600}
-                      // height={600}
-                      fill={true}
-                      className="object-cover overflow-visible"
-                      src={"/images/models/model4.png"}
-                    />
-                  </div>{" "}
-                  <div className="h-72 flex items-end w-60 relative z-40">
-                    <Image
-                      // width={600}
-                      // height={600}
-                      fill={true}
-                      className="object-cover overflow-visible"
-                      src={"/images/models/model5.png"}
-                    />
-                  </div> */}
                 </div>
               </TranslateWrapper>
             </div>
@@ -254,7 +251,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "75%" }}
       animate={{ translateX: reverse ? "100%" : "-100%" }}
-      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       className="flex  "
     >
       {children}
@@ -264,54 +261,31 @@ const TranslateWrapper = ({ children, reverse }) => {
 
 const models = [
   {
-    name: "~JORDADAM",
-    photo: "/images/models/model1Big.png",
-    photoSmall: "/images/models/model1.png",
-    id: 0,
-    instaImg: "/images/models/model1Insta.png",
-    description:
-      "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
-  },
-  {
-    name: "~ANNEVE",
-    photo: "/images/models/model2Big.png",
-    photoSmall: "/images/models/model2.png",
-    id: 1,
-    instaImg: "/images/models/model2Insta.png",
-    description:
-      "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
-  },
-  {
-    name: "~KUMAR ADAM",
-    photo: "/images/models/model3Big.png",
-    photoSmall: "/images/models/model3.png",
-    id: 2,
-    instaImg: "/images/models/model3Insta.png",
-    description:
-      "Hailing from Kumari Kandam, Kumar Adam is an artist of varying mediums.He is a poet, sculptor, martial artist and archer too.",
-  },
-  {
-    name: "~RARO EVE",
-    photo: "/images/models/model4Big.png",
-    photoSmall: "/images/models/model4.png",
-    id: 3,
-    instaImg: "/images/models/model4Insta.png",
-    description:
-      "Raro is from the exotic lost island Nararo. She is an underwater photographer by profession and shell collector by passion. She loves to run, play beach volleyball and reads the weather effortlessly. ",
-  },
-  {
     name: "~MU EVE",
     photo: "/images/models/model5Big.png",
-    photoSmall: "/images/models/model5.png",
+    // photoSmall: "/images/models/Asset6small.png",
+    photoSmall: "/images/models/Asset1small.png",
+
     id: 4,
     instaImg: "",
     description:
       "This French teacher loves sugar cane and hails from the lost island of Mauritia and is passionate about building boats. During his free time he loves to sing and dance.",
   },
   {
+    name: "~JORDADAM",
+    photo: "/images/models/model1Big.png",
+    photoSmall: "/images/models/Asset2small.png",
+    id: 0,
+    instaImg: "/images/models/model1Insta.png",
+    description:
+      "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
+  },
+  {
     name: "~WICH EVE",
     photo: "/images/models/model6Big.png",
-    photoSmall: "/images/models/model6.png",
+    // photoSmall: "/images/models/Asset7small.png",
+    photoSmall: "/images/models/Asset7small.png",
+
     id: 5,
     instaImg: "",
     description:
@@ -320,28 +294,94 @@ const models = [
   {
     name: "~NAH ADAM",
     photo: "/images/models/model7Big.png",
-    photoSmall: "/images/models/model7.png",
+    // photoSmall: "/images/models/Asset8small.png",
+    photoSmall: "/images/models/Asset6small.png",
+
     id: 6,
     instaImg: "",
     description:
       "Nah Adam is from the lost island of Nahlapenlohd. He loves to climb trees in his free time and enjoys skiing too.",
   },
   {
+    name: "~MU EVE 2",
+    photo: "/images/models/model9Big.png",
+    // photoSmall: "/images/models/Asset10small.png",
+    photoSmall: "/images/models/Asset9small.png",
+    id: 8,
+    instaImg: "",
+    description:
+      "Mu eve is from the Japanese Mu island. She loves to sing, fish and is passionate about efforts against climate change.",
+  },
+  {
     name: "~TAMBU ADAM",
     photo: "/images/models/model8Big.png",
-    photoSmall: "/images/models/model8.png",
+    photoSmall: "/images/models/Asset8small.png",
     id: 7,
     instaImg: "",
     description:
       "Tambu adam is a deep sea diver from the lost island of Nuatambu. When he is not swimming with the fishes he is playing his panpipe and volunteering for the climate change cause.",
   },
   {
-    name: "~MU EVE",
-    photo: "/images/models/model9Big.png",
-    photoSmall: "/images/models/model9.png",
-    id: 8,
-    instaImg: "",
+    name: "~ANNEVE",
+    photo: "/images/models/model2Big.png",
+    // photoSmall: "/images/models/Asset3small.png",
+    photoSmall: "/images/models/Asset7small.png",
+
+    id: 1,
+    instaImg: "/images/models/model2Insta.png",
     description:
-      "Mu eve is from the Japanese Mu island. She loves to sing, fish and is passionate about efforts against climate change.",
+      "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
+  },
+  {
+    name: "~RARO EVE",
+    photo: "/images/models/model4Big.png",
+    // photoSmall: "/images/models/Asset5small.png",
+    photoSmall: "/images/models/Asset4small.png",
+
+    id: 3,
+    instaImg: "/images/models/model4Insta.png",
+    description:
+      "Raro is from the exotic lost island Nararo. She is an underwater photographer by profession and shell collector by passion. She loves to run, play beach volleyball and reads the weather effortlessly. ",
+  },
+  {
+    name: "~KUMAR ADAM",
+    photo: "/images/models/model3Big.png",
+    // photoSmall: "/images/models/Asset1small.png",
+    photoSmall: "/images/models/Asset5small.png",
+
+    id: 2,
+    instaImg: "/images/models/model3Insta.png",
+    description:
+      "Hailing from Kumari Kandam, Kumar Adam is an artist of varying mediums.He is a poet, sculptor, martial artist and archer too.",
+  },
+];
+
+const brandLogos = [
+  {
+    logo: "/images/models/logos/Asset1.png",
+  },
+  {
+    logo: "/images/models/logos/Asset2.png",
+  },
+  {
+    logo: "/images/models/logos/Asset3.png",
+  },
+  {
+    logo: "/images/models/logos/Asset4.png",
+  },
+  {
+    logo: "/images/models/logos/Asset5.png",
+  },
+  {
+    logo: "/images/models/logos/Asset6.png",
+  },
+  {
+    logo: "/images/models/logos/Asset7.png",
+  },
+  {
+    logo: "/images/models/logos/Asset8.png",
+  },
+  {
+    logo: "/images/models/logos/Asset9.svg",
   },
 ];

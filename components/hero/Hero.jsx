@@ -40,10 +40,10 @@ const Hero = () => {
             See Works
           </button>
           <Image
-            width={200}
-            height={200}
-            className="  absolute -left-24 -bottom-9"
-            src={"/3dPerson/cam.0000.png"}
+            width={100}
+            height={100}
+            className="  absolute -left-14 bottom-0"
+            src={"/images/hero/heroGirl.png"}
           />
         </div>
       </div>

@@ -115,6 +115,7 @@ const content = [
       "Performance Marketing",
       "AI Film Making",
       "AI-Gen Lookbooks",
+      "Influencer Marketing",
     ],
   },
   {
@@ -218,7 +219,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className=" h-[200vh] ">
-      <div className="sticky top-0 flex h-screen md:items-end  py-44 overflow-hidden z-30">
+      <div className="sticky top-0 flex h-screen md:items-end  py-36 overflow-hidden z-30">
         <motion.div style={{ x }} className="flex flex-col gap-36 ">
           {/* <img
             className="h-[18vmax] object-cover overflow-visible relative z-10 "
@@ -231,12 +232,12 @@ const HorizontalScrollCarousel = () => {
                 key={idx}
                 className="flex flex-col justify-end relative  cursor-pointer"
               >
-                <button className="bg-light-orange w-52  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold"></button>
+                <button className="bg-light-orange w-52  pl-16 pr-5 py-8 rounded-full text-xl font-semibold"></button>
                 <Image
-                  width={200}
-                  height={200}
-                  className="  absolute -left-24 -bottom-10"
-                  src={"/3dPerson/cam.0000.png"}
+                  width={100}
+                  height={100}
+                  className="  absolute -left-14 bottom-0"
+                  src={"/images/hero/heroGirl.png"}
                 />
               </div>
             ))}

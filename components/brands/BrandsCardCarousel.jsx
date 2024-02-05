@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import BrandCard from "./BrandCard";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function BrandsCardCarousel({ card }) {
   const [idx, setIdx] = useState(3);
@@ -24,9 +25,10 @@ export default function BrandsCardCarousel({ card }) {
           setPrevIdx(idx);
           setIdx((pv) => pv - 1);
         }}
-        className="bg-white/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 left-16 rounded-full top-1/2 "
+        className=" transition-colors  text-white p-2 absolute z-10 left-10 rounded-full top-1/2 "
       >
-        <FiChevronLeft className="text-3xl" />
+        {/* <FiChevronLeft className="text-3xl" /> */}
+        <ArrowLeftIcon className="w-8" />
       </button>
 
       <div className="absolute  inset-0 z-[5] backdrop-blur-xl">
@@ -51,9 +53,10 @@ export default function BrandsCardCarousel({ card }) {
           setPrevIdx(idx);
           setIdx((pv) => pv + 1);
         }}
-        className="bg-white/50 hover:bg-black/60 transition-colors text-white p-2 absolute z-10 right-16  rounded-full top-1/2"
+        className=" transition-colors text-white p-2 absolute z-10 right-10 rounded-full top-1/2 "
       >
-        <FiChevronRight className="text-3xl" />
+        {/* <FiChevronLeft className="text-3xl" /> */}
+        <ArrowRightIcon className="w-8" />
       </button>
     </div>
   );

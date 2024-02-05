@@ -16,30 +16,36 @@ const Brands = () => {
       className="px-10  flex justify-end h-screen overflow-hidden relative z-30"
     >
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
-      <TranslateWrapper reverse>
-        <div className="relative    mr-10">
-          <div className="h-screen">
-            <Image
-              width={100}
-              height={400}
-              className="  absolute right-0 -bottom-3 -z-10 h-screen w-72 "
-              src={"/images/brands.png"}
-            />
-          </div>{" "}
-          {BrandsData.map((brand) => (
-            <>
-              <div
-                onClick={() => {
-                  setSelectedBrand(brand);
-                  setIsOpen(true);
-                }}
-                key={brand.id}
-                className="cursor-pointer w-40 h-20  "
-              ></div>
-            </>
-          ))}
-        </div>
-      </TranslateWrapper>
+      <div>
+        {" "}
+        <TranslateWrapper reverse>
+          <div className="flex flex-col justify-center">
+            <div className="relative    mr-7">
+              <div className="h-screen">
+                <Image
+                  width={100}
+                  height={400}
+                  className="  absolute right-0 -bottom-3 -z-10 h-screen w-72 "
+                  src={"/images/brands/BrandLogos.svg"}
+                />
+              </div>{" "}
+              {BrandsData.map((brand) => (
+                <>
+                  <div
+                    onClick={() => {
+                      setSelectedBrand(brand);
+                      setIsOpen(true);
+                    }}
+                    key={brand.id}
+                    className="cursor-pointer w-40 h-20  "
+                  ></div>
+                </>
+              ))}
+            </div>{" "}
+          </div>
+        </TranslateWrapper>
+      </div>
+
       {/* </div> */}
 
       {/* <TranslateWrapper reverse>
@@ -101,10 +107,10 @@ export default Brands;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateY: reverse ? "-200%" : "0%" }}
+      initial={{ translateY: reverse ? "-50%" : "0%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
       transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      className="flex flex-col gap-20 px-2"
+      className="flex flex-col gap-4 px-2"
     >
       {children}
     </motion.div>

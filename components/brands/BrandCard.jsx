@@ -9,7 +9,7 @@ const BrandCard = ({ card }) => {
       key={card?.id}
       className="group absolute    h-screen flex flex-col justify-start gap-28 py-6 px-4  w-full overflow-hidden "
     >
-      <div className="flex  md:flex-row flex-col gap-20   w-full">
+      <div className="flex  md:flex-row flex-col gap-10   w-full">
         <div className="flex gap-2 md:gap-1 ">
           <div className="flex flex-col  ">
             <Image
@@ -45,17 +45,17 @@ const BrandCard = ({ card }) => {
         <div
           className={`text-light-orange w-[60vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
         >
-          <div className="border leading-5 rounded-full p-8 md:w-[50%]">
+          <div className="border  leading-5 rounded-[90px] p-8 md:w-[40%]">
             <span className="font-bold"> What they wrote:</span>
             <br />
             {card?.whatTheyWrote}
           </div>
-          <div className="border leading-5 rounded-full p-8 md:w-[50%]">
+          <div className="border leading-5 rounded-[90px] p-8 md:w-[40%]">
             <span className="font-bold"> What we read:</span>
             <br />
             {card?.whatWeRead}
           </div>
-          <div className=" rounded-lg p-8 ">
+          <div className=" rounded-lg  pl-8 w-72 flex flex-col  justify-center">
             <span className="font-bold"> What we gave them:</span>
           </div>
         </div>
@@ -66,7 +66,7 @@ const BrandCard = ({ card }) => {
           height={700}
           alt=""
           style={{ objectFit: "contain" }}
-          className="w-[70vw] rounded-xl"
+          className="w-[70vw] -mt-10 rounded-xl"
           src={card?.url}
         />
       </div>
