@@ -18,7 +18,7 @@ const Brands = () => {
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
       <div>
         {" "}
-        <TranslateWrapper reverse>
+        <TranslateWrapper>
           <div className="flex flex-col justify-center">
             <div className="relative    mr-7">
               <div className="h-screen">
@@ -41,7 +41,7 @@ const Brands = () => {
                   ></div>
                 </>
               ))}
-            </div>{" "}
+            </div>
           </div>
         </TranslateWrapper>
       </div>
@@ -109,9 +109,14 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateY: reverse ? "-50%" : "0%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
       className="flex flex-col gap-4 px-2"
     >
+      {children}
+      {children}
+      {children}
+      {children}
+      {children}
       {children}
     </motion.div>
   );
