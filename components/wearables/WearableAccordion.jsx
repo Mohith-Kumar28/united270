@@ -10,21 +10,25 @@ const WearableAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
 
   return (
-    <section className="  px-32 flex flex-col justify-center relative z-30">
+    <section className="  px-32 flex flex-col pt-14 justify-center relative z-30">
       <h2
-        className={` text-pri-green mr-4 mb-4 relative mb-0 text-4xl text-right  ${galaktisRegular.className}`}
+        className={` text-pri-green mr-4  relative mb-0 text-4xl text-right  ${galaktisRegular.className}`}
       >
         INTEROPERABLE WEARABLES &AVATARS
-        <Link href={"https://www.instagram.com/united_270/"} target="_blank">
+        <Link
+          className=""
+          href={"https://www.instagram.com/united_270/"}
+          target="_blank"
+        >
           <Image
             width={80}
             height={80}
-            className="absolute -top-5 -right-24 z-10"
+            className="absolute  -top-5 -right-24 z-10"
             src={"/images/logos/Asset_1.png"}
           />
         </Link>
       </h2>
-      <div className="flex flex-col  lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto shadow overflow-hidden -mb-16">
+      <div className="flex flex-col   lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto  overflow-hidden mt-10">
         {/* {items.map((item) => {
           return (
             <Panel

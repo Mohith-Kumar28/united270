@@ -39,13 +39,13 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-pri-pink">
+    <section ref={targetRef} className="relative h-[200vh] bg-pri-pink">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden ">
         <motion.div style={{ x }} className="flex gap-52 ">
-          <div className="flex w-[100vw] relative">
+          <div className="flex w-[100vw] relative overflow-hidden">
             <Link
               href={"https://www.instagram.com/united_270/"}
               target="_blank"

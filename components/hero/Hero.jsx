@@ -4,6 +4,7 @@ import { motion, useAnimate } from "framer-motion";
 import SlidingText from "../utils/SlidingText";
 import { galaktisRegular } from "@/styles/fonts";
 import { fadeIn, staggerContainer } from "@/utils/motion";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const Hero = () => {
   return (
@@ -36,8 +37,9 @@ const Hero = () => {
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">
-          <button className="bg-pri-green text-white  pl-16 pr-5 py-3 rounded-lg text-xl font-semibold">
+          <button className="bg-pri-green text-white  pl-16 pr-5 py-3  text-xl font-semibold flex rounded-full">
             See Works
+            <ArrowRightIcon className="w-7 ml-2  text-white" />
           </button>
           <Image
             width={100}

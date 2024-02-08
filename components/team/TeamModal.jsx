@@ -103,10 +103,10 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                         className=" h-[18vmax] object-cover overflow-visible"
                         src={user?.brands}
                       />{" "}
-                      <img
-                        className="translate-x-[25%] h-[18vmax] object-cover overflow-visible"
+                      {/* <img
+                        className="translate-x-[50%] h-[18vmax] object-cover overflow-visible"
                         src={user?.brands}
-                      />
+                      /> */}
                     </TranslateWrapper>
                   </div>
                   <Dialog.Title
@@ -114,20 +114,20 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     className="mt-4 text-lg font-medium leading-6 text-gray-900"
                   >
                     <p
-                      className={`text-pri-green text-4xl md:text-8xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
+                      className={`text-pri-green text-4xl md:text-8xl font-semibold relative z-0  w-full px-5  ${galaktisRegular.className}`}
                     >
                       {user?.name}
                     </p>
                   </Dialog.Title>
                   <div className="mt-2 p-4 justify-between flex flex-col md:flex-row">
                     <p
-                      className={`text-base md:text-lg font-medium text-gray-100 bg-white/5 backdrop-blur-lg relative z-10 md:w-2/3  ${sourceSansVariableItalic.className}`}
+                      className={`text-base md:text-lg font-medium text-gray-100  backdrop-blur-lg relative z-10 md:w-2/3  ${sourceSansVariableItalic.className}`}
                     >
                       {user?.description}
                     </p>
                     <Link
                       href={user?.linkedinUrl}
-                      // target="_blank"
+                      target="_blank"
                       className="cursor-pointer z-10 w-16 md:w-24 h-16 md:h-24 flex justify-center items-center rounded-lg  hover:bg-black/10 text-pri-green transition-colors outline-none"
                     >
                       <SiLinkedin className="text-4xl md:text-5xl" />

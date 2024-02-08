@@ -20,17 +20,17 @@ const Team = () => {
       photo: "/images/team/person1.png",
       photoSmall: "",
       brands: "/images/team/person1Brands.png",
-      linkedinUrl: "",
+      linkedinUrl: "https://www.linkedin.com/in/jeff-emmanuel-33359223/",
       description:
         "With over 18 years of experience in advertising and brand-building, Jeff has been the man behind many iconic campaigns. He has worked on numerous brands like Simon Carter, Puma, Mumbai Indians, Allen Solly, Mia by Tanishq, Louis Phillipe and headed various creative teams both in India and the Middle East. During his stint he has been recognised multiple times by both national and international forums like the Cannes Lions and been featured in the top creatives lists by various agencies.",
     },
     {
-      name: "~MANISH CHAWALA",
+      name: "~MANISH CHAWLA",
       role: "Chief Creative Officer & Co- Founder",
       photo: "/images/team/person2.png",
       photoSmall: "",
-      brands: "/images/team/person2Brands.png",
-      linkedinUrl: "",
+      brands: "",
+      linkedinUrl: "https://www.linkedin.com/in/manishchawla111/",
       description:
         "With a keen interest and experience in business and entrepreneurship, he has recently diversified himself with the advertising industry. In the past 5 years he has managed and built various accounts across diverse industries. A full-time hustler, Manish is an organised visionary who is passionate about building businesses into brands. His key skills include Account Management, Media Buying and Strategy, and Tech and Media Innovations.",
     },
@@ -40,7 +40,8 @@ const Team = () => {
       photo: "/images/team/person3.png",
       photoSmall: "/images/team/person3Small.png",
       brands: "/images/team/person3Brands.png",
-      linkedinUrl: "",
+      linkedinUrl:
+        "https://www.linkedin.com/in/sasha-d-souza-147322214/?originalSubdomain=in",
       description:
         "With over 5 years of experience in the advertising industry, Sasha has worked on some key accounts in a short span. She spearheaded her career by writing for Hindustan Unilever - one of Indias largest and most trusted FMCG brands. She led the communications for their CSR initiatives on Twitter and executive leadership profiles. She later moved on to other noteworthy brands across segments like Automobile, fashion, finance, real estate among many others.",
     },
@@ -60,7 +61,7 @@ const Team = () => {
       photo: "/images/team/person5.png",
       photoSmall: "",
       brands: "",
-      linkedinUrl: "",
+      linkedinUrl: "https://www.linkedin.com/in/kesava-senapathi/",
       description:
         "With over 22 years of expertise in the IT domain across diverse business verticals, Senapathi is our experienced advisor and mentor. His multi-faceted expertise lies in areas like IT Strategy & Planning, Enterprise Solution Design, and Business Transformation - including Digital Transformation ranging from Big data and Robotics to Apps and Al.",
     },

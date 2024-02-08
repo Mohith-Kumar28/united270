@@ -77,6 +77,7 @@ import SlidingText from "../utils/SlidingText";
 import Image from "next/image";
 import { galaktisRegular, sourceSansVariableItalic } from "@/styles/fonts";
 import ModelsModal from "./ModelsModal";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const ModelsHero = () => {
   return (
@@ -147,7 +148,7 @@ const HorizontalScrollCarousel = () => {
             <div className="absolute flex bottom-0  ">
               <TranslateWrapper>
                 <div className="flex ">
-                  {models.map((model) => (
+                  {models.map((model, index) => (
                     <div
                       key={model.id}
                       onClick={() => {
@@ -169,9 +170,9 @@ const HorizontalScrollCarousel = () => {
               </TranslateWrapper>
             </div>
           </div>
-          {models.map((model) => (
+          {models.map((model, index) => (
             <>
-              <ModelCard key={model.name} model={model} />
+              <ModelCard key={model.name} model={model} index={index} />
             </>
           ))}
         </motion.div>
@@ -182,13 +183,13 @@ const HorizontalScrollCarousel = () => {
 
 export default ModelsHero;
 
-const ModelCard = ({ model }) => {
+const ModelCard = ({ model, index }) => {
   return (
     <div className="flex flex-col justify-between md:justify-center  w-[125vw] h-screen relative px-[30vw] py-28 overflow-hidden ">
       <TranslateWrapper>
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900 ">
           <p
-            className={`text-pri-green  text-6xl   md:text-9xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
+            className={`text-pri-green  text-7xl  whitespace-nowrap md:text-9xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
           >
             {model.name}
           </p>
@@ -199,7 +200,7 @@ const ModelCard = ({ model }) => {
         />
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900">
           <p
-            className={`text-pri-green text-6xl   md:text-9xl font-semibold relative z-10   w-full px-5  ${galaktisRegular.className}`}
+            className={`text-pri-green text-7xl whitespace-nowrap   md:text-9xl font-semibold relative z-10   w-full px-5  ${galaktisRegular.className}`}
           >
             {model.name}
           </p>
@@ -207,16 +208,16 @@ const ModelCard = ({ model }) => {
       </TranslateWrapper>
       <div className="mt-4">
         <Image
-          width={600}
-          height={600}
-          className="object-contain  w-[60%] md:w-1/2 md:h-[120vh] py-20  absolute left-24  -bottom-28 "
+          width={1000}
+          height={1000}
+          className="object-contain  w-[60%] md:w-1/3 md:h-[100vh] py-20  absolute left-32  -bottom-20 "
           src={model.photo}
         />
       </div>
 
-      <div className="mt-2 p-4 justify-end flex">
+      <div className="mt-2 p-4 justify-end flex ">
         <p
-          className={`text-base md:text-lg rounded-lg font-bold  pl-32 bg-light-orange/80 backdrop-blur-md text-pri-pink md:w-4/5 relative z-30 ${sourceSansVariableItalic.className}`}
+          className={`text-base md:text-lg rounded-full border border-pri-green font-bold  p-6   text-pri-pink md:w-4/5 relative z-30 ${sourceSansVariableItalic.className}`}
         >
           {model.description}
         </p>
@@ -228,20 +229,22 @@ const ModelCard = ({ model }) => {
         <SiLinkedin className="text-4xl md:text-5xl" />
       </Link> */}
       </div>
-
-      <div className="flex absolute  bottom-10 right-60 cursor-pointer z-30">
-        <div className="flex flex-col justify-end relative">
-          <button className="bg-pri-pink text-white  pl-16 pr-6 py-3 rounded-full text-md md:text-xl font-semibold">
-            Meet {model.name}
-          </button>
-          <Image
-            width={100}
-            height={100}
-            className="  absolute -left-12 bottom-0"
-            src={"/images/models/model1.png"}
-          />
+      {index !== 7 && (
+        <div className="flex absolute  bottom-10 right-60 cursor-pointer z-30">
+          <div className="flex  justify-end relative">
+            <button className="bg-pri-pink text-white  pl-16 pr-6 py-3 rounded-full text-md md:text-xl font-semibold">
+              Meet {models[index + 1]?.name}
+            </button>
+            <ArrowRightIcon className="w-8 ml-3 text-pri-pink" />
+            <Image
+              width={100}
+              height={100}
+              className="  absolute -left-12 bottom-0"
+              src={models[index + 1]?.photoSmall}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
@@ -251,7 +254,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "75%" }}
       animate={{ translateX: reverse ? "100%" : "-100%" }}
-      transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       className="flex  "
     >
       {children}
@@ -302,16 +305,16 @@ const models = [
     description:
       "Nah Adam is from the lost island of Nahlapenlohd. He loves to climb trees in his free time and enjoys skiing too.",
   },
-  {
-    name: "~MU EVE 2",
-    photo: "/images/models/model9Big.png",
-    // photoSmall: "/images/models/Asset10small.png",
-    photoSmall: "/images/models/Asset9small.png",
-    id: 8,
-    instaImg: "",
-    description:
-      "Mu eve is from the Japanese Mu island. She loves to sing, fish and is passionate about efforts against climate change.",
-  },
+  // {
+  //   name: "~MU EVE 2",
+  //   photo: "/images/models/model9Big.png",
+  //   // photoSmall: "/images/models/Asset10small.png",
+  //   photoSmall: "/images/models/Asset9small.png",
+  //   id: 8,
+  //   instaImg: "",
+  //   description:
+  //     "Mu eve is from the Japanese Mu island. She loves to sing, fish and is passionate about efforts against climate change.",
+  // },
   {
     name: "~TAMBU ADAM",
     photo: "/images/models/model8Big.png",
@@ -325,7 +328,7 @@ const models = [
     name: "~ANNEVE",
     photo: "/images/models/model2Big.png",
     // photoSmall: "/images/models/Asset3small.png",
-    photoSmall: "/images/models/Asset7small.png",
+    photoSmall: "/images/models/Asset3small.png",
 
     id: 1,
     instaImg: "/images/models/model2Insta.png",

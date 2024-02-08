@@ -21,6 +21,7 @@ import WearableAccordion from "../wearables/WearableAccordion";
 
 import useScrollSnap from "react-use-scroll-snap";
 import Link from "next/link";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 const WearableHorizontalScroll = () => {
   return (
@@ -64,7 +65,7 @@ const HyperRealisticHero = () => {
               />
               <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div>
               <div className="w-2/3">
-                <h2
+                {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >
                   CREATING
@@ -72,8 +73,8 @@ const HyperRealisticHero = () => {
                   <br /> 3D FASHION
                   <br /> BESPOKE
                   <br /> CREATIONS ~
-                </h2>
-                <div
+                </h2> */}
+                {/* <div
                   className={`text-3xl flex flex-col  md:text-6xl text-gray-600 mt-3 ${cafeDeParis.className}`}
                 >
                   <h3 className={``}>BRANDS</h3>
@@ -81,7 +82,13 @@ const HyperRealisticHero = () => {
                   <h3 className={``}>ORG</h3>
                   <h3 className={``}>GAMING</h3>
                   <h3 className={``}>METAVERSE</h3>
-                </div>
+                </div> */}
+                <Image
+                  width={700}
+                  height={700}
+                  className=""
+                  src={"/images/hyperRealistic/Asset_4.svg"}
+                />
               </div>
             </div>
             <div className=" ">
@@ -89,7 +96,9 @@ const HyperRealisticHero = () => {
                 <div className="relative h-screen flex gap-36 justify-between py-5   ">
                   {cards.map((item) => {
                     return (
-                      <div className="w-[80vw] flex flex-col justify-center relative">
+                      <div className="w-[80vw] flex flex-col justify-center relative ">
+                        <ArrowLeftIcon className="w-7 text-pri-green absolute top-1/2 left-0" />
+                        <ArrowRightIcon className="w-7 text-pri-green absolute top-1/2 right-0" />
                         <h2
                           className={`relative text-pri-green mb-2 md:mr-8  text-4xl text-right  ${galaktisRegular.className}`}
                         >
@@ -112,7 +121,7 @@ const HyperRealisticHero = () => {
                           className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:-right-16 md:top-28 z-10"
                           src={"/images/logos/Asset_2.png"}
                         /> */}
-                        <div className="flex justify-end  relative h-[70vh]">
+                        <div className="flex justify-center  relative h-[70vh]">
                           <Image
                             width={900}
                             height={700}
