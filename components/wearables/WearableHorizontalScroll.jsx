@@ -64,6 +64,7 @@ const HorizontalScrollCarousel = () => {
                 }
               />
             </div>
+            {/*  */}
             <div className="w-full flex items-center">
               <Image
                 width={600}
