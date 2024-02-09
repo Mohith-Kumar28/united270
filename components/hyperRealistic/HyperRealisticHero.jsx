@@ -65,7 +65,7 @@ const HyperRealisticHero = () => {
               />
               <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div>
               <div className="w-2/3">
-                {/* <h2
+                <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >
                   CREATING
@@ -73,8 +73,8 @@ const HyperRealisticHero = () => {
                   <br /> 3D FASHION
                   <br /> BESPOKE
                   <br /> CREATIONS ~
-                </h2> */}
-                {/* <div
+                </h2>{" "}
+                <div
                   className={`text-3xl flex flex-col  md:text-6xl text-gray-600 mt-3 ${cafeDeParis.className}`}
                 >
                   <h3 className={``}>BRANDS</h3>
@@ -82,13 +82,13 @@ const HyperRealisticHero = () => {
                   <h3 className={``}>ORG</h3>
                   <h3 className={``}>GAMING</h3>
                   <h3 className={``}>METAVERSE</h3>
-                </div> */}
-                <Image
+                </div>
+                {/* <Image
                   width={700}
                   height={700}
                   className=""
                   src={"/images/hyperRealistic/Asset_4.svg"}
-                />
+                /> */}
               </div>
             </div>
             <div className=" ">
