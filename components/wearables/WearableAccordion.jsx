@@ -49,7 +49,7 @@ const WearableAccordion = () => {
           alt=""
           style={{ objectFit: "contain" }}
           className="w-[80vw] rounded-xl "
-          src={"/images/wearables/wearablesAvatar.png "}
+          src={"/images/wearables/wearablesAvatar.png"}
         />
       </div>
     </section>
