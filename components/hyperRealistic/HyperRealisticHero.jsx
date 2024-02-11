@@ -65,7 +65,7 @@ const HyperRealisticHero = () => {
               />
               <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div>
               <div className="w-2/3">
-                <h2
+                {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >
                   CREATING
@@ -82,13 +82,13 @@ const HyperRealisticHero = () => {
                   <h3 className={``}>ORG</h3>
                   <h3 className={``}>GAMING</h3>
                   <h3 className={``}>METAVERSE</h3>
-                </div>
-                {/* <Image
+                </div> */}
+                <Image
                   width={700}
                   height={700}
                   className=""
-                  src={"/images/hyperRealistic/Asset_4.svg"}
-                /> */}
+                  src={"/images/hyperRealistic/Asset_4.png"}
+                />
               </div>
             </div>
             <div className=" ">

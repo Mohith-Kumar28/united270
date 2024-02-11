@@ -18,15 +18,15 @@ const Brands = () => {
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
       <div>
         {" "}
-        <TranslateWrapper>
+        <TranslateWrapper reverse>
           <div className="flex flex-col justify-center">
             <div className="relative    mr-7">
-              <div className="h-screen">
+              <div className="h-screen overflow-visible ">
                 <Image
                   width={100}
                   height={400}
-                  className="  absolute right-0 -bottom-3 -z-10 h-screen w-72 "
-                  src={"/images/brands/BrandLogos.svg"}
+                  className="  absolute right-0 -bottom-3 -z-10  w-72 "
+                  src={"/images/brands/BrandLogosLong.svg"}
                 />
               </div>{" "}
               {BrandsData.map((brand) => (
@@ -37,7 +37,43 @@ const Brands = () => {
                       setIsOpen(true);
                     }}
                     key={brand.id}
-                    className="cursor-pointer w-40 h-20  "
+                    className="cursor-pointer w-40 h-24 "
+                  ></div>
+                </>
+              ))}
+              {BrandsData.map((brand) => (
+                <>
+                  <div
+                    onClick={() => {
+                      setSelectedBrand(brand);
+                      setIsOpen(true);
+                    }}
+                    key={brand.id}
+                    className="cursor-pointer w-40 h-24  "
+                  ></div>
+                </>
+              ))}
+              {BrandsData.map((brand) => (
+                <>
+                  <div
+                    onClick={() => {
+                      setSelectedBrand(brand);
+                      setIsOpen(true);
+                    }}
+                    key={brand.id}
+                    className="cursor-pointer w-40 h-24 "
+                  ></div>
+                </>
+              ))}
+              {BrandsData.map((brand) => (
+                <>
+                  <div
+                    onClick={() => {
+                      setSelectedBrand(brand);
+                      setIsOpen(true);
+                    }}
+                    key={brand.id}
+                    className="cursor-pointer w-40 h-24  "
                   ></div>
                 </>
               ))}
@@ -107,17 +143,17 @@ export default Brands;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateY: reverse ? "-50%" : "0%" }}
+      initial={{ translateY: reverse ? "-100%" : "-200%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       className="flex flex-col gap-4 px-2"
     >
       {children}
+      {/* {children}
       {children}
       {children}
       {children}
-      {children}
-      {children}
+      {children} */}
     </motion.div>
   );
 };

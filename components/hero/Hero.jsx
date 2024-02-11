@@ -16,14 +16,24 @@ const Hero = () => {
         <div className="flex overflow-hidden  relative z-0 -mt-36">
           <TranslateWrapper>
             <img
-              className=" h-[18vmax] object-cover overflow-visible"
-              src={"/images/texts/Asset_1.png"}
+              className=" h-[18vmax]  object-cover overflow-visible"
+              src={"/images/texts/Asset_1.svg"}
             />{" "}
             {/* <img
-              className="  h-[18vmax] object-cover overflow-visible hidden md:block"
-              src={"/images/texts/Asset_1.png"}
+              className=" h-[18vmax] mx-[1500px]  object-cover overflow-visible"
+              src={"/images/texts/Asset_1.svg"}
+            />{" "}
+            <img
+              className=" h-[18vmax] mx-[1500px]  object-cover overflow-visible"
+              src={"/images/texts/Asset_1.svg"}
             /> */}
-          </TranslateWrapper>
+          </TranslateWrapper>{" "}
+          {/* <TranslateWrapper>
+            <img
+              className=" h-[18vmax]  object-cover overflow-visible"
+              src={"/images/texts/Asset_1.svg"}
+            />{" "}
+          </TranslateWrapper> */}
         </div>
         {/* <p
           className={
@@ -58,9 +68,9 @@ export default Hero;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateX: reverse ? "-100%" : "80%" }}
-      animate={{ translateX: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      initial={{ translateX: reverse ? "-100%" : "130%" }}
+      animate={{ translateX: reverse ? "0%" : "-150%" }}
+      transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
       className="flex gap-4 px-2"
     >
       {children}

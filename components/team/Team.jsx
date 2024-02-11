@@ -15,18 +15,8 @@ const Team = () => {
 
   const team = [
     {
-      name: "~JEFF EMMANUEL",
-      role: "Chief Creative Officer & Co- Founder",
-      photo: "/images/team/person1.png",
-      photoSmall: "",
-      brands: "/images/team/person1Brands.png",
-      linkedinUrl: "https://www.linkedin.com/in/jeff-emmanuel-33359223/",
-      description:
-        "With over 18 years of experience in advertising and brand-building, Jeff has been the man behind many iconic campaigns. He has worked on numerous brands like Simon Carter, Puma, Mumbai Indians, Allen Solly, Mia by Tanishq, Louis Phillipe and headed various creative teams both in India and the Middle East. During his stint he has been recognised multiple times by both national and international forums like the Cannes Lions and been featured in the top creatives lists by various agencies.",
-    },
-    {
       name: "~MANISH CHAWLA",
-      role: "Chief Creative Officer & Co- Founder",
+      role: "Brand Director",
       photo: "/images/team/person2.png",
       photoSmall: "",
       brands: "",
@@ -36,34 +26,46 @@ const Team = () => {
     },
     {
       name: "~SASHADSOZA",
-      role: "Chief Creative Officer & Co- Founder",
+      role: "Creative Director",
       photo: "/images/team/person3.png",
-      photoSmall: "/images/team/person3Small.png",
-      brands: "/images/team/person3Brands.png",
+      photoSmall: "",
+      brands: "/images/team/person3Brands.svg",
       linkedinUrl:
         "https://www.linkedin.com/in/sasha-d-souza-147322214/?originalSubdomain=in",
       description:
         "With over 5 years of experience in the advertising industry, Sasha has worked on some key accounts in a short span. She spearheaded her career by writing for Hindustan Unilever - one of Indias largest and most trusted FMCG brands. She led the communications for their CSR initiatives on Twitter and executive leadership profiles. She later moved on to other noteworthy brands across segments like Automobile, fashion, finance, real estate among many others.",
     },
-    {
-      name: "~ANTARA SRIVATSA",
-      role: "Chief Creative Officer & Co- Founder",
-      photo: "/images/team/person4.png",
-      photoSmall: "/images/team/person4Small.png",
-      brands: "/images/team/person4Brands.png",
-      linkedinUrl: "",
-      description:
-        "With over 8 years of experience in retail and visual merchandising across various marketsin the country, Antara has elevated multiple brands like Tommy Hilfiger, ALDO, Lifestyle. Apart from these she has a keen interest in styling and marketing and has associated with brands like Collective, Louis Phillipe, Mia, Lifestyle and TFM Modelling agency for the same.",
-    },
+
     {
       name: "~SENAPATHI KESAVA",
-      role: "Chief Creative Officer & Co- Founder",
+      role: "Chief Operations Officer & Co- Founder",
       photo: "/images/team/person5.png",
-      photoSmall: "",
+      photoSmall: "/images/team/person3Small.png",
       brands: "",
       linkedinUrl: "https://www.linkedin.com/in/kesava-senapathi/",
       description:
         "With over 22 years of expertise in the IT domain across diverse business verticals, Senapathi is our experienced advisor and mentor. His multi-faceted expertise lies in areas like IT Strategy & Planning, Enterprise Solution Design, and Business Transformation - including Digital Transformation ranging from Big data and Robotics to Apps and Al.",
+    },
+    {
+      name: "~JEFF EMMANUEL",
+      role: "Chief Creative Officer & Co- Founder",
+      photo: "/images/team/person1.png",
+      photoSmall: "/images/team/person4Small.png",
+      brands: "/images/team/person1Brands.svg",
+      linkedinUrl: "https://www.linkedin.com/in/jeff-emmanuel-33359223/",
+      description:
+        "With over 18 years of experience in advertising and brand-building, Jeff has been the man behind many iconic campaigns. He has worked on numerous brands like Simon Carter, Puma, Mumbai Indians, Allen Solly, Mia by Tanishq, Louis Phillipe and headed various creative teams both in India and the Middle East. During his stint he has been recognised multiple times by both national and international forums like the Cannes Lions and been featured in the top creatives lists by various agencies.",
+    },
+
+    {
+      name: "~ANTARA SRIVATSA",
+      role: "Brand Strategist",
+      photo: "/images/team/person4.png",
+      photoSmall: "",
+      brands: "/images/team/person4Brands.svg",
+      linkedinUrl: "",
+      description:
+        "With over 8 years of experience in retail and visual merchandising across various marketsin the country, Antara has elevated multiple brands like Tommy Hilfiger, ALDO, Lifestyle. Apart from these she has a keen interest in styling and marketing and has associated with brands like Collective, Louis Phillipe, Mia, Lifestyle and TFM Modelling agency for the same.",
     },
   ];
 
@@ -93,7 +95,7 @@ const Team = () => {
             {team.map((member, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-end   cursor-pointer"
+                className="flex flex-col justify-start    cursor-pointer"
               >
                 <div
                   onClick={() => {
@@ -109,7 +111,7 @@ const Team = () => {
                   />
                 </div>
                 <span
-                  className={`text-center mt-2 w-28 md:w-44 font-bold text-lg text-gray-200 rounded-lg   ${galaktisRegular.className}`}
+                  className={`text-center  w-28 md:w-44 font-bold text-lg text-gray-200 rounded-lg   ${galaktisRegular.className}`}
                 >
                   {member.role}
                 </span>

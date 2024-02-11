@@ -210,7 +210,7 @@ const ModelCard = ({ model, index }) => {
         <Image
           width={1000}
           height={1000}
-          className="object-contain  w-[60%] md:w-1/3 md:h-[100vh] py-20  absolute left-32  -bottom-20 "
+          className="object-contain  w-[60%] md:w-1/3 md:h-[100vh] py-20  absolute left-52 -bottom-20 "
           src={model.photo}
         />
       </div>
@@ -254,7 +254,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "75%" }}
       animate={{ translateX: reverse ? "100%" : "-100%" }}
-      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       className="flex  "
     >
       {children}
@@ -263,6 +263,15 @@ const TranslateWrapper = ({ children, reverse }) => {
 };
 
 const models = [
+  {
+    name: "~JORDADAM",
+    photo: "/images/models/model1Big.png",
+    photoSmall: "/images/models/Asset2small.png",
+    id: 0,
+    instaImg: "/images/models/model1Insta.png",
+    description:
+      "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
+  },
   {
     name: "~MU EVE",
     photo: "/images/models/model5Big.png",
@@ -274,15 +283,7 @@ const models = [
     description:
       "This French teacher loves sugar cane and hails from the lost island of Mauritia and is passionate about building boats. During his free time he loves to sing and dance.",
   },
-  {
-    name: "~JORDADAM",
-    photo: "/images/models/model1Big.png",
-    photoSmall: "/images/models/Asset2small.png",
-    id: 0,
-    instaImg: "/images/models/model1Insta.png",
-    description:
-      "jord adam takes great pride in his Danish descent and resides in modern-day Copenhagen. He loves to create with his hands, is a baker by profession and a carpenter too. He can effortlessly predict the weather and passionately contributes to efforts against climate change and advocates sustainability through action.",
-  },
+
   {
     name: "~WICH EVE",
     photo: "/images/models/model6Big.png",
