@@ -17,7 +17,7 @@ const Hero = () => {
           <TranslateWrapper>
             <img
               className=" h-[18vmax]  object-cover overflow-visible"
-              src={"/images/texts/Asset_1.svg"}
+              src={"/images/texts/Asset_1.png"}
             />{" "}
             {/* <img
               className=" h-[18vmax] mx-[1500px]  object-cover overflow-visible"
