@@ -63,7 +63,14 @@ const HyperRealisticHero = () => {
                 className="absolute top-44 -left-6 z-10"
                 src={"/images/logos/Asset_2.png"}
               />
-              <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div>
+              {/* <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div> */}
+              <video autoPlay loop muted className="md:w-1/3 h-1/3 md:h-full">
+                <source
+                  src="/images/hyperRealistic/heroVideo.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
               <div className="w-2/3">
                 {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
