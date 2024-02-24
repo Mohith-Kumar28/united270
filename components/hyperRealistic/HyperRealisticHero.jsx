@@ -161,7 +161,7 @@ const cards = [
     id: 2,
   },
   {
-    url: "/images/hyperRealistic/Asset_3.png",
+    url: "/images/hyperRealistic/Asset_3.jpeg",
     title: "VIRTUAL  AI  TOUR",
 
     id: 3,

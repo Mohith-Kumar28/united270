@@ -18,7 +18,7 @@ const Team = () => {
       name: "~MANISH CHAWLA",
       role: "Brand Director",
       photo: "/images/team/person2.png",
-      photoSmall: "",
+      photoSmall: "/images/team/manish.png",
       brands: "",
       linkedinUrl: "https://www.linkedin.com/in/manishchawla111/",
       description:
@@ -28,7 +28,7 @@ const Team = () => {
       name: "~SASHADSOZA",
       role: "Creative Director",
       photo: "/images/team/person3.png",
-      photoSmall: "",
+      photoSmall: "/images/team/sasha.png",
       brands: "/images/team/person3Brands.svg",
       linkedinUrl:
         "https://www.linkedin.com/in/sasha-d-souza-147322214/?originalSubdomain=in",
@@ -61,7 +61,7 @@ const Team = () => {
       name: "~ANTARA SRIVATSA",
       role: "Brand Strategist",
       photo: "/images/team/person4.png",
-      photoSmall: "",
+      photoSmall: "/images/team/kiran.png",
       brands: "/images/team/person4Brands.svg",
       linkedinUrl: "",
       description:

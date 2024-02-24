@@ -200,7 +200,7 @@ const LastSection = () => {
             </div>
           </div>
           <p
-            className={`text-gray-200 w-1/2 bg-white/10 backdrop-blur-3xl p-3 rounded-lg text-lg mt-4 ${galaktisRegular.className}`}
+            className={`text-gray-200 w-1/2  p-3 rounded-lg text-lg mt-4 ${galaktisRegular.className}`}
           >
             Studio Space & Locations Curated Talents Model Agencies Meta
             Creative Partner Motion Capture Studio Green Screen Studio + VFX

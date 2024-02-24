@@ -9,7 +9,7 @@ const CanvasAnimation = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const canvasRef = useRef(null);
   const frameCount = 358; // Total image count
-  const initialLoadCount = 200; // Initial loaded count
+  const initialLoadCount = 358; // Initial loaded count
 
   useEffect(() => {
     const loadImages = async () => {
@@ -17,8 +17,12 @@ const CanvasAnimation = () => {
         const images = [];
         const imagePromises = [];
         for (let i = 1; i <= initialLoadCount; i++) {
-          const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
-            3,
+          // const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
+          //   3,
+          //   "0"
+          // )}.png`;
+          const imgSrc = `/3dPersonLatest/NewLevelSequence.${String(i).padStart(
+            4,
             "0"
           )}.png`;
           images.push(imgSrc);
@@ -52,9 +56,17 @@ const CanvasAnimation = () => {
           const images = [...loadedImages];
           for (let i = loadedImages.length + 1; i <= frameCount; i++) {
             images.push(
-              `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
+              `/3dPersonLatest/NewLevelSequence.${String(i).padStart(
+                4,
+                "0"
+              )}.png`
             );
           }
+          // for (let i = loadedImages.length + 1; i <= frameCount; i++) {
+          //   images.push(
+          //     `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
+          //   );
+          // }
           setLoadedImages(images);
         } catch (error) {
           console.error("Error loading remaining images:", error);
@@ -118,10 +130,13 @@ const CanvasAnimation = () => {
           />
         ))}
         <img
-          src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
-            3,
-            "0"
-          )}.png`}
+          // src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
+          //   3,
+          //   "0"
+          // )}.png`}
+          src={`/3dPersonLatest/NewLevelSequence.${String(
+            currentFrame + 1
+          ).padStart(4, "0")}.png`}
           alt="3D Person"
           className="object-cover max-w-[100vw] ov fixed w-full h-screen z-20 -bottom-44 md:-bottom-10 left-0"
         />
