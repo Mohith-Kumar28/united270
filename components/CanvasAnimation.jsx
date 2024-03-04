@@ -110,11 +110,11 @@ const CanvasAnimation = () => {
               style={{ width: `${loadingPercentage}%` }}
             ></div>
           </div>
-          <div
+          {/* <div
             className={`flex text-white text-lg font-bold justify-center gap-3 ${galaktisRegular.className}`}
           >
             {`${loadedImages.length} out of ${frameCount} images loaded`}
-          </div>
+          </div> */}
         </div>
       </div>
     ); // Placeholder until all images are loaded
