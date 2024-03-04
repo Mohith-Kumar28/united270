@@ -7,6 +7,7 @@ const CanvasAnimation = () => {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [loadedImages, setLoadedImages] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadingPercentage, setLoadingPercentage] = useState(0);
   const canvasRef = useRef(null);
   const frameCount = 798; // Total image count
   const initialLoadCount = 600; // Initial loaded count
@@ -17,10 +18,6 @@ const CanvasAnimation = () => {
         const images = [];
         const imagePromises = [];
         for (let i = 1; i <= initialLoadCount; i++) {
-          // const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
-          //   3,
-          //   "0"
-          // )}.png`;
           const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
             3,
             "0"
@@ -28,7 +25,10 @@ const CanvasAnimation = () => {
           images.push(imgSrc);
           const promise = new Promise((resolve, reject) => {
             const img = new Image();
-            img.onload = resolve;
+            img.onload = () => {
+              setLoadingPercentage((i / initialLoadCount) * 100);
+              resolve();
+            };
             img.onerror = reject;
             img.src = imgSrc;
           });
@@ -59,11 +59,6 @@ const CanvasAnimation = () => {
               `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
             );
           }
-          // for (let i = loadedImages.length + 1; i <= frameCount; i++) {
-          //   images.push(
-          //     `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
-          //   );
-          // }
           setLoadedImages(images);
         } catch (error) {
           console.error("Error loading remaining images:", error);
@@ -104,10 +99,21 @@ const CanvasAnimation = () => {
             className={`flex text-white text-4xl font-bold justify-center gap-3 ${galaktisRegular.className}`}
           >
             <svg
-              className="mx-auto bg-white animate-spin h-5 w-5 mr-3 ..."
+              className="mx-auto mt-3 bg-white animate-spin h-5 w-5 mr-3 ..."
               viewBox="0 0 24 24"
             ></svg>
             LOADING...
+          </div>
+          <div className="w-full bg-gray-200 h-4 mt-4 relative">
+            <div
+              className="bg-white absolute top-0 left-0 h-full"
+              style={{ width: `${loadingPercentage}%` }}
+            ></div>
+          </div>
+          <div
+            className={`flex text-white text-lg font-bold justify-center gap-3 ${galaktisRegular.className}`}
+          >
+            {`${loadedImages.length} out of ${frameCount} images loaded`}
           </div>
         </div>
       </div>
@@ -127,10 +133,6 @@ const CanvasAnimation = () => {
           />
         ))}
         <img
-          // src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
-          //   3,
-          //   "0"
-          // )}.png`}
           src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
             3,
             "0"
