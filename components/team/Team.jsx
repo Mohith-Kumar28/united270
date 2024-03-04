@@ -18,7 +18,7 @@ const Team = () => {
       name: "~MANISH CHAWLA",
       role: "Brand Director",
       photo: "/images/team/person2.png",
-      photoSmall: "/images/team/manish.png",
+      photoSmall: "/images/team/1.png",
       brands: "",
       linkedinUrl: "https://www.linkedin.com/in/manishchawla111/",
       description:
@@ -28,7 +28,7 @@ const Team = () => {
       name: "~SASHADSOZA",
       role: "Creative Director",
       photo: "/images/team/person3.png",
-      photoSmall: "/images/team/sasha.png",
+      photoSmall: "/images/team/2.png",
       brands: "/images/team/person3Brands.svg",
       linkedinUrl:
         "https://www.linkedin.com/in/sasha-d-souza-147322214/?originalSubdomain=in",
@@ -40,7 +40,7 @@ const Team = () => {
       name: "~SENAPATHI KESAVA",
       role: "Chief Operations Officer & Co- Founder",
       photo: "/images/team/person5.png",
-      photoSmall: "/images/team/person3Small.png",
+      photoSmall: "/images/team/4.png",
       brands: "",
       linkedinUrl: "https://www.linkedin.com/in/kesava-senapathi/",
       description:
@@ -50,7 +50,7 @@ const Team = () => {
       name: "~JEFF EMMANUEL",
       role: "Chief Creative Officer & Co- Founder",
       photo: "/images/team/person1.png",
-      photoSmall: "/images/team/person4Small.png",
+      photoSmall: "/images/team/3.png",
       brands: "/images/team/person1Brands.svg",
       linkedinUrl: "https://www.linkedin.com/in/jeff-emmanuel-33359223/",
       description:
@@ -61,7 +61,7 @@ const Team = () => {
       name: "~ANTARA SRIVATSA",
       role: "Brand Strategist",
       photo: "/images/team/person4.png",
-      photoSmall: "/images/team/kiran.png",
+      photoSmall: "/images/team/5.png",
       brands: "/images/team/person4Brands.svg",
       linkedinUrl: "",
       description:
@@ -101,12 +101,12 @@ const Team = () => {
                   onClick={() => {
                     setSelectedPerson(member), setIsOpen(true);
                   }}
-                  className="bg-gray-200 w-20 h-20 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end"
+                  className="bg-gray-200 w-20 h-20 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end overflow-hidden"
                 >
                   <Image
-                    width={600}
-                    height={600}
-                    className="  absolute bottom0 "
+                    width={400}
+                    height={400}
+                    className="  "
                     src={member.photoSmall}
                   />
                 </div>
