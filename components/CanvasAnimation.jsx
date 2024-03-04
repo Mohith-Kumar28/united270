@@ -21,8 +21,8 @@ const CanvasAnimation = () => {
           //   3,
           //   "0"
           // )}.png`;
-          const imgSrc = `/3dPersonLatest/NewLevelSequence.${String(i).padStart(
-            4,
+          const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
+            3,
             "0"
           )}.png`;
           images.push(imgSrc);
@@ -56,10 +56,7 @@ const CanvasAnimation = () => {
           const images = [...loadedImages];
           for (let i = loadedImages.length + 1; i <= frameCount; i++) {
             images.push(
-              `/3dPersonLatest/NewLevelSequence.${String(i).padStart(
-                4,
-                "0"
-              )}.png`
+              `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
             );
           }
           // for (let i = loadedImages.length + 1; i <= frameCount; i++) {
@@ -134,9 +131,10 @@ const CanvasAnimation = () => {
           //   3,
           //   "0"
           // )}.png`}
-          src={`/3dPersonLatest/NewLevelSequence.${String(
-            currentFrame + 1
-          ).padStart(4, "0")}.png`}
+          src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
+            3,
+            "0"
+          )}.png`}
           alt="3D Person"
           className="object-cover max-w-[100vw] ov fixed w-full h-screen z-20 -bottom-44 md:-bottom-10 left-0"
         />
