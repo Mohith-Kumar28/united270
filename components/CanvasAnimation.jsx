@@ -16,7 +16,7 @@ const CanvasAnimation = () => {
     const loadImages = async () => {
       try {
         const images = [];
-        const imagePromises = [];
+        const loadedImageCount = { value: 0 }; // Object to track loaded image count
         for (let i = 1; i <= initialLoadCount; i++) {
           const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
             3,
@@ -26,15 +26,27 @@ const CanvasAnimation = () => {
           const promise = new Promise((resolve, reject) => {
             const img = new Image();
             img.onload = () => {
-              setLoadingPercentage((i / initialLoadCount) * 100);
+              loadedImageCount.value++; // Increment loaded image count
+              setLoadingPercentage(
+                (loadedImageCount.value / initialLoadCount) * 100
+              );
               resolve();
             };
             img.onerror = reject;
             img.src = imgSrc;
           });
-          imagePromises.push(promise);
         }
-        await Promise.all(imagePromises);
+        // Wait until all images are loaded (resolved)
+        await new Promise((resolve) => {
+          const checkLoaded = () => {
+            if (loadedImageCount.value === initialLoadCount) {
+              resolve();
+            } else {
+              setTimeout(checkLoaded, 100); // Check again after 100 milliseconds
+            }
+          };
+          checkLoaded();
+        });
         setLoadedImages(images);
       } catch (error) {
         console.error("Error loading initial images:", error);
@@ -50,7 +62,45 @@ const CanvasAnimation = () => {
       // Cleanup logic if needed
     };
   }, []);
-  ``;
+
+  // useEffect(() => {
+  //   const loadImages = async () => {
+  //     try {
+  //       const images = [];
+  //       const imagePromises = [];
+  //       for (let i = 1; i <= initialLoadCount; i++) {
+  //         const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
+  //           3,
+  //           "0"
+  //         )}.png`;
+  //         images.push(imgSrc);
+  //         const promise = new Promise((resolve, reject) => {
+  //           const img = new Image();
+  //           img.onload = () => {
+  //             setLoadingPercentage((i / initialLoadCount) * 100);
+  //             resolve();
+  //           };
+  //           img.onerror = reject;
+  //           img.src = imgSrc;
+  //         });
+  //         imagePromises.push(promise);
+  //       }
+  //       await Promise.all(imagePromises);
+  //       setLoadedImages(images);
+  //     } catch (error) {
+  //       console.error("Error loading initial images:", error);
+  //     } finally {
+  //       // Set loading to false after all images are loaded
+  //       setImagesLoaded(true);
+  //     }
+  //   };
+
+  //   loadImages();
+
+  //   return () => {
+  //     // Cleanup logic if needed
+  //   };
+  // }, []);
 
   useEffect(() => {
     if (imagesLoaded && loadedImages.length < frameCount) {
