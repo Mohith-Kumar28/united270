@@ -36,9 +36,11 @@ const CanvasAnimation = () => {
         }
         await Promise.all(imagePromises);
         setLoadedImages(images);
-        setImagesLoaded(true);
       } catch (error) {
         console.error("Error loading initial images:", error);
+      } finally {
+        // Set loading to false after all images are loaded
+        setImagesLoaded(true);
       }
     };
 
@@ -48,6 +50,7 @@ const CanvasAnimation = () => {
       // Cleanup logic if needed
     };
   }, []);
+  ``;
 
   useEffect(() => {
     if (imagesLoaded && loadedImages.length < frameCount) {
