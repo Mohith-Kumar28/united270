@@ -103,7 +103,7 @@ const HorizontalScrollCarousel = () => {
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-light-orange ">
         <motion.div style={{ x }} className="flex  justify-between ">
           <div className="flex w-[100vw]  overflow-hidden h-screen relative gap-10 p-20">
-            <div className="absolute top-0 right-0 h-full w-32 z-10 bg-gradient-to-l from-light-orange"></div>
+            {/* <div className="absolute top-0 right-0 h-full w-32 z-10 bg-gradient-to-l from-light-orange"></div> */}
             <div className="absolute top-1/2 -translate-y-1/4 -mt-28">
               <TranslateWrapper>
                 <img
