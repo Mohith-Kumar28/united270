@@ -58,14 +58,13 @@ const Team = () => {
     },
 
     {
-      name: "~ANTARA SRIVATSA",
-      role: "Brand Strategist",
-      photo: "/images/team/person4.png",
+      // name: "~ANTARA SRIVATSA",
+      role: "Agency Producer",
+      // photo: "/images/team/person4.png",
       photoSmall: "/images/team/5.png",
       brands: "/images/team/person4Brands.svg",
       linkedinUrl: "",
-      description:
-        "With over 8 years of experience in retail and visual merchandising across various marketsin the country, Antara has elevated multiple brands like Tommy Hilfiger, ALDO, Lifestyle. Apart from these she has a keen interest in styling and marketing and has associated with brands like Collective, Louis Phillipe, Mia, Lifestyle and TFM Modelling agency for the same.",
+      description: "",
     },
   ];
 
@@ -99,7 +98,9 @@ const Team = () => {
               >
                 <div
                   onClick={() => {
-                    setSelectedPerson(member), setIsOpen(true);
+                    if (member.name) {
+                      setSelectedPerson(member), setIsOpen(true);
+                    }
                   }}
                   className="bg-gray-200 w-20 h-20 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end overflow-hidden"
                 >
