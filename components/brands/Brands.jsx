@@ -9,7 +9,7 @@ const Brands = () => {
   const [isOpen, setIsOpen] = useState(false);
   let [selectedBrand, setSelectedBrand] = useState();
   const scrollRef = useRef(null);
-  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 1 });
+  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0.2 });
   return (
     <motion.div
       ref={scrollRef}
@@ -18,7 +18,7 @@ const Brands = () => {
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
       <div>
         {" "}
-        <TranslateWrapper reverse>
+        <TranslateWrapper>
           <div className="flex flex-col justify-center">
             <div className="relative    mr-7">
               <div className="h-screen overflow-visible ">
@@ -143,7 +143,7 @@ export default Brands;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateY: reverse ? "-100%" : "-200%" }}
+      initial={{ translateY: reverse ? "-100%" : "0%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       className="flex flex-col gap-4 px-2"
