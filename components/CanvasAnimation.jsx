@@ -9,8 +9,8 @@ const CanvasAnimation = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [loadingPercentage, setLoadingPercentage] = useState(0);
   const canvasRef = useRef(null);
-  const frameCount = 398; // Total image count
-  const initialLoadCount = 397; // Initial loaded count
+  const frameCount = 397; // Total image count
+  const initialLoadCount = 396; // Initial loaded count
 
   useEffect(() => {
     const loadImages = async () => {
@@ -18,8 +18,8 @@ const CanvasAnimation = () => {
         const images = [];
         const loadedImageCount = { value: 0 }; // Object to track loaded image count
         for (let i = 1; i <= initialLoadCount; i++) {
-          const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
-            3,
+          const imgSrc = `/3dPersonLatest/Final_${String(i).padStart(
+            5,
             "0"
           )}.png`;
           images.push(imgSrc);
@@ -69,8 +69,8 @@ const CanvasAnimation = () => {
   //       const images = [];
   //       const imagePromises = [];
   //       for (let i = 1; i <= initialLoadCount; i++) {
-  //         const imgSrc = `/3dPersonCompressed/Image_${String(i).padStart(
-  //           3,
+  //         const imgSrc = `/3dPersonLatest/Final_${String(i).padStart(
+  //           5,
   //           "0"
   //         )}.png`;
   //         images.push(imgSrc);
@@ -109,7 +109,7 @@ const CanvasAnimation = () => {
           const images = [...loadedImages];
           for (let i = loadedImages.length + 1; i <= frameCount; i++) {
             images.push(
-              `/3dPersonCompressed/Image_${String(i).padStart(3, "0")}.png`
+              `/3dPersonLatest/Final_${String(i).padStart(5, "0")}.png`
             );
           }
           setLoadedImages(images);
@@ -186,8 +186,8 @@ const CanvasAnimation = () => {
           />
         ))}
         <img
-          src={`/3dPersonCompressed/Image_${String(currentFrame + 1).padStart(
-            3,
+          src={`/3dPersonLatest/Final_${String(currentFrame + 1).padStart(
+            5,
             "0"
           )}.png`}
           alt="3D Person"
