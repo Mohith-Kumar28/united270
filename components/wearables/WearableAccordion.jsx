@@ -10,7 +10,7 @@ const WearableAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
 
   return (
-    <section className="  px-32 flex flex-col pt-14 justify-center relative z-30">
+    <section className="  pr-32 md:px-32 flex flex-col pt-14  justify-center relative z-30">
       <h2
         className={` text-pri-green mr-4  relative mb-0 text-4xl text-right  ${galaktisRegular.className}`}
       >

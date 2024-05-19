@@ -56,7 +56,7 @@ const LastSection = () => {
           </div> */}
         </div>
       </div>
-      <div className="">
+      <div className="-mt-52 md:mt-0">
         {/* <div className="flex justify-end gap-3">
           <div className="h-20 w-20">
             <Image
@@ -89,7 +89,7 @@ const LastSection = () => {
               </div>{" "} */}
         <TranslateWrapper>
           <img
-            className=" h-[18vmax] object-cover overflow-visible"
+            className=" h-[18vmax] object-cover overflow-visible mx-72"
             src="/images/texts/Asset_6.png"
           />{" "}
           <Image
@@ -219,7 +219,7 @@ const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "50%" }}
-      animate={{ translateX: reverse ? "0%" : "-100%" }}
+      animate={{ translateX: reverse ? "0%" : "-300%" }}
       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       className="flex gap-10 px-2"
     >

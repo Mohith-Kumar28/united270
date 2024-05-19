@@ -56,7 +56,7 @@ const HyperRealisticHero = () => {
       <section ref={targetRef} className="relative h-[300vh] z-30 bg-pri-pink">
         <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
           <motion.div style={{ x }} className="flex gap-52 ">
-            <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 pl-32 py-16 pr-28">
+            <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 px-16 md:pl-32 py-16 md:pr-28">
               <Image
                 width={90}
                 height={90}
@@ -64,14 +64,14 @@ const HyperRealisticHero = () => {
                 src={"/images/logos/Asset_2.png"}
               />
               {/* <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div> */}
-              <video autoPlay loop muted className="md:w-1/3 h-1/3 md:h-full">
+              <video autoPlay loop muted className=" md:w-1/3 h-1/3 md:h-full">
                 <source
                   src="/images/hyperRealistic/heroVideo.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="w-2/3">
+              <div className="md:w-2/3">
                 {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >

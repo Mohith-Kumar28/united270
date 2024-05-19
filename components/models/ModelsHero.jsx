@@ -185,7 +185,7 @@ export default ModelsHero;
 
 const ModelCard = ({ model, index }) => {
   return (
-    <div className="flex flex-col justify-between md:justify-center  w-[125vw] h-screen relative px-[30vw] py-28 overflow-hidden ">
+    <div className="flex flex-col justify-between md:justify-center  w-[125vw] h-screen relative px-20 md:px-[30vw] py-28 overflow-hidden ">
       <TranslateWrapper>
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900 ">
           <p
@@ -210,14 +210,14 @@ const ModelCard = ({ model, index }) => {
         <Image
           width={1000}
           height={1000}
-          className="object-contain  w-[60%] md:w-1/3 md:h-[100vh] py-20  absolute left-52 -bottom-20 "
+          className="object-contain  w-[60%] md:w-1/3 h-[90vh] md:h-[100vh] py-20  absolute left-52 -bottom-20 "
           src={model.photo}
         />
       </div>
 
       <div className="mt-2 p-4 justify-end flex ">
         <p
-          className={`text-base md:text-lg rounded-full border border-pri-green font-bold  p-6   text-pri-pink md:w-4/5 relative z-30 ${sourceSansVariableItalic.className}`}
+          className={`text-base md:text-lg rounded-xl border border-pri-green font-bold  p-6 bg-light-orange backdrop-blur-lg  text-pri-pink md:w-4/5  relative z-30 ${sourceSansVariableItalic.className}`}
         >
           {model.description}
         </p>
@@ -254,7 +254,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "75%" }}
       animate={{ translateX: reverse ? "100%" : "-100%" }}
-      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       className="flex  "
     >
       {children}
@@ -362,30 +362,75 @@ const models = [
 
 const brandLogos = [
   {
-    logo: "/images/models/logos/Asset1.png",
+    logo: "/images/models/logos/Image_001.png",
   },
   {
-    logo: "/images/models/logos/Asset2.png",
+    logo: "/images/models/logos/Image_002.png",
   },
   {
-    logo: "/images/models/logos/Asset3.png",
+    logo: "/images/models/logos/Image_003.png",
   },
   {
-    logo: "/images/models/logos/Asset4.png",
+    logo: "/images/models/logos/Image_004.png",
   },
   {
-    logo: "/images/models/logos/Asset5.png",
+    logo: "/images/models/logos/Image_005.png",
   },
   {
-    logo: "/images/models/logos/Asset6.png",
+    logo: "/images/models/logos/Image_006.png",
   },
   {
-    logo: "/images/models/logos/Asset7.png",
+    logo: "/images/models/logos/Image_007.png",
   },
   {
-    logo: "/images/models/logos/Asset8.png",
+    logo: "/images/models/logos/Image_008.png",
   },
   {
-    logo: "/images/models/logos/Asset9.svg",
+    logo: "/images/models/logos/Image_009.png",
+  },
+  {
+    logo: "/images/models/logos/Image_010.png",
+  },
+  {
+    logo: "/images/models/logos/Image_011.png",
+  },
+  {
+    logo: "/images/models/logos/Image_012.png",
+  },
+  {
+    logo: "/images/models/logos/Image_013.png",
+  },
+  {
+    logo: "/images/models/logos/Image_014.png",
+  },
+  {
+    logo: "/images/models/logos/Image_015.png",
+  },
+  {
+    logo: "/images/models/logos/Image_016.png",
+  },
+  {
+    logo: "/images/models/logos/Image_017.png",
+  },
+  {
+    logo: "/images/models/logos/Image_018.png",
+  },
+  {
+    logo: "/images/models/logos/Image_019.png",
+  },
+  {
+    logo: "/images/models/logos/Image_020.png",
+  },
+  {
+    logo: "/images/models/logos/Image_021.png",
+  },
+  {
+    logo: "/images/models/logos/Image_022.png",
+  },
+  // {
+  //   logo: "/images/models/logos/Image_023.png",
+  // },
+  {
+    logo: "/images/models/logos/Image_024.png",
   },
 ];

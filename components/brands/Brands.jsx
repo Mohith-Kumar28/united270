@@ -8,11 +8,12 @@ import useScrollSnap from "react-use-scroll-snap";
 const Brands = () => {
   const [isOpen, setIsOpen] = useState(false);
   let [selectedBrand, setSelectedBrand] = useState();
-  const scrollRef = useRef(null);
+  // const scrollRef = useRef(null);
   // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0.2 });
   return (
     <motion.div
-      ref={scrollRef}
+      // ref={scrollRef}
+      id='brands'
       className="px-10  flex justify-end h-screen overflow-hidden relative z-30"
     >
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
@@ -189,7 +190,7 @@ const BrandsData = [
     url: "/images/brands/Asset2.png",
     title: "Cult Sport",
     whatTheyWrote: "Launch their run collection",
-    whatWeRead: "Give Nike a run its money",
+    whatWeRead: "Give Nike a run for its money",
     icon: "/images/logos/cultSport.png",
     id: 1,
   },
@@ -246,7 +247,7 @@ const BrandsData = [
   {
     url: "/images/brands/Asset9.png",
     title: "Kone",
-    whatTheyWrote: "lTalk about KONEs modernisation efforts",
+    whatTheyWrote: "Talk about KONEs modernisation efforts",
     whatWeRead: "Make KONE a household favourite",
     icon: "/images/logos/kone.png",
     id: 8,

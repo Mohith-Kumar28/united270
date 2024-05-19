@@ -157,7 +157,7 @@ const About = () => {
     <div className=" py-56 ">
       <div className="pb-72">
         {" "}
-        <div className="flex flex-wrap gap-x-3  gap-y-16 justify-center  relative z-30">
+        <div className="flex flex-wrap gap-x-3 p-10  gap-y-16 justify-center  relative z-30">
           {content.map((item, idx) => (
             <div className="flex flex-col leading-5">
               <p
@@ -206,7 +206,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  useScrollSnap({ ref: targetRef, duration: 1, delay: 0 });
+  // useScrollSnap({ ref: targetRef, duration: 1, delay: 0 });
 
   // useEffect(() => {
   //   const element = targetRef.current;

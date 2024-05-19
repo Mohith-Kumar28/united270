@@ -117,7 +117,7 @@ const BrandsData = [
     url: "/images/brands/Asset2.png",
     title: "Cult Sport",
     whatTheyWrote: "Launch their run collection",
-    whatWeRead: "Give Nike a run its money",
+    whatWeRead: "Give Nike a run for its money",
     icon: "/images/logos/cultSport.png",
     id: 1,
   },
@@ -176,7 +176,7 @@ const BrandsData = [
   {
     url: "/images/brands/Asset9.png",
     title: "Kone",
-    whatTheyWrote: "lTalk about KONEs modernisation efforts",
+    whatTheyWrote: "Talk about KONEs modernisation efforts",
     whatWeRead: "Make KONE a household favourite",
     icon: "/images/logos/kone.png",
     id: 8,
