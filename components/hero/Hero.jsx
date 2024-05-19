@@ -48,10 +48,12 @@ const Hero = () => {
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">
-        <Link href={'#brands'}>  <button className="bg-pri-green text-white  pl-16 pr-5 py-3  text-xl font-semibold flex rounded-full">
-            See Works
-            <ArrowRightIcon className="w-7 ml-2  text-white" />
-          </button>
+          <Link href={"#brands"}>
+            {" "}
+            <button className="bg-pri-green text-white  pl-16 pr-5 py-3  text-xl font-semibold flex rounded-full">
+              See Works
+              <ArrowRightIcon className="w-7 ml-2  text-white" />
+            </button>
           </Link>
           <Image
             width={100}

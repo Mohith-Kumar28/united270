@@ -183,6 +183,24 @@ const About = () => {
             />
           </TranslateWrapper>
         </div>
+        <p
+          className={
+            `text-gray-100 bg-black/20 backdrop-blur-3xl p-10 m-20 mt-2 text-left  text-xl font-medium  z-30 relative rounded-lg ` +
+            ` ${galaktisRegular.className}`
+          }
+        >
+          So, what is United270 anyway? Just the speed at which brain neurons
+          form a thought - 270mph. At United270 Communication Lab, we embody
+          this speed and vision. We aim to keep thinking, building small brands
+          into big ones and big brands into great ones. We don't just write or
+          design, we create - inspired by insights and emotions. Our diverse
+          team specializes in impactful storytelling that bridges the gap
+          between What you are and What you say, because we go beyond the
+          surface. From branding and marketing to AI-integrated campaigns and
+          tech innovations, we deliver. #WeAreInTransit, from the universe to
+          the humanverse, and we want to take you along. Join us to
+          strategically transform your business into a brand.
+        </p>
       </div>
 
       {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
