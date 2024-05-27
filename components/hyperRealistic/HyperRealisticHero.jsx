@@ -129,15 +129,17 @@ const HyperRealisticHero = () => {
                           src={"/images/logos/Asset_2.png"}
                         /> */}
                         <div className="flex justify-center  relative h-[70vh]">
-                          <Image
-                            width={900}
-                            height={700}
-                            // style={{ objectFit: "cover" }}
-
-                            // objectFit="contain"
-                            className="object-contain "
-                            src={item.url}
-                          />
+                          <video
+                            autoPlay
+                            loop
+                            width="900"
+                            height="700"
+                            className="object-contain"
+                            controls
+                          >
+                            <source src={item.url} type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
                         </div>
                       </div>
                     );
@@ -156,19 +158,19 @@ export default HyperRealisticHero;
 
 const cards = [
   {
-    url: "/images/hyperRealistic/Asset_1.png",
+    url: "/images/hyperRealistic/Asset_1.mp4",
     title: "HYPER  REALISTIC  VISUALS",
 
     id: 1,
   },
   {
-    url: "/images/hyperRealistic/Asset_1.png",
+    url: "/images/hyperRealistic/Asset_2.mp4",
     title: "ARCHITECTURAL  WALKTHROUGH",
 
     id: 2,
   },
   {
-    url: "/images/hyperRealistic/Asset_3.jpeg",
+    url: "/images/hyperRealistic/Asset_3.mp4",
     title: "VIRTUAL  AI  TOUR",
 
     id: 3,

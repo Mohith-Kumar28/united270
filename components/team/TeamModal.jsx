@@ -76,7 +76,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[90vh] md:h-[80vh] flex flex-col justify-center">
+                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-pri-pink p-6 text-left align-middle shadow-xl transition-all relative h-[100vh]  flex flex-col justify-center">
                   <div className="flex  overflow-hidden">
                     {/* <TranslateWrapper>
                       <LogoItemsTop />
