@@ -98,7 +98,11 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
 
   return (
-    <section ref={targetRef} className=" h-[400vh] relative z-30">
+    <section
+      ref={targetRef}
+      id="modelsHero"
+      className=" h-[400vh] relative z-30"
+    >
       <ModelsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedModel} />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-light-orange ">
         <motion.div style={{ x }} className="flex  justify-between ">
@@ -254,7 +258,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "75%" }}
       animate={{ translateX: reverse ? "100%" : "-100%" }}
-      transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
       className="flex  "
     >
       {children}

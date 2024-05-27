@@ -48,7 +48,7 @@ const Hero = () => {
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">
-          <Link href={"#brands"}>
+          <Link href={"#modelsHero"}>
             {" "}
             <button className="bg-pri-green text-white  pl-16 pr-5 py-3  text-xl font-semibold flex rounded-full">
               See Works

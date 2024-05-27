@@ -13,7 +13,7 @@ const Brands = () => {
   return (
     <motion.div
       // ref={scrollRef}
-      id='brands'
+      id="brands"
       className="px-10  flex justify-end h-screen overflow-hidden relative z-30"
     >
       <BrandsModal isOpen={isOpen} setIsOpen={setIsOpen} card={selectedBrand} />
@@ -146,7 +146,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateY: reverse ? "-100%" : "0%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       className="flex flex-col gap-4 px-2"
     >
       {children}
