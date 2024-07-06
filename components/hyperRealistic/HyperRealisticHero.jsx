@@ -169,7 +169,7 @@ const HyperRealisticHero = () => {
                       </Link> */}
                       </h2>
 
-                      <div className="flex justify-center  relative ]">
+                      <div className="flex justify-center  relative md:w-1/2">
                         <video
                           autoPlay
                           muted
@@ -186,7 +186,7 @@ const HyperRealisticHero = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                    </div>{" "}
+                    </div>
                     <div>
                       <h2
                         className={`relative text-pri-green mt-4 mb-2 md:mr-8  text-4xl text-left  ${galaktisRegular.className}`}
@@ -205,7 +205,7 @@ const HyperRealisticHero = () => {
                       </Link> */}
                       </h2>
 
-                      <div className="flex justify-center  relative ">
+                      <div className="flex justify-center md:w-1/2 relative ">
                         <video
                           autoPlay
                           muted
