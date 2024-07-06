@@ -18,10 +18,7 @@ const CanvasAnimation = () => {
         const images = [];
         const loadedImageCount = { value: 0 }; // Object to track loaded image count
         for (let i = 1; i <= initialLoadCount; i++) {
-          const imgSrc = `/3dPersonLatest/Final_${String(i).padStart(
-            5,
-            "0"
-          )}.png`;
+          const imgSrc = `/website/Website_${String(i).padStart(5, "0")}.png`;
           images.push(imgSrc);
           const promise = new Promise((resolve, reject) => {
             const img = new Image();
@@ -69,7 +66,7 @@ const CanvasAnimation = () => {
   //       const images = [];
   //       const imagePromises = [];
   //       for (let i = 1; i <= initialLoadCount; i++) {
-  //         const imgSrc = `/3dPersonLatest/Final_${String(i).padStart(
+  //         const imgSrc = `/website/Website_${String(i).padStart(
   //           5,
   //           "0"
   //         )}.png`;
@@ -108,9 +105,7 @@ const CanvasAnimation = () => {
         try {
           const images = [...loadedImages];
           for (let i = loadedImages.length + 1; i <= frameCount; i++) {
-            images.push(
-              `/3dPersonLatest/Final_${String(i).padStart(5, "0")}.png`
-            );
+            images.push(`/website/Website_${String(i).padStart(5, "0")}.png`);
           }
           setLoadedImages(images);
         } catch (error) {
@@ -186,7 +181,7 @@ const CanvasAnimation = () => {
           />
         ))}
         <img
-          src={`/3dPersonLatest/Final_${String(currentFrame + 1).padStart(
+          src={`/website/Website_${String(currentFrame + 1).padStart(
             5,
             "0"
           )}.png`}

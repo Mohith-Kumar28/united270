@@ -63,22 +63,22 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["50%", "-150%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["150%", "-250%"]);
 
   return (
     <section ref={targetRef} className="relative h-[190vh] z-0">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-20  md:-mt-36 ">
           {/* <SlidingText text={"STRATEGIC TRANSFORMATION OF BRANDS"} /> */}
-          <span
+          {/* <span
             className={`w-fit whitespace-nowrap text-[20vmax] font-extrabold uppercase leading-[0.75] text-pri-green  ${cafeDeParis.className}`}
           >
             STRATEGIC TRANSFORMATION OF BRANDS
-          </span>
-          {/* <img
-            className=" h-[18vmax] object-cover overflow-visible "
-            src={"/images/texts/Asset_2.png"}
-          /> */}
+          </span> */}
+          <img
+            className=" h-[20vmax] object-cover overflow-visible "
+            src={"/images/texts/Asset_8.png"}
+          />
         </motion.div>
       </div>
     </section>

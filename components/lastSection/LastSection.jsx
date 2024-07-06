@@ -22,7 +22,7 @@ const LastSection = () => {
       <section ref={targetRef} className="relative h-[200vh] z-30 ">
         <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
           <motion.div style={{ x }} className="flex gap-52 ">
-            <div className="flex md:flex-row flex-col  relative gap-10  md:pl-32 py-16  md:pr-28">
+            <div className="flex md:flex-row flex-col  relative gap-10   py-16  md:pr-28">
               <div
                 className=" md:h-screen z-50 w-[150vw] bg-pri-pink relative flex flex-col gap-28  h-auto py-16"
                 ref={scrollRef}
@@ -94,9 +94,9 @@ const LastSection = () => {
                       </div>
                     </div>
                     <div>
-                      <div className="flex gap-10">
+                      <div className="flex gap-10 ">
                         <div
-                          className={`text-md  font-regular md:w-1/2 ${galaktisRegular.className}`}
+                          className={`text-md  font-regular  ${galaktisRegular.className}`}
                         >
                           <div className="w-14 h-14 flex flex-col justify-start">
                             <Image
@@ -109,7 +109,7 @@ const LastSection = () => {
                           </div>
                         </div>{" "}
                         <div
-                          className={`text-md  font-regular md:w-1/2 ${galaktisRegular.className}`}
+                          className={`text-md  font-regular ${galaktisRegular.className}`}
                         >
                           <div className="w-14 h-14 flex flex-col justify-start">
                             <Image
@@ -140,7 +140,7 @@ const LastSection = () => {
                     />
                   </TranslateWrapper> */}
                   <div
-                    className={`text-8xl text-pri-green w-full ${cafeDeParis.className}`}
+                    className={`text-8xl md:absolute md:-mt-52 md:ml-36 md:text-[200px] text-pri-green w-full ${cafeDeParis.className}`}
                   >
                     MEET US HERE
                   </div>

@@ -209,7 +209,27 @@ const About = () => {
       </p> */}
       {/* <SlidingText text={"from the univ"} /> */}
 
-      <HorizontalScrollCarousel />
+      <div className="flex gap-20 justify-end relative z-30 pr-20">
+        <div className="flex flex-col justify-end  relative  cursor-pointer">
+          <button className="bg-light-orange w-52  pl-16 pr-5 py-8 rounded-xl text-xl font-semibold"></button>
+          <Image
+            width={100}
+            height={100}
+            className="  absolute -left-14 bottom-0"
+            src={"/images/hero/heroGirl.png"}
+          />
+        </div>{" "}
+        <div className="flex flex-col justify-end relative  cursor-pointer">
+          <button className="bg-light-orange w-52  pl-16 pr-5 py-8 rounded-xl text-xl font-semibold"></button>
+          <Image
+            width={100}
+            height={100}
+            className="  absolute -left-14 bottom-0"
+            src={"/images/hero/heroGirl.png"}
+          />
+        </div>
+      </div>
+      {/* <HorizontalScrollCarousel /> */}
       {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll up
