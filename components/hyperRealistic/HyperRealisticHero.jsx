@@ -57,20 +57,14 @@ const HyperRealisticHero = () => {
         <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
           <motion.div style={{ x }} className="flex gap-52 ">
             <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 px-16 md:pl-32 py-16 md:pr-28">
-              <Image
+              {/* <Image
                 width={90}
                 height={90}
                 className="absolute top-44 -left-6 z-10"
                 src={"/images/logos/Asset_2.png"}
-              />
+              /> */}
               {/* <div className="md:w-1/3 bg-black h-1/3 md:h-full"></div> */}
-              <video autoPlay loop muted className=" md:w-1/3 h-1/3 md:h-full">
-                <source
-                  src="/images/hyperRealistic/heroVideo.mp4"
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+
               <div className="md:w-2/3">
                 {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
@@ -90,18 +84,31 @@ const HyperRealisticHero = () => {
                   <h3 className={``}>GAMING</h3>
                   <h3 className={``}>METAVERSE</h3>
                 </div> */}
+
                 <Image
                   width={700}
                   height={700}
-                  className=""
+                  className="mt-20"
                   src={"/images/hyperRealistic/Asset_4.png"}
                 />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className=" md:w-1/4 h-2/5 md:h-full absolute bottom-20 right-20"
+                >
+                  <source
+                    src="/images/hyperRealistic/heroVideo.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
             <div className=" ">
               <section className="  px-32 flex flex-col justify-center mt-10 relative z-30">
                 <div className="relative h-screen flex gap-36 justify-between py-5   ">
-                  {cards.map((item) => {
+                  {/* {cards.map((item) => {
                     return (
                       <div className="w-[80vw] flex flex-col justify-center relative ">
                         <ArrowLeftIcon className="w-7 text-pri-green absolute top-1/2 left-0" />
@@ -122,15 +129,11 @@ const HyperRealisticHero = () => {
                             />
                           </Link>
                         </h2>
-                        {/* <Image
-                          width={60}
-                          height={60}
-                          className="absolute left-0 bottom-0 md:left-auto md:bottom-auto md:-right-16 md:top-28 z-10"
-                          src={"/images/logos/Asset_2.png"}
-                        /> */}
+
                         <div className="flex justify-center  relative h-[70vh]">
                           <video
                             autoPlay
+                            muted
                             loop
                             width="900"
                             height="700"
@@ -143,7 +146,125 @@ const HyperRealisticHero = () => {
                         </div>
                       </div>
                     );
-                  })}
+                  })} */}
+
+                  <div className="w-[80vw] flex flex-col justify-center relative ">
+                    <ArrowLeftIcon className="w-7 text-pri-green absolute bottom-10 left-0" />
+                    <ArrowRightIcon className="w-7 text-pri-green absolute bottom-10 right-0" />
+                    <div>
+                      <h2
+                        className={`relative text-pri-green mb-2 md:mr-8  text-4xl text-left  ${galaktisRegular.className}`}
+                      >
+                        HYPER REALISTIC VISUALS
+                        {/* <Link
+                        href={"https://www.instagram.com/united_270/"}
+                        target="_blank"
+                      >
+                        <Image
+                          width={80}
+                          height={80}
+                          className="absolute -top-10 -right-24 z-10"
+                          src={"/images/logos/Asset_2.png"}
+                        />
+                      </Link> */}
+                      </h2>
+
+                      <div className="flex justify-center  relative ]">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          width="800"
+                          height="300"
+                          className="object-contain"
+                          controls
+                        >
+                          <source
+                            src={"/images/hyperRealistic/Asset_1.mp4"}
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>{" "}
+                    <div>
+                      <h2
+                        className={`relative text-pri-green mt-4 mb-2 md:mr-8  text-4xl text-left  ${galaktisRegular.className}`}
+                      >
+                        ARCHITECTURAL WALKTHROUGH
+                        {/* <Link
+                        href={"https://www.instagram.com/united_270/"}
+                        target="_blank"
+                      >
+                        <Image
+                          width={80}
+                          height={80}
+                          className="absolute -top-10 -right-24 z-10"
+                          src={"/images/logos/Asset_2.png"}
+                        />
+                      </Link> */}
+                      </h2>
+
+                      <div className="flex justify-center  relative ">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          width="800"
+                          height="300"
+                          className="object-contain"
+                          controls
+                        >
+                          <source
+                            src={"/images/hyperRealistic/Asset_2.mp4"}
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-[80vw] flex flex-col justify-center relative ">
+                    <ArrowLeftIcon className="w-7 text-pri-green absolute bottom-10 left-0" />
+                    <ArrowRightIcon className="w-7 text-pri-green absolute bottom-10 right-0" />
+                    <div>
+                      <h2
+                        className={`relative text-pri-green mb-2 md:mr-8  text-4xl text-left  ${galaktisRegular.className}`}
+                      >
+                        VIRTUAL AI TOUR
+                        {/* <Link
+                        href={"https://www.instagram.com/united_270/"}
+                        target="_blank"
+                      >
+                        <Image
+                          width={80}
+                          height={80}
+                          className="absolute -top-10 -right-24 z-10"
+                          src={"/images/logos/Asset_2.png"}
+                        />
+                      </Link> */}
+                      </h2>
+
+                      <div className="flex justify-center  relative ">
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          width="800"
+                          height="300"
+                          className="object-contain"
+                          controls
+                        >
+                          <source
+                            src={"/images/hyperRealistic/Asset_3.mp4"}
+                            type="video/mp4"
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>{" "}
+                  </div>
                 </div>
               </section>
             </div>

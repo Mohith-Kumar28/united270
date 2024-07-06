@@ -9,12 +9,12 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <motion.div className="w-full h-screen flex flex-col md:justify-center py-20 overflow-hidden relative">
+    <motion.div className="w-full h-screen flex flex-col justify-end md:justify-center pb-40 overflow-hidden relative">
       <div className=" ">
         {/* <p className="text-pri-green text-9xl font-extrabold   ">
           Text to test here
         </p> */}
-        <div className="flex overflow-hidden  relative z-0 mt-12 md:-mt-36">
+        <div className="flex overflow-hidden  relative z-0 mt-12 ">
           <TranslateWrapper>
             <img
               className=" h-[18vmax]  object-cover overflow-visible"
@@ -28,15 +28,9 @@ const Hero = () => {
               className=" h-[18vmax] mx-[1500px]  object-cover overflow-visible"
               src={"/images/texts/Asset_1.svg"}
             /> */}
-          </TranslateWrapper>{" "}
-          {/* <TranslateWrapper>
-            <img
-              className=" h-[18vmax]  object-cover overflow-visible"
-              src={"/images/texts/Asset_1.svg"}
-            />{" "}
-          </TranslateWrapper> */}
+          </TranslateWrapper>
         </div>
-        {/* <p
+        <p
           className={
             `text-gray-100  w-80 p-5 mt-2 text-left  text-xl font-medium md:ml-52 z-30 relative rounded-lg ` +
             ` ${galaktisRegular.className}`
@@ -44,14 +38,14 @@ const Hero = () => {
         >
           Cyberfiction aims to be a decentralized community that can create new
           values and profits through play in the virtual world.
-        </p> */}
+        </p>
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
         <div className="flex flex-col justify-end relative">
           <Link href={"#modelsHero"}>
             {" "}
             <button className="bg-pri-green text-white  pl-16 pr-5 py-3  text-xl font-semibold flex rounded-full">
-              See Works
+              New Work
               <ArrowRightIcon className="w-7 ml-2  text-white" />
             </button>
           </Link>

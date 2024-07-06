@@ -14,6 +14,7 @@ import WearableHorizontalScroll from "@/components/wearables/WearableHorizontalS
 import HyperRealisticHero from "@/components/hyperRealistic/HyperRealisticHero";
 import LastSection from "@/components/lastSection/LastSection";
 import AfterHero from "@/components/hero/AfterHero";
+import AfterAbout from "@/components/about/AfterAbout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
         <Hero />
         <AfterHero />
         <About />
+        <AfterAbout />
         <Brands />
         {/* <HorizontalScroll /> */}
         <ModelsHero />

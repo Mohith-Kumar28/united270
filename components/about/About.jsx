@@ -181,9 +181,10 @@ const About = () => {
               className="h-[18vmax] object-cover overflow-visible   "
               src={"/images/texts/Asset_3.png"}
             />
+            {/* <SlidingText text={"FROM THE UNIVERSE TO THE HUMANVERSE."} /> */}
           </TranslateWrapper>
         </div>
-        <p
+        {/* <p
           className={
             `text-gray-100 bg-black/20 backdrop-blur-3xl p-10 m-20 mt-2 text-left  text-xl font-medium  z-30 relative rounded-lg ` +
             ` ${galaktisRegular.className}`
@@ -200,7 +201,7 @@ const About = () => {
           tech innovations, we deliver. #WeAreInTransit, from the universe to
           the humanverse, and we want to take you along. Join us to
           strategically transform your business into a brand.
-        </p>
+        </p> */}
       </div>
 
       {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
@@ -237,7 +238,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className=" h-[200vh] ">
-      <div className="sticky top-0 flex h-screen md:items-end  py-36 overflow-hidden z-30">
+      <div className="sticky top-1/2 flex h-screen md:items-end  py-36 overflow-hidden z-30">
         <motion.div style={{ x }} className="flex flex-col gap-36 ">
           {/* <img
             className="h-[18vmax] object-cover overflow-visible relative z-10 "

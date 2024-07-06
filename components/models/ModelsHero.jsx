@@ -135,7 +135,7 @@ const HorizontalScrollCarousel = () => {
                       //   setSelectedModel(model);
                       //   setIsOpen(true);
                       // }}
-                      className="h-[25vh] cursor-pointer flex items-end w-60  relative z-40"
+                      className="h-[25vh] cursor-pointer flex items-end w-52  relative z-40"
                     >
                       <Image
                         width={200}
@@ -189,7 +189,13 @@ export default ModelsHero;
 
 const ModelCard = ({ model, index }) => {
   return (
-    <div className="flex flex-col justify-between md:justify-center  w-[125vw] h-screen relative px-20 md:px-[30vw] py-28 overflow-hidden ">
+    <div className="flex flex-col justify-end md:justify-center  w-[125vw] h-screen relative px-0 md:px-[30vw] pb-28 pt-16 overflow-hidden ">
+      <div className="flex justify-end">
+        <img
+          className=" md:w-[20vw] w-[35vw] object-cover overflow-visible"
+          src={model.instaImg}
+        />
+      </div>
       <TranslateWrapper>
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900 ">
           <p
@@ -198,10 +204,7 @@ const ModelCard = ({ model, index }) => {
             {model.name}
           </p>
         </h3>
-        <img
-          className=" md:w-[20vw] w-[50vw] object-cover overflow-visible"
-          src={model.instaImg}
-        />
+
         <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900">
           <p
             className={`text-pri-green text-7xl whitespace-nowrap   md:text-9xl font-semibold relative z-10   w-full px-5  ${galaktisRegular.className}`}
@@ -214,14 +217,14 @@ const ModelCard = ({ model, index }) => {
         <Image
           width={1000}
           height={1000}
-          className="object-contain  w-[60%] md:w-1/3 h-[90vh] md:h-[100vh] py-20  absolute left-52 -bottom-20 "
+          className="object-contain  w-[60%] md:w-1/3 h-[90vh] md:h-[100vh] py-20  absolute left-56 -bottom-20 "
           src={model.photo}
         />
       </div>
 
-      <div className="mt-2 p-4 justify-end flex ">
+      <div className="mt-2 p-4 w-[65vw] md:w-auto justify-end flex ">
         <p
-          className={`text-base md:text-lg rounded-xl border border-pri-green font-bold  p-6 bg-light-orange backdrop-blur-lg  text-pri-pink md:w-4/5  relative z-30 ${sourceSansVariableItalic.className}`}
+          className={`text-base md:text-lg rounded-xl border font-bold  p-6 bg-light-orange backdrop-blur-lg  text-pri-pink md:w-4/5  relative z-30 ${sourceSansVariableItalic.className}`}
         >
           {model.description}
         </p>
@@ -234,12 +237,12 @@ const ModelCard = ({ model, index }) => {
       </Link> */}
       </div>
       {index !== 7 && (
-        <div className="flex absolute  bottom-10 right-60 cursor-pointer z-30">
+        <div className="flex absolute  bottom-10 right-20 cursor-pointer z-30">
           <div className="flex  justify-end relative">
             <button className="bg-pri-pink text-white  pl-16 pr-6 py-3 rounded-full text-md md:text-xl font-semibold">
               Meet {models[index + 1]?.name}
             </button>
-            <ArrowRightIcon className="w-8 ml-3 text-pri-pink" />
+            <ArrowRightIcon className="w-6 ml-2 text-pri-pink" />
             <Image
               width={100}
               height={100}
@@ -374,67 +377,67 @@ const brandLogos = [
   {
     logo: "/images/models/logos/Image_003.png",
   },
-  {
-    logo: "/images/models/logos/Image_004.png",
-  },
-  {
-    logo: "/images/models/logos/Image_005.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_004.png",
+  // },
+  // {
+  //   logo: "/images/models/logos/Image_005.png",
+  // },
   {
     logo: "/images/models/logos/Image_006.png",
   },
-  {
-    logo: "/images/models/logos/Image_007.png",
-  },
-  {
-    logo: "/images/models/logos/Image_008.png",
-  },
-  {
-    logo: "/images/models/logos/Image_009.png",
-  },
-  {
-    logo: "/images/models/logos/Image_010.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_007.png",
+  // },
+  // {
+  //   logo: "/images/models/logos/Image_008.png",
+  // },
+  // {
+  //   logo: "/images/models/logos/Image_009.png",
+  // },
+  // {
+  //   logo: "/images/models/logos/Image_010.png",
+  // },
   {
     logo: "/images/models/logos/Image_011.png",
   },
   {
     logo: "/images/models/logos/Image_012.png",
   },
-  {
-    logo: "/images/models/logos/Image_013.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_013.png",
+  // },
   {
     logo: "/images/models/logos/Image_014.png",
   },
-  {
-    logo: "/images/models/logos/Image_015.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_015.png",
+  // },
   {
     logo: "/images/models/logos/Image_016.png",
   },
-  {
-    logo: "/images/models/logos/Image_017.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_017.png",
+  // },
   {
     logo: "/images/models/logos/Image_018.png",
   },
   {
     logo: "/images/models/logos/Image_019.png",
   },
-  {
-    logo: "/images/models/logos/Image_020.png",
-  },
-  {
-    logo: "/images/models/logos/Image_021.png",
-  },
-  {
-    logo: "/images/models/logos/Image_022.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_020.png",
+  // },
+  // {
+  //   logo: "/images/models/logos/Image_021.png",
+  // },
+  // {
+  //   logo: "/images/models/logos/Image_022.png",
+  // },
   // {
   //   logo: "/images/models/logos/Image_023.png",
   // },
-  {
-    logo: "/images/models/logos/Image_024.png",
-  },
+  // {
+  //   logo: "/images/models/logos/Image_024.png",
+  // },
 ];

@@ -10,49 +10,66 @@ const WearableAccordion = () => {
   const [open, setOpen] = useState(items[0].id);
 
   return (
-    <section className="  pr-32 md:px-32 flex flex-col pt-14  justify-center relative z-30">
-      <h2
-        className={` text-pri-green mr-4  relative mb-0 text-4xl text-right  ${galaktisRegular.className}`}
-      >
-        INTEROPERABLE WEARABLES &AVATARS
+    <>
+      <section className="w-[100vw]   pr-32 md:px-32 flex flex-col pt-14  justify-center relative z-30">
         <Link
           className=""
           href={"https://www.instagram.com/united_270/"}
           target="_blank"
         >
           <Image
-            width={80}
-            height={80}
-            className="absolute  -top-5 -right-24 z-10"
+            width={60}
+            height={60}
+            className="absolute top-9 left-16 z-10"
             src={"/images/logos/Asset_1.png"}
           />
         </Link>
-      </h2>
-      <div className="flex flex-col   lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto  overflow-hidden mt-10">
-        {/* {items.map((item) => {
-          return (
-            <Panel
-              key={item.id}
-              open={open}
-              setOpen={setOpen}
-              id={item.id}
-              Icon={item.Icon}
-              title={item.title}
-              imgSrc={item.imgSrc}
-              description={item.description}
-            />
-          );
-        })} */}
-        <Image
-          width={700}
-          height={700}
-          alt=""
-          style={{ objectFit: "contain" }}
-          className="w-[80vw] rounded-xl "
-          src={"/images/wearables/wearablesAvatar.png"}
-        />
-      </div>
-    </section>
+        <h2
+          className={` text-pri-green mr-4  relative mb-0 text-4xl text-left  ${galaktisRegular.className}`}
+        >
+          INTEROPERABLE WEARABLES &AVATARS
+        </h2>
+        <div className="flex flex-col   lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto  overflow-hidden mt-10">
+          <Image
+            width={700}
+            height={700}
+            alt=""
+            style={{ objectFit: "contain" }}
+            className="w-[80vw]  "
+            src={"/images/wearables/wearablesAvatar1.png"}
+          />
+        </div>
+      </section>
+      <section className="w-[100vw]  pr-32 md:px-32 flex flex-col pt-14  justify-center relative z-30">
+        <Link
+          className=""
+          href={"https://www.instagram.com/united_270/"}
+          target="_blank"
+        >
+          <Image
+            width={60}
+            height={60}
+            className="absolute top-9 left-16 z-10"
+            src={"/images/logos/Asset_1.png"}
+          />
+        </Link>
+        <h2
+          className={` text-pri-green mr-4  relative mb-0 text-4xl text-left  ${galaktisRegular.className}`}
+        >
+          INTEROPERABLE WEARABLES &AVATARS
+        </h2>
+        <div className="flex flex-col   lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto  overflow-hidden mt-10">
+          <Image
+            width={700}
+            height={700}
+            alt=""
+            style={{ objectFit: "contain" }}
+            className="w-[90vw]  "
+            src={"/images/wearables/wearablesAvatar2.png"}
+          />
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -51,9 +51,9 @@ const HorizontalScrollCarousel = () => {
               target="_blank"
             >
               <Image
-                width={80}
-                height={80}
-                className="absolute top-24 left-40 z-10"
+                width={50}
+                height={50}
+                className="absolute top-10 left-40 z-10"
                 src={"/images/logos/Asset_1.png"}
               />
             </Link>
@@ -74,7 +74,7 @@ const HorizontalScrollCarousel = () => {
               />
             </div>
           </div>
-          <div className="flex w-[100vw] h-screen ">
+          <div className="flex w-[300vw] h-screen ">
             <WearableAccordion />
           </div>
         </motion.div>

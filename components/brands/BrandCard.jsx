@@ -43,30 +43,32 @@ const BrandCard = ({ card }) => {
           {/* <card?.icon className="w-28 h-28 text-pri-green" /> */}
         </div>
         <div
-          className={`text-light-orange w-[60vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
+          className={`text-light-orange md:w-[60vw] flex md:flex-row flex-col font-bold  ${sourceSansVariableItalic.className}`}
         >
-          <div className="border  leading-5 rounded-[90px] p-8 md:w-[40%]">
-            <span className="font-bold"> What they wrote:</span>
-            <br />
-            {card?.whatTheyWrote}
+          <div className="flex">
+            <div className="border  leading-5 rounded-2xl p-8 md:w-[40%]">
+              <span className="font-bold"> What they wrote:</span>
+              <br />
+              {card?.whatTheyWrote}
+            </div>
+            <div className="border leading-5 rounded-2xl p-8 md:w-[40%]">
+              <span className="font-bold"> What we read:</span>
+              <br />
+              {card?.whatWeRead}
+            </div>
           </div>
-          <div className="border leading-5 rounded-[90px] p-8 md:w-[40%]">
-            <span className="font-bold"> What we read:</span>
-            <br />
-            {card?.whatWeRead}
-          </div>
-          <div className=" rounded-lg  pl-8 w-72 flex flex-col  justify-center">
+          <div className=" rounded-lg mt-6 md:mt-0 md:pl-8 w-72 flex flex-col  justify-center">
             <span className="font-bold"> What we gave them:</span>
           </div>
         </div>
       </div>
       <div className="flex justify-center">
         <Image
-          width={700}
-          height={700}
+          width={1000}
+          height={1000}
           alt=""
           style={{ objectFit: "contain" }}
-          className="w-[70vw] -mt-10 rounded-xl"
+          className="h-[70vw] md:h-[60vh] -mt-10 rounded-xl"
           src={card?.url}
         />
       </div>
