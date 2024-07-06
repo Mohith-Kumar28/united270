@@ -2,26 +2,39 @@ import { cafeDeParis, galaktisRegular } from "@/styles/fonts";
 import Image from "next/image";
 import React from "react";
 import SlidingText from "../utils/SlidingText";
-import { motion, useAnimate } from "framer-motion";
+import { motion, useAnimate, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
 
 const LastSection = () => {
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 50, delay: 0 });
+
+  // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0 });
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
+  // useScrollSnap({ ref: scrollRef, duration: 50, delay: 0 });
   return (
-    <div
-      className=" md:h-screen relative flex flex-col gap-28 overflow-hidden py-16"
-      ref={scrollRef}
-    >
-      <div className="flex md:flex-row flex-col justify-center  px-16 gap-16 md:gap-44 md:pl-44">
-        <h2
-          className={`text-5xl md:text-7xl font-bold text-light-orange md:w-2/3  ${cafeDeParis.className}`}
-        >
-          “to have a great idea, have a lot of them.”
-        </h2>
-        <div>
-          {/* <div
+    <div ref={scrollRef}>
+      <section ref={targetRef} className="relative h-[200vh] z-30 ">
+        <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
+          <motion.div style={{ x }} className="flex gap-52 ">
+            <div className="flex md:flex-row flex-col  relative gap-10  md:pl-32 py-16  md:pr-28">
+              <div
+                className=" md:h-screen z-50 w-[150vw] bg-pri-pink relative flex flex-col gap-28  h-auto py-16"
+                ref={scrollRef}
+              >
+                <div className="flex md:flex-row flex-col justify-center  px-16 pt-16 gap-16 md:gap-44 md:pl-44">
+                  <h2
+                    className={`text-5xl md:text-7xl font-bold text-right text-light-orange md:w-2/3  ${cafeDeParis.className}`}
+                  >
+                    “to have a great idea, have a lot of them.”
+                  </h2>
+                  <div>
+                    {/* <div
             className={`text-3xl text-gray-200 font-regular md:w-1/2 ${galaktisRegular.className}`}
           >
             Shortlisted
@@ -54,161 +67,108 @@ const LastSection = () => {
               </div>
             </div>
           </div> */}
-        </div>
-      </div>
-      <div className="-mt-52 md:mt-0">
-        {/* <div className="flex justify-end gap-3">
-          <div className="h-20 w-20">
-            <Image
-              width={400}
-              height={400}
-              className="rounded-full overflow-hidden"
-              src={"/images/lastSection/Asset_4.png"}
-            />
-          </div>
-          <div className="flex flex-col justify-center">
-            <p
-              className={`text-gray-200  w-64 text-xl  ${galaktisRegular.className}`}
-            >
-              3d Studio partner
-            </p>
-          </div>
-        </div> */}
+                  </div>
+                </div>
+                <div className="-mt-52 md:mt-0"></div>
+                <div className="flex  md:flex-row flex-col gap-20 justify-center -mt-10 px-0 md:px-28 relative z-30 ">
+                  <div className="flex gap-9 justify-center">
+                    <div
+                      className={`flex flex-col text-2xl justify-start gap-4 ml-6 ${galaktisRegular.className}`}
+                    >
+                      Shortlisted
+                      <div className="h-14 w-14">
+                        <Image
+                          width={200}
+                          height={200}
+                          className="rounded-full overflow-hidden"
+                          src={"/images/lastSection/Asset_1.png"}
+                        />
+                      </div>
+                      <div className="h-14 w-14">
+                        <Image
+                          width={200}
+                          height={200}
+                          className="rounded-full overflow-hidden"
+                          src={"/images/lastSection/Asset_4.png"}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex gap-10">
+                        <div
+                          className={`text-md  font-regular md:w-1/2 ${galaktisRegular.className}`}
+                        >
+                          <div className="w-14 h-14 flex flex-col justify-start">
+                            <Image
+                              width={200}
+                              height={200}
+                              className=""
+                              src={"/images/lastSection/Asset_3.png"}
+                            />
+                            Bangalore mumbai
+                          </div>
+                        </div>{" "}
+                        <div
+                          className={`text-md  font-regular md:w-1/2 ${galaktisRegular.className}`}
+                        >
+                          <div className="w-14 h-14 flex flex-col justify-start">
+                            <Image
+                              width={200}
+                              height={200}
+                              className=""
+                              src={"/images/lastSection/Asset_2.png"}
+                            />
+                            JEDDAH
+                          </div>
+                        </div>
+                      </div>
+                      <p
+                        className={`text-gray-200 pr-9  rounded-lg md:text-lg mt-16 ${galaktisRegular.className}`}
+                      >
+                        Studio Space & Locations Curated Talents Model Agencies
+                        Meta Creative Partner Motion Capture Studio Green Screen
+                        Studio + VFX Rendering Farm Influencer Agency 3D Body
+                        Scan Studio Public Relations Agencies
+                      </p>
+                    </div>
+                  </div>
 
-        {/* <SlidingText text={"Meet Us Here "} /> */}
-        {/* <SlidingText
-          text={
-            <div className="flex gap-4"> */}
-        {/* <div className="w-[700px]">
-                <Image
-                  width={300}
-                  height={200}
-                  className=""
-                  src={"/images/lastSection/Asset_6.png"}
-                />{" "}
-              </div>{" "} */}
-        <TranslateWrapper>
-          <img
-            className=" h-[18vmax] object-cover overflow-visible mx-72"
-            src="/images/texts/Asset_6.png"
-          />{" "}
-          <Image
-            width={400}
-            height={200}
-            className=" h-[10vmax] object-cover overflow-visible mt-10 mx-10"
-            src={"/images/lastSection/Asset_7.png"}
-          />
-          <div className="flex  flex-col justify-center rounded-xl">
-            <div className="flex  rounded-xl gap-10 p-4">
-              <div
-                className={`text-3xl h-[10vmax] text-gray-800 font-regular md:w-1/2 ${galaktisRegular.className}`}
-              >
-                Shortlisted
-                <div className="flex gap-10 mt-4">
-                  {/* <div className="h-28 w-28">
-                <Image
-                  width={200}
-                  height={200}
-                  className="rounded-full overflow-hidden"
-                  src={"/images/lastSection/Asset_1.png"}
-                />
-              </div>{" "} */}
-                  <div className="w-24 h-24 flex flex-col justify-start">
-                    <Image
-                      width={200}
-                      height={200}
-                      className=""
-                      src={"/images/lastSection/Asset_3.png"}
+                  {/* <TranslateWrapper>
+                    <img
+                      className=" h-[8vmax] object-cover overflow-visible mx-72"
+                      src="/images/texts/Asset_6.png"
                     />
-                    {/* BANGALORE */}
-                  </div>{" "}
-                  <div className="w-24 h-24 flex flex-col justify-start">
-                    <Image
-                      width={200}
-                      height={200}
-                      className=""
-                      src={"/images/lastSection/Asset_2.png"}
-                    />
-                    {/* JEDDAH */}
+                  </TranslateWrapper> */}
+                  <div
+                    className={`text-8xl text-pri-green w-full ${cafeDeParis.className}`}
+                  >
+                    MEET US HERE
+                  </div>
+                  <div className="md:w-[100vw]  flex gap-20 justify-start pl-8  mb-10">
+                    <div className=" ">
+                      <Image
+                        width={100}
+                        height={100}
+                        className=""
+                        src={"/images/lastSection/Asset_10.svg"}
+                      />{" "}
+                    </div>
+                    <div>
+                      <Image
+                        width={200}
+                        height={200}
+                        className=" "
+                        src={"/images/lastSection/Asset_6.png"}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="flex  justify-end gap-3">
-                <div className=" flex flex-col justify-center">
-                  <p
-                    className={`text-gray-800   text-xl  ${galaktisRegular.className}`}
-                  >
-                    3d Studio partner
-                  </p>
-                </div>
-              </div>
-              <div className="h-44 w-44">
-                <Image
-                  width={400}
-                  height={400}
-                  alt=""
-                  className="rounded-full overflow-hidden"
-                  src={"/images/lastSection/Asset_4.png"}
-                />
-              </div>
             </div>
-          </div>
-          {/* <img
-            className=" h-[18vmax] object-cover overflow-visible"
-            src={"/images/texts/Asset_6.png"}
-          /> */}
-        </TranslateWrapper>
-        {/* <div className="w-[700px]">
-                <Image
-                  width={300}
-                  height={200}
-                  className=""
-                  src={"/images/lastSection/Asset_6.png"}
-                />{" "}
-              </div> */}
-        {/* </div>
-          }
-        /> */}
-      </div>
-      <div className="flex  md:flex-row flex-col gap-20 justify-center -mt-10 px-10 md:px-28 relative z-30 ">
-        {/* <div>
-          <Image
-            width={300}
-            height={200}
-            className=""
-            src={"/images/lastSection/Asset_7.png"}
-          />
-        </div> */}
-        <div className="flex gap-4 justify-center">
-          <div className="flex flex-col justify-center gap-4">
-            <div className="h-20 w-20">
-              <Image
-                width={400}
-                height={400}
-                className="rounded-full overflow-hidden"
-                src={"/images/lastSection/Asset_5.png"}
-              />
-            </div>
-            <div className="h-20 w-20">
-              <Image
-                width={400}
-                height={400}
-                className="rounded-full overflow-hidden"
-                src={"/images/lastSection/Asset_8.png"}
-              />
-            </div>
-          </div>
-          <p
-            className={`text-gray-200 w-1/2  p-3 rounded-lg text-lg mt-4 ${galaktisRegular.className}`}
-          >
-            Studio Space & Locations Curated Talents Model Agencies Meta
-            Creative Partner Motion Capture Studio Green Screen Studio + VFX
-            Rendering Farm Influencer Agency 3D Body Scan Studio Public
-            Relations Agencies
-          </p>
+            <div className=" "></div>
+          </motion.div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
