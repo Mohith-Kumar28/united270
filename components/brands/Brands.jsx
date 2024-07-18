@@ -43,7 +43,7 @@ const Brands = () => {
                       setIsOpen(true);
                     }}
                     key={brand.id}
-                    className="cursor-pointer w-40 h-24 "
+                    className="cursor-pointer   w-40 h-24 "
                   ></div>
                 </>
               ))}
@@ -55,7 +55,7 @@ const Brands = () => {
                       setIsOpen(true);
                     }}
                     key={brand.id}
-                    className="cursor-pointer w-40 h-24  "
+                    className="cursor-pointer   w-40 h-24  "
                   ></div>
                 </>
               ))}
@@ -67,7 +67,7 @@ const Brands = () => {
                       setIsOpen(true);
                     }}
                     key={brand.id}
-                    className="cursor-pointer w-40 h-24 "
+                    className="cursor-pointer   w-40 h-24 "
                   ></div>
                 </>
               ))}
@@ -79,7 +79,7 @@ const Brands = () => {
                       setIsOpen(true);
                     }}
                     key={brand.id}
-                    className="cursor-pointer w-40 h-24  "
+                    className="cursor-pointer   w-40 h-24  "
                   ></div>
                 </>
               ))}
