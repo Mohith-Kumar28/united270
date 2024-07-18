@@ -149,9 +149,9 @@ export default Brands;
 const TranslateWrapper = ({ children, reverse }) => {
   return (
     <motion.div
-      initial={{ translateY: reverse ? "-100%" : "0%" }}
+      initial={{ translateY: reverse ? "-100%" : "-50%" }}
       animate={{ translateY: reverse ? "0%" : "-100%" }}
-      transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
       className="flex flex-col gap-4 px-2"
     >
       {children}
