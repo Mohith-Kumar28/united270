@@ -114,6 +114,10 @@ const HorizontalScrollCarousel = () => {
                   className="h-[18vmax]  object-cover overflow-visible  z-10 "
                   src={"/images/texts/Asset_7.png"}
                 />
+                <img
+                  className="h-[18vmax] ml-[1000px] object-cover overflow-visible  z-10 "
+                  src={"/images/texts/Asset_7.png"}
+                />
               </TranslateWrapper>
               <div className="flex justify-center">
                 <Image

@@ -6,15 +6,17 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function BrandsCardCarousel({ card }) {
   const [idx, setIdx] = useState(3);
+  const [cardIndex, setCardIndex] = useState(1);
   const [prevIdx, setPrevIdx] = useState(idx);
 
   const trend = idx > prevIdx ? 1 : -1;
 
-  const cardIndex = Math.abs(idx % BrandsData.length);
-
+  // const cardIndex = Math.abs(idx % BrandsData.length);
+  // console.log(Math.abs(card.id % BrandsData.length));
   useEffect(() => {
     if (card) {
       setIdx(card.id);
+      setCardIndex(Math.abs(card.id % BrandsData.length));
     }
   }, [card]);
 
@@ -45,7 +47,7 @@ export default function BrandsCardCarousel({ card }) {
             style={{ y: "-50%", x: "-50%" }}
             className="aspect-square max-h-[90%] max-w-[calc(100%_-_80px)] mx-auto bg-black object-cover shadow-2xl absolute left-1/2 top-1/2"
           /> */}
-          <BrandCard card={BrandsData[cardIndex]} />
+          <BrandCard card={BrandsData.find((brand) => brand.id == idx)} />
         </AnimatePresence>
       </div>
       <button
@@ -106,6 +108,14 @@ const images = [
 
 const BrandsData = [
   {
+    url: "/images/brands/Asset5.png",
+    title: "Van Heusen",
+    whatTheyWrote: "Launch the first-ever casual collection",
+    whatWeRead: "Show that Vanhuesen means business even when its casual ",
+    icon: "/images/logos/vanHeusen.png",
+    id: 4,
+  },
+  {
     url: "/images/brands/Asset4.png",
     title: "Chumbak",
     whatTheyWrote: "Reposition the boutique brand into a mass brand",
@@ -114,6 +124,15 @@ const BrandsData = [
     id: 3,
   },
 
+  {
+    url: "/images/brands/Asset3.png",
+    title: "Simon Carter",
+    whatTheyWrote: "Show India Simon Carter is quirky too",
+    whatWeRead:
+      "Create a campaign that makes Simon Carter impossible to forget",
+    icon: "/images/logos/simonCarter.png",
+    id: 2,
+  },
   {
     url: "/images/brands/Asset2.png",
     title: "Cult Sport",
@@ -141,6 +160,16 @@ const BrandsData = [
   },
 
   {
+    url: "/images/brands/Asset7.png",
+    title: "Whistling Woods",
+    whatTheyWrote: "Reposition WWI as more than just a film school",
+    whatWeRead:
+      "Create an iconic campaign that leverages the iconic school’s reputation to establish it as a safe haven for all creative people",
+    icon: "/images/logos/whistlingWoods.png",
+    id: 6,
+  },
+
+  {
     url: "/images/brands/Asset10.png",
     title: "Virgio",
     whatTheyWrote:
@@ -149,6 +178,17 @@ const BrandsData = [
       "Shoot a memorable film that celebrates the youth and their quirks",
     icon: "/images/logos/virgio.png",
     id: 9,
+  },
+
+  {
+    url: "/images/brands/Asset6.png",
+    title: "John Jacobs",
+    whatTheyWrote:
+      "Create a campaign that celebrates John Jacobs fine craftsmanship ",
+    whatWeRead:
+      "Position John Jacobs as the best thing your eyes will see, or wear.",
+    icon: "/images/logos/johnJacobs.png",
+    id: 5,
   },
 
   {

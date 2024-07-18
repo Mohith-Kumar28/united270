@@ -30,17 +30,32 @@ const WearableAccordion = () => {
           INTEROPERABLE WEARABLES &AVATARS
         </h2>
         <div className="flex flex-col   lg:flex-row h-fit lg:h-[450px] w-full max-w-6xl mx-auto  overflow-hidden mt-10">
-          <Image
-            width={700}
-            height={700}
-            alt=""
-            style={{ objectFit: "contain" }}
-            className="w-[80vw]  "
-            src={"/images/wearables/wearablesAvatar1.png"}
-          />
+          <div className="hidden md:block">
+            {" "}
+            <Image
+              width={700}
+              height={700}
+              alt=""
+              style={{ objectFit: "contain" }}
+              className="w-[80vw]  "
+              src={"/images/wearables/wearablesAvatar.png"}
+            />
+          </div>
+
+          <div className="block md:hidden">
+            {" "}
+            <Image
+              width={700}
+              height={700}
+              alt=""
+              style={{ objectFit: "contain" }}
+              className="w-[80vw]  "
+              src={"/images/wearables/wearablesAvatar1.png"}
+            />
+          </div>
         </div>
       </section>
-      <section className="w-[100vw]  pr-32 md:px-32 flex flex-col pt-14  justify-center relative z-30">
+      {/* <section className="w-[100vw]  pr-32 md:px-32 flex flex-col pt-14  justify-center relative z-30">
         <Link
           className=""
           href={"https://www.instagram.com/united_270/"}
@@ -68,7 +83,7 @@ const WearableAccordion = () => {
             src={"/images/wearables/wearablesAvatar2.png"}
           />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

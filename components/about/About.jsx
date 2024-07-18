@@ -181,10 +181,9 @@ const About = () => {
               className="h-[18vmax] object-cover overflow-visible   "
               src={"/images/texts/Asset_3.png"}
             />
-            {/* <SlidingText text={"FROM THE UNIVERSE TO THE HUMANVERSE."} /> */}
           </TranslateWrapper>
         </div>
-        {/* <p
+        <p
           className={
             `text-gray-100 bg-black/20 backdrop-blur-3xl p-10 m-20 mt-2 text-left  text-xl font-medium  z-30 relative rounded-lg ` +
             ` ${galaktisRegular.className}`
@@ -201,7 +200,7 @@ const About = () => {
           tech innovations, we deliver. #WeAreInTransit, from the universe to
           the humanverse, and we want to take you along. Join us to
           strategically transform your business into a brand.
-        </p> */}
+        </p>
       </div>
 
       {/* <p className="text-pri-green text-9xl font-bold relative   w-full overflow-hidden">
@@ -209,27 +208,7 @@ const About = () => {
       </p> */}
       {/* <SlidingText text={"from the univ"} /> */}
 
-      <div className="flex gap-20 justify-end relative z-30 pr-20">
-        <div className="flex flex-col justify-end  relative  cursor-pointer">
-          <button className="bg-light-orange w-52  pl-16 pr-5 py-8 rounded-xl text-xl font-semibold"></button>
-          <Image
-            width={100}
-            height={100}
-            className="  absolute -left-14 bottom-0"
-            src={"/images/hero/heroGirl.png"}
-          />
-        </div>{" "}
-        <div className="flex flex-col justify-end relative  cursor-pointer">
-          <button className="bg-light-orange w-52  pl-16 pr-5 py-8 rounded-xl text-xl font-semibold"></button>
-          <Image
-            width={100}
-            height={100}
-            className="  absolute -left-14 bottom-0"
-            src={"/images/hero/heroGirl.png"}
-          />
-        </div>
-      </div>
-      {/* <HorizontalScrollCarousel /> */}
+      <HorizontalScrollCarousel />
       {/* <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
           Scroll up
@@ -258,7 +237,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className=" h-[200vh] ">
-      <div className="sticky top-1/2 flex h-screen md:items-end  py-36 overflow-hidden z-30">
+      <div className="sticky top-0 flex h-screen md:items-end  py-36 overflow-hidden z-30">
         <motion.div style={{ x }} className="flex flex-col gap-36 ">
           {/* <img
             className="h-[18vmax] object-cover overflow-visible relative z-10 "

@@ -15,6 +15,7 @@ import HyperRealisticHero from "@/components/hyperRealistic/HyperRealisticHero";
 import LastSection from "@/components/lastSection/LastSection";
 import AfterHero from "@/components/hero/AfterHero";
 import AfterAbout from "@/components/about/AfterAbout";
+import AfterBrands from "@/components/brands/AfterBrands";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function Home() {
         <About />
         <AfterAbout />
         <Brands />
+        <AfterBrands />
         {/* <HorizontalScroll /> */}
         <ModelsHero />
 

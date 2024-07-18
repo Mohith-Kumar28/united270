@@ -65,16 +65,16 @@ const HorizontalScrollCarousel = () => {
               />
             </div>
             {/*  */}
-            <div className="w-full flex items-center">
+            <div className="w-full flex items-center justify-end">
               <Image
                 width={600}
                 height={600}
-                className="w-full relative z-10 m-20"
+                className="w-1/2 relative z-10 m-20"
                 src={"/images/wearables/hero.png"}
               />
             </div>
           </div>
-          <div className="flex w-[300vw] h-screen ">
+          <div className="flex w-[200vw] h-screen ">
             <WearableAccordion />
           </div>
         </motion.div>

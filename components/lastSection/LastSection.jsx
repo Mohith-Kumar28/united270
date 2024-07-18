@@ -24,7 +24,7 @@ const LastSection = () => {
           <motion.div style={{ x }} className="flex gap-52 ">
             <div className="flex md:flex-row flex-col  relative gap-10   py-16  md:pr-28">
               <div
-                className=" md:h-screen z-50 w-[150vw] bg-pri-pink relative flex flex-col gap-28  h-auto py-16"
+                className=" md:h-screen z-50 w-[100vw] bg-pri-pink relative flex flex-col gap-28  h-auto py-16"
                 ref={scrollRef}
               >
                 <div className="flex md:flex-row flex-col justify-center  px-16 pt-16 gap-16 md:gap-44 md:pl-44">
@@ -70,7 +70,7 @@ const LastSection = () => {
                   </div>
                 </div>
                 <div className="-mt-52 md:mt-0"></div>
-                <div className="flex  md:flex-row flex-col gap-20 justify-center -mt-10 px-0 md:px-28 relative z-30 ">
+                <div className="flex  md:flex-row flex-col md:gap-20 justify-center -mt-10 px-0 md:px-28 relative z-30 ">
                   <div className="flex gap-9 justify-center">
                     <div
                       className={`flex flex-col text-2xl justify-start gap-4 ml-6 ${galaktisRegular.className}`}
@@ -140,7 +140,7 @@ const LastSection = () => {
                     />
                   </TranslateWrapper> */}
                   <div
-                    className={`text-8xl md:absolute md:-mt-52 md:ml-36 md:text-[200px] text-pri-green w-full ${cafeDeParis.className}`}
+                    className={`md:text-8xl text-6xl ml-4 md:absolute md:-mt-52 md:ml-36 md:text-[200px] text-pri-green w-full ${cafeDeParis.className}`}
                   >
                     MEET US HERE
                   </div>

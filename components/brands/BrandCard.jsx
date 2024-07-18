@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 const BrandCard = ({ card }) => {
-  console.log("card", card);
+  // console.log("card", card);
   return (
     <div
       key={card?.id}

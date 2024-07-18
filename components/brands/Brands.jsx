@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import BrandsModal from "./BrandsModal";
 import { fadeIn, staggerContainer } from "@/utils/motion";
@@ -10,6 +10,11 @@ const Brands = () => {
   let [selectedBrand, setSelectedBrand] = useState();
   // const scrollRef = useRef(null);
   // useScrollSnap({ ref: scrollRef, duration: 10, delay: 0.2 });
+
+  useEffect(() => {
+    // console.log(selectedBrand);
+  }, [selectedBrand]);
+
   return (
     <motion.div
       // ref={scrollRef}
@@ -161,6 +166,14 @@ const TranslateWrapper = ({ children, reverse }) => {
 
 const BrandsData = [
   {
+    url: "/images/brands/Asset5.png",
+    title: "Van Heusen",
+    whatTheyWrote: "Launch the first-ever casual collection",
+    whatWeRead: "Show that Vanhuesen means business even when its casual ",
+    icon: "/images/logos/vanHeusen.png",
+    id: 4,
+  },
+  {
     url: "/images/brands/Asset4.png",
     title: "Chumbak",
     whatTheyWrote: "Reposition the boutique brand into a mass brand",
@@ -169,6 +182,15 @@ const BrandsData = [
     id: 3,
   },
 
+  {
+    url: "/images/brands/Asset3.png",
+    title: "Simon Carter",
+    whatTheyWrote: "Show India Simon Carter is quirky too",
+    whatWeRead:
+      "Create a campaign that makes Simon Carter impossible to forget",
+    icon: "/images/logos/simonCarter.png",
+    id: 2,
+  },
   {
     url: "/images/brands/Asset2.png",
     title: "Cult Sport",
@@ -196,6 +218,16 @@ const BrandsData = [
   },
 
   {
+    url: "/images/brands/Asset7.png",
+    title: "Whistling Woods",
+    whatTheyWrote: "Reposition WWI as more than just a film school",
+    whatWeRead:
+      "Create an iconic campaign that leverages the iconic school’s reputation to establish it as a safe haven for all creative people",
+    icon: "/images/logos/whistlingWoods.png",
+    id: 6,
+  },
+
+  {
     url: "/images/brands/Asset10.png",
     title: "Virgio",
     whatTheyWrote:
@@ -204,6 +236,17 @@ const BrandsData = [
       "Shoot a memorable film that celebrates the youth and their quirks",
     icon: "/images/logos/virgio.png",
     id: 9,
+  },
+
+  {
+    url: "/images/brands/Asset6.png",
+    title: "John Jacobs",
+    whatTheyWrote:
+      "Create a campaign that celebrates John Jacobs fine craftsmanship ",
+    whatWeRead:
+      "Position John Jacobs as the best thing your eyes will see, or wear.",
+    icon: "/images/logos/johnJacobs.png",
+    id: 5,
   },
 
   {
