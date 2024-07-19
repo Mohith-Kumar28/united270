@@ -23,6 +23,7 @@ export default function BrandsCardCarousel({ card }) {
   return (
     <div className="h-full w-[100vw]  mx-auto relative ">
       <button
+        disabled={idx == 0}
         onClick={() => {
           setPrevIdx(idx);
           setIdx((pv) => pv - 1);
@@ -51,6 +52,7 @@ export default function BrandsCardCarousel({ card }) {
         </AnimatePresence>
       </div>
       <button
+        disabled={idx == 9}
         onClick={() => {
           setPrevIdx(idx);
           setIdx((pv) => pv + 1);
