@@ -54,7 +54,7 @@ const HyperRealisticHero = () => {
   return (
     <div ref={scrollRef}>
       <section ref={targetRef} className="relative h-[300vh] z-30 bg-pri-pink">
-        <div className="sticky top-0 flex  h-screen items-center overflow-hidden ">
+        <div className="sticky top-0 flex  h-screen items-center overflow-x-hidden overflow-y-clip  ">
           <motion.div style={{ x }} className="flex gap-52 ">
             <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 px-16 md:pl-32 py-16 md:pr-28">
               <Image
@@ -71,7 +71,7 @@ const HyperRealisticHero = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="md:w-2/3">
+              <div className="md:w-[45vw] pt-6">
                 {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >
@@ -91,8 +91,8 @@ const HyperRealisticHero = () => {
                   <h3 className={``}>METAVERSE</h3>
                 </div> */}
                 <Image
-                  width={700}
-                  height={700}
+                  width={600}
+                  height={600}
                   className=""
                   src={"/images/hyperRealistic/Asset_4.png"}
                 />
