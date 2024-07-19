@@ -36,8 +36,7 @@ const Hero = () => {
             ` ${galaktisRegular.className}`
           }
         >
-          Cyberfiction aims to be a decentralized community that can create new
-          values and profits through play in the virtual world.
+          We're in the business of making B2B & B2C more H2H - Human to Human.
         </p>
       </div>
       <div className="flex absolute z-20 bottom-10 right-10 cursor-pointer">
