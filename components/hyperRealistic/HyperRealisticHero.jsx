@@ -103,7 +103,7 @@ const HyperRealisticHero = () => {
                 <div className="relative h-screen flex gap-36 justify-between py-5   ">
                   {cards.map((item) => {
                     return (
-                      <div className="w-[80vw] flex flex-col justify-center relative ">
+                      <div className="w-[80vw] pt-20 flex flex-col justify-center relative ">
                         <ArrowLeftIcon className="w-7 text-pri-green absolute top-1/2 left-0" />
                         <ArrowRightIcon className="w-7 text-pri-green absolute top-1/2 right-0" />
                         <h2
