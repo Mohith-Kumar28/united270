@@ -28,7 +28,7 @@ export default function BrandsCardCarousel({ card }) {
           setPrevIdx(idx);
           setIdx((pv) => pv - 1);
         }}
-        className=" transition-colors  text-white p-2 absolute z-10 left-10 rounded-full top-1/2 "
+        className=" transition-colors  disabled:cursor-not-allowed  text-white p-2 absolute z-10 left-10 rounded-full top-1/2 "
       >
         {/* <FiChevronLeft className="text-3xl" /> */}
         <ArrowLeftIcon className="w-8" />
@@ -57,7 +57,7 @@ export default function BrandsCardCarousel({ card }) {
           setPrevIdx(idx);
           setIdx((pv) => pv + 1);
         }}
-        className=" transition-colors text-white p-2 absolute z-10 right-10 rounded-full top-1/2 "
+        className=" transition-colors text-white p-2 absolute z-10 right-10 rounded-full top-1/2 disabled:cursor-not-allowed"
       >
         {/* <FiChevronLeft className="text-3xl" /> */}
         <ArrowRightIcon className="w-8" />
