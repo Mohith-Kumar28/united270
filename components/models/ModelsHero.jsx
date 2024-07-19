@@ -114,10 +114,10 @@ const HorizontalScrollCarousel = () => {
                   className="h-[18vmax]  object-cover overflow-visible  z-10 "
                   src={"/images/texts/Asset_7.png"}
                 />
-                <img
+                {/* <img
                   className="h-[18vmax] ml-[1000px] object-cover overflow-visible  z-10 "
                   src={"/images/texts/Asset_7.png"}
-                />
+                /> */}
               </TranslateWrapper>
               <div className="flex justify-center">
                 <Image
@@ -265,7 +265,7 @@ const TranslateWrapper = ({ children, reverse }) => {
     <motion.div
       initial={{ translateX: reverse ? "-100%" : "75%" }}
       animate={{ translateX: reverse ? "100%" : "-100%" }}
-      transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       className="flex  "
     >
       {children}
