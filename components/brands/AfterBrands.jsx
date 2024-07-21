@@ -27,38 +27,15 @@ const AfterBrands = () => {
                   {cards.map((item) => {
                     return (
                       <div className="w-[80vw] flex flex-col justify-center relative ">
-                        {/* <ArrowLeftIcon className="w-7 text-pri-green absolute top-1/2 left-0" />
-                        <ArrowRightIcon className="w-7 text-pri-green absolute top-1/2 right-0" />
-                        <h2
-                          className={`relative text-pri-green mb-2 md:mr-8  text-4xl text-right  ${galaktisRegular.className}`}
-                        >
-                          {item.title}
-                          <Link
-                            href={"https://www.instagram.com/united_270/"}
-                            target="_blank"
-                          >
-                            <Image
-                              width={80}
-                              height={80}
-                              className="absolute -top-10 -right-24 z-10"
-                              src={"/images/logos/Asset_2.png"}
-                            />
-                          </Link>
-                        </h2> */}
-
                         <div className="flex justify-center  relative h-[70vh]">
-                          <video
-                            autoPlay
-                            muted
-                            loop
-                            width="900"
-                            height="700"
-                            className="object-contain"
-                            controls
-                          >
-                            <source src={item.url} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                          <iframe
+                            className="w-full h-full"
+                            src={`https://www.youtube.com/embed//${item.ytId}?controls=1&autoplay=1&mute=1&loop=1&playlist=${item.ytId}`}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                          ></iframe>
                         </div>
                       </div>
                     );
@@ -77,30 +54,33 @@ export default AfterBrands;
 
 const cards = [
   {
-    url: "/images/works/Asset_1.mp4",
-    title: "",
+    ytId: "MLwSRzeCB8A",
+  },
+  {
+    ytId: "PQDE9xY4AH0",
+  },
 
-    id: 1,
-  },
   {
-    url: "/images/works/Asset_2.mp4",
-    title: "",
+    ytId: "7pJIH-tBlcE",
+  },
 
-    id: 2,
-  },
   {
-    url: "/images/works/Asset_3.mp4",
-    title: "",
-    id: 3,
+    ytId: "olv1NsIJcww",
   },
+
   {
-    url: "/images/works/Asset_4.mp4",
-    title: "",
-    id: 4,
+    ytId: "XbBoZriYrD4",
   },
+
   {
-    url: "/images/works/Asset_5.mp4",
-    title: "",
-    id: 5,
+    ytId: "C-iJGn5W110",
+  },
+
+  {
+    ytId: "djuWkgKmfZc",
+  },
+
+  {
+    ytId: "Zy9_tuJIomg",
   },
 ];

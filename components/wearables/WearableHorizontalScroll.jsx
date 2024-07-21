@@ -53,7 +53,7 @@ const HorizontalScrollCarousel = () => {
               <Image
                 width={50}
                 height={50}
-                className="absolute top-10 left-40 z-10"
+                className="absolute top-36 left-40 z-10"
                 src={"/images/logos/Asset_1.png"}
               />
             </Link>

@@ -98,18 +98,18 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     <TranslateWrapper reverse>
                       <LogoItemsBottom />
                     </TranslateWrapper> */}
-                    {/* <TranslateWrapper> */}
-                    <img
-                      className=" h-[20vmax] flex ml-auto object-cover overflow-visible"
-                      src={user?.brands}
-                    />{" "}
-                    {/* <img
+                    <TranslateWrapper>
+                      <img
+                        className=" h-[18vmax] object-cover overflow-visible"
+                        src={user?.brands}
+                      />{" "}
+                      {/* <img
                         className="translate-x-[50%] h-[18vmax] object-cover overflow-visible"
                         src={user?.brands}
                       /> */}
-                    {/* </TranslateWrapper> */}
+                    </TranslateWrapper>
                   </div>
-                  {/* <Dialog.Title
+                  <Dialog.Title
                     as="h3"
                     className="mt-4 text-lg font-medium leading-6 text-gray-900"
                   >
@@ -118,34 +118,17 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     >
                       {user?.name}
                     </p>
-                  </Dialog.Title> */}
-                  <TranslateWrapper>
-                    <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900 ">
-                      <p
-                        className={`text-pri-green  text-7xl  whitespace-nowrap md:text-9xl font-semibold relative z-10  w-full px-5  ${galaktisRegular.className}`}
-                      >
-                        {user?.name}
-                      </p>
-                    </h3>
-
-                    <h3 className="mt-4 text-lg font-medium flex items-end leading-6 text-gray-900">
-                      <p
-                        className={`text-pri-green text-7xl whitespace-nowrap   md:text-9xl font-semibold relative z-10   w-full px-5  ${galaktisRegular.className}`}
-                      >
-                        {user?.name}
-                      </p>
-                    </h3>
-                  </TranslateWrapper>
-                  <div className="md:mt-2 p-4 justify-between items-end  mt-auto flex flex-col md:flex-row">
+                  </Dialog.Title>
+                  <div className="mt-2 p-4 justify-between flex flex-col md:flex-row">
                     <p
-                      className={`text-base md:text-lg  font-medium text-gray-100  backdrop-blur-lg relative z-10 w-2/3 md:w-2/3  ${sourceSansVariableItalic.className}`}
+                      className={`text-base md:text-lg font-medium text-gray-100  backdrop-blur-lg relative z-10 md:w-2/3  ${sourceSansVariableItalic.className}`}
                     >
                       {user?.description}
                     </p>
                     <Link
                       href={user?.linkedinUrl}
                       target="_blank"
-                      className="cursor-pointer z-10 w-16 md:w-24 h-16 md:h-24 flex justify-center items-center rounded-lg  hover:bg-black/10 text-pri-green transition-colors outline-none ml-auto"
+                      className="cursor-pointer z-10 w-16 md:w-24 h-16 md:h-24 flex justify-center items-center rounded-lg  hover:bg-black/10 text-pri-green transition-colors outline-none"
                     >
                       <SiLinkedin className="text-4xl md:text-5xl" />
                     </Link>
@@ -162,7 +145,7 @@ export default function TeamModal({ isOpen, setIsOpen, user }) {
                     <Image
                       width={600}
                       height={600}
-                      className="object-contain h-full py-20  absolute  right-16 -bottom-3 "
+                      className="object-contain h-full py-20  absolute -right-10 -bottom-3 "
                       src={user?.photo}
                     />
                   </div>

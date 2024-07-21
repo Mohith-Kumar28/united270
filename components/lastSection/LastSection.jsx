@@ -27,9 +27,9 @@ const LastSection = () => {
                 className=" md:h-screen z-50 w-[100vw] bg-pri-pink relative flex flex-col gap-28  h-auto py-16"
                 ref={scrollRef}
               >
-                <div className="flex md:flex-row flex-col justify-center  px-16 pt-16 gap-16 md:gap-44 md:pl-44">
+                <div className="flex md:flex-row flex-col justify-center  px-16 pt-16 gap-16 md:gap-44 md:pl-10">
                   <h2
-                    className={`text-5xl md:text-7xl font-bold text-right text-light-orange md:w-2/3  ${cafeDeParis.className}`}
+                    className={`text-5xl md:text-7xl font-bold text-left text-light-orange  ${cafeDeParis.className}`}
                   >
                     “to have a great idea, have a lot of them.”
                   </h2>
@@ -140,7 +140,7 @@ const LastSection = () => {
                     />
                   </TranslateWrapper> */}
                   <div
-                    className={`md:text-8xl text-6xl ml-4 md:absolute md:-mt-52 md:ml-36 md:text-[200px] text-pri-green w-full ${cafeDeParis.className}`}
+                    className={`md:text-8xl text-6xl ml-4 md:absolute md:-mt-52 md:ml-64 md:text-[200px] text-pri-green w-full ${cafeDeParis.className}`}
                   >
                     MEET US HERE
                   </div>

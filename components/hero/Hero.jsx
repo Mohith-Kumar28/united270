@@ -32,10 +32,18 @@ const Hero = () => {
         </div>
         <p
           className={
-            `text-gray-100  w-80 p-5 mt-2 text-left  text-xl font-medium md:ml-52 z-30 relative rounded-lg ` +
+            `text-gray-100  w-96 p-5 mt-2 text-left  text-xl font-medium md:ml-32 z-30 relative rounded-lg flex gap-8` +
             ` ${galaktisRegular.className}`
           }
         >
+          <Link className="" target="_blank" href="/images/hero/playBook.pdf">
+            <Image
+              width={200}
+              height={200}
+              className=" "
+              src={"/images/hero/playBook.png"}
+            />
+          </Link>
           We're in the business of making B2B & B2C more H2H - Human to Human.
         </p>
       </div>

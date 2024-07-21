@@ -29,7 +29,7 @@ const Team = () => {
       role: "Chief Operations Officer & Co- Founder",
       photo: "/images/team/person5.png",
       photoSmall: "/images/team/4.png",
-      brands: "/images/team/senapathiBrands.svg",
+      brands: "",
       linkedinUrl: "https://www.linkedin.com/in/kesava-senapathi/",
       description:
         "With over 22 years of expertise in the IT domain across diverse business verticals, Senapathi is our experienced advisor and mentor. His multi-faceted expertise lies in areas like IT Strategy & Planning, Enterprise Solution Design, and Business Transformation - including Digital Transformation ranging from Big data and Robotics to Apps and Al.",
@@ -39,7 +39,7 @@ const Team = () => {
       role: "Creative Director",
       photo: "/images/team/person3.png",
       photoSmall: "/images/team/2.png",
-      brands: "/images/team/sashaBrands.svg",
+      brands: "/images/team/person3Brands.svg",
       linkedinUrl:
         "https://www.linkedin.com/in/sasha-d-souza-147322214/?originalSubdomain=in",
       description:
