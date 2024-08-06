@@ -54,7 +54,7 @@ const HyperRealisticHero = () => {
   return (
     <div ref={scrollRef}>
       <section ref={targetRef} className="relative h-[300vh] z-30 bg-pri-pink">
-        <div className="sticky top-0 flex  h-screen items-center overflow-x-hidden overflow-y-clip  ">
+        <div className="sticky top-0 flex  h-screen  items-center overflow-x-hidden overflow-y-visible  ">
           <motion.div style={{ x }} className="flex gap-52 ">
             <div className="flex md:flex-row flex-col w-[100vw] relative gap-10 px-16 md:pl-32 py-16 md:pr-28">
               <Image

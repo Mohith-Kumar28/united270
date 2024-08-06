@@ -26,7 +26,10 @@ const AfterBrands = () => {
                 <div className="relative h-screen flex gap-36 justify-between py-5   ">
                   {cards.map((item) => {
                     return (
-                      <div className="w-[80vw] flex flex-col justify-center relative ">
+                      <div
+                        key={item.ytId}
+                        className="w-[80vw] flex flex-col justify-center relative "
+                      >
                         <div className="flex justify-center  relative h-[70vh]">
                           <iframe
                             className="w-full h-full"

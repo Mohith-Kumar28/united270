@@ -76,7 +76,7 @@ const TranslateWrapper = ({ children, reverse }) => {
       initial={{ translateX: reverse ? "-100%" : "130%" }}
       animate={{ translateX: reverse ? "0%" : "-150%" }}
       transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-      className="flex gap-4 px-2"
+      className="flex gap-4 px-2 overflow-visible"
     >
       {children}
     </motion.div>
