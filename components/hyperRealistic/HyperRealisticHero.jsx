@@ -130,7 +130,7 @@ const HyperRealisticHero = () => {
                         /> */}
                         <div className="flex justify-center  relative h-[70vh]">
                           <video
-                            autoPlay
+                            // autoPlay
                             muted
                             loop
                             width="900"
