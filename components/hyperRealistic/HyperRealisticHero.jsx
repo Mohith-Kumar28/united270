@@ -107,6 +107,24 @@ const HyperRealisticHero = () => {
                         key={item.ytId}
                         className="w-[80vw] flex flex-col justify-center relative "
                       >
+                          <ArrowLeftIcon className="w-7 text-pri-green absolute top-1/2 left-0" />
+                        <ArrowRightIcon className="w-7 text-pri-green absolute top-1/2 right-0" />
+                        <h2
+                          className={`relative text-pri-green mb-2 md:mr-8  text-4xl text-right  ${galaktisRegular.className}`}
+                        >
+                          {item.title}
+                          <Link
+                            href={"https://www.instagram.com/united_270/"}
+                            target="_blank"
+                          >
+                            <Image
+                              width={80}
+                              height={80}
+                              className="absolute -top-10 -right-24 z-10"
+                              src={"/images/logos/Asset_2.png"}
+                            />
+                          </Link>
+                        </h2>
                         <div className="flex justify-center  relative h-[70vh]">
                           <iframe
                             className="w-full h-full"
