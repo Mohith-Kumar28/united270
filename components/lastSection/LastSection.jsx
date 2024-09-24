@@ -153,7 +153,7 @@ const LastSection = () => {
                         src={"/images/lastSection/Asset_10.svg"}
                       />{" "}
                     </div>
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col md:gap-3">
                       <Image
                         width={200}
                         height={200}
