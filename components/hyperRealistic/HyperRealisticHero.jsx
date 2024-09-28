@@ -71,7 +71,7 @@ const HyperRealisticHero = () => {
                 />
                 Your browser does not support the video tag.
               </video>
-              <div className="md:w-[45vw] pt-6">
+              <div className="md:w-[35vw]  pt-36">
                 {/* <h2
                   className={`text-5xl  md:text-8xl font-bold text-pri-green ${cafeDeParis.className}`}
                 >
@@ -100,7 +100,7 @@ const HyperRealisticHero = () => {
             </div>
             <div className=" ">
               <section className="  px-32 flex flex-col justify-center mt-10 relative z-30">
-                <div className="relative h-screen flex gap-36 justify-between py-5   ">
+                <div className="relative h-screen flex gap-36 justify-between pt-36   ">
                 {cards.map((item) => {
                     return (
                       <div
