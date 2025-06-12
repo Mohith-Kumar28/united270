@@ -36,9 +36,9 @@ const Team = () => {
     },
     {
       name: "~SASHA DSOUZA",
-      role: "Creative Director",
+      role: "Brand relation and core team",
       photo: "/images/team/person3.png",
-      photoSmall: "/images/team/2.png",
+      photoSmall: "/images/team/6.png",
       brands: "/images/team/person3Brands.svg",
       linkedinUrl:
         "https://www.linkedin.com/in/sasha-d-souza-147322214/?originalSubdomain=in",
@@ -83,14 +83,14 @@ const Team = () => {
             {team.map((member, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-start    cursor-pointer"
+                className="flex flex-col justify-start "
               >
                 <div
-                  onClick={() => {
-                    if (member.name) {
-                      setSelectedPerson(member), setIsOpen(true);
-                    }
-                  }}
+                  // onClick={() => {
+                  //   if (member.name) {
+                  //     setSelectedPerson(member), setIsOpen(true);
+                  //   }
+                  // }}
                   className="bg-gray-200 w-24 h-24 md:w-36  md:h-36 relative rounded-full text-xl font-semibold mx-auto flex items-end overflow-hidden"
                 >
                   <Image
