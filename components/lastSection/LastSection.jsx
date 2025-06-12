@@ -158,11 +158,6 @@ const LastSection = () => {
                         width={200}
                         height={200}
                         className=" "
-                        src={"/images/lastSection/Asset_6.jpg"}
-                      /> <Image
-                        width={200}
-                        height={200}
-                        className=" "
                         src={"/images/lastSection/Asset_11.jpg"}
                       />
                     </div>
