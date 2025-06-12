@@ -57,32 +57,41 @@ export default AfterBrands;
 
 const cards = [
   {
+    ytId: "lnMF-M5fY88",
+  },
+  {
+    ytId: "dv25eM2jR7Q",
+  },
+  {
+    ytId: "zOaRbxMFdh0",
+  },
+  {
+    ytId: "mQwUlVhx1UQ",
+  },
+  {
+    ytId: "-rwJy7jhWUo",
+  },
+  {
     ytId: "MLwSRzeCB8A",
   },
   {
     ytId: "PQDE9xY4AH0",
   },
-
   {
     ytId: "7pJIH-tBlcE",
   },
-
   {
     ytId: "olv1NsIJcww",
   },
-
   {
     ytId: "XbBoZriYrD4",
   },
-
   {
     ytId: "C-iJGn5W110",
   },
-
   {
     ytId: "djuWkgKmfZc",
   },
-
   {
     ytId: "Zy9_tuJIomg",
   },
