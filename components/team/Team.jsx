@@ -28,7 +28,7 @@ const Team = () => {
       name: "~SENAPATHI KESAVA",
       role: "Chief Operations Officer & Co- Founder",
       photo: "/images/team/person5.png",
-      photoSmall: "/images/team/5.png",
+      photoSmall: "/images/team/1.png",
       brands: "",
       linkedinUrl: "https://www.linkedin.com/in/kesava-senapathi/",
       description:
