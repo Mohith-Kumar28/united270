@@ -46,7 +46,7 @@ const Team = () => {
     },
     {
       name: "~Mayuri Lad",
-      role: "Mayuri Lad ~ Brand relation and core team",
+      role: "MAYURI LAD ~ Brand relation and core team",
       photo: "/images/team/person3.png",
       photoSmall: "/images/team/6.png",
       brands: "/images/team/person3Brands.svg",
