@@ -89,7 +89,7 @@ const Team = () => {
             src={"/images/texts/Asset_5.png"}
           /> */}
           </TranslateWrapper>{" "}
-          <div className="flex flex-wrap gap-16 mt-20 relative z-20 justify-center ">
+          <div className="flex flex-wrap px-16 gap-16 mt-20 relative z-20 justify-center ">
             {team.map((member, idx) => (
               <div
                 key={idx}
