@@ -15,8 +15,8 @@ const Team = () => {
 
   const team = [
     {
-      name: "~JEFF EMMANUEL",
-      role: "JEFF EMMANUEL ~ Chief Creative Officer & Co- Founder",
+      name: "~ JEFF EMMANUEL",
+      role: "Chief Creative Officer & Co- Founder",
       photo: "/images/team/person1.png",
       photoSmall: "/images/team/3.png",
       brands: "/images/team/person1Brands.svg",
@@ -25,8 +25,8 @@ const Team = () => {
         "With over 18 years of experience in advertising and brand-building, Jeff has been the man behind many iconic campaigns. He has worked on numerous brands like Simon Carter, Puma, Mumbai Indians, Allen Solly, Mia by Tanishq, Louis Phillipe and headed various creative teams both in India and the Middle East. During his stint he has been recognised multiple times by both national and international forums like the Cannes Lions and been featured in the top creatives lists by various agencies.",
     },
     {
-      name: "~SENAPATHI KESAVA",
-      role: "KESAVA SENAPATHI ~ Chief Operations Officer & Co- Founder",
+      name: "~ SENAPATHI KESAVA",
+      role: "Chief Operations Officer & Co- Founder",
       photo: "/images/team/person5.png",
       photoSmall: "/images/team/1.png",
       brands: "",
@@ -35,8 +35,8 @@ const Team = () => {
         "With over 22 years of expertise in the IT domain across diverse business verticals, Senapathi is our experienced advisor and mentor. His multi-faceted expertise lies in areas like IT Strategy & Planning, Enterprise Solution Design, and Business Transformation - including Digital Transformation ranging from Big data and Robotics to Apps and Al.",
     },
     {
-      name: "~KIRAN RAMESH",
-      role: "KIRAN RAMESH ~ Brand Producer & Core Team",
+      name: "~ KIRAN RAMESH",
+      role: "Brand Producer & Core Team",
       photo: "/images/team/person5.png",
       photoSmall: "/images/team/4.png",
       brands: "",
@@ -45,8 +45,8 @@ const Team = () => {
         "With over 22 years of expertise in the IT domain across diverse business verticals, Senapathi is our experienced advisor and mentor. His multi-faceted expertise lies in areas like IT Strategy & Planning, Enterprise Solution Design, and Business Transformation - including Digital Transformation ranging from Big data and Robotics to Apps and Al.",
     },
     {
-      name: "~Mayuri Lad",
-      role: "MAYURI LAD ~ Brand relation and core team",
+      name: "~ MAYURI LAD",
+      role: "Brand Relations & Core Team",
       photo: "/images/team/person3.png",
       photoSmall: "/images/team/6.png",
       brands: "/images/team/person3Brands.svg",
@@ -110,6 +110,11 @@ const Team = () => {
                     src={member.photoSmall}
                   />
                 </div>
+                <span
+                  className={`text-left mt-3  w-24  md:w-44 font-bold text-sm md:text-lg text-gray-200 rounded-lg   ${galaktisRegular.className}`}
+                >
+                  {member.name}
+                </span>
                 <span
                   className={`text-left mt-3  w-24  md:w-44 font-bold text-sm md:text-lg text-gray-200 rounded-lg   ${galaktisRegular.className}`}
                 >
